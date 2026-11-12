@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-level="B" data-style="oxford">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>聽得準，答得快｜多益聽力中級練習</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F6; --paper:#FFFFFF; --ink:#1C2B39; --muted:#5B6773; --line:#D3DCE5;
+  --red:#C8323F; --red-soft:#FBE8EA; --green:#127A57; --green-soft:#E1F3EA; --blue:#2C5D8F; --blue-soft:#E6EEF7;
+  --art-g:#9AA4AE; --art-g2:#D9C3A5;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121920; --paper:#1B242E; --ink:#E6ECF2; --muted:#9BA8B5; --line:#33414E;
+    --red:#F0707B; --red-soft:#3A2228; --green:#4DC598; --green-soft:#16332A; --blue:#8DB6E3; --blue-soft:#1C2A3A;
+    --art-g:#6B7783; --art-g2:#8A7458; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121920; --paper:#1B242E; --ink:#E6ECF2; --muted:#9BA8B5; --line:#33414E;
+  --red:#F0707B; --red-soft:#3A2228; --green:#4DC598; --green-soft:#16332A; --blue:#8DB6E3; --blue-soft:#1C2A3A;
+  --art-g:#6B7783; --art-g2:#8A7458; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Noto Sans Thai","Noto Sans Myanmar","Noto Sans Khmer",system-ui,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+button,select,textarea,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+a{color:var(--blue)}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 56px}
+.sheet-head{border-top:6px double var(--red);margin-top:12px;padding:18px 0 8px}
+.sheet-head h1{font-family:"Noto Serif TC",serif;font-weight:700;font-size:clamp(34px,8vw,48px);line-height:1.15;margin:0;letter-spacing:.04em}
+.sheet-head p{margin:8px 0 0;color:var(--muted);max-width:36em}
+.topbar{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:2px solid var(--red)}
+.back{background:none;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:15px;flex:none}
+.topbar h2{margin:0;font-size:20px;font-family:"Noto Serif TC",serif}
+h3{font-size:19px;margin:30px 0 10px;font-family:"Noto Serif TC",serif}
+.muted{color:var(--muted)}.small{font-size:14px}
+.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:16px;padding:12px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.settings label{display:flex;flex-direction:column;font-size:14px;color:var(--muted);gap:4px}
+.settings select{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);min-width:0}
+.warn{margin-top:12px;padding:10px 12px;border-left:4px solid var(--red);background:var(--red-soft);border-radius:4px;font-size:15px}
+.note{margin-top:12px;padding:10px 12px;border-left:4px solid var(--blue);background:var(--blue-soft);border-radius:4px;font-size:15px}
+.parts{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--paper);overflow:hidden}
+.parts li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:12px 14px;border-top:1px solid var(--line)}
+.parts li:first-child{border-top:0}
+.num{width:34px;height:34px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:grid;place-items:center;font-weight:700}
+.parts b{display:block}.parts span{color:var(--muted);font-size:15px}
+.topics{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.topic{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:14px 4px;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;width:100%}
+.topic:hover{background:var(--paper)}
+.topic .ic{font-size:34px;line-height:1;text-align:center}
+.topic .nm{font-weight:700;font-size:18px}.topic .ds{color:var(--muted);font-size:14px}
+.dots{display:flex;gap:5px;align-items:center;justify-content:flex-end}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--red)}
+.dot.ok{background:var(--green);border-color:var(--green)}.dot.no{background:var(--red-soft)}
+.topic .sp{font-size:13px;color:var(--muted);text-align:right;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);font-weight:700;font-size:16px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn svg{width:16px;height:16px;flex:none}.btn{white-space:nowrap}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.sm{padding:5px 12px;font-size:14px;border-width:1.5px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tabs{display:flex;margin:14px 0 4px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper)}
+.tabs button{flex:1;border:0;background:none;padding:9px 2px;font-size:16px}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);font-weight:700}
+.vlist{list-style:none;margin:12px 0 0;padding:0}
+.vlist li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.say{width:40px;height:40px;border-radius:50%;border:2px solid var(--red);background:var(--paper);color:var(--red);display:inline-grid;place-items:center;padding:0;flex:none;vertical-align:middle}
+.say.sm{width:30px;height:30px;border-width:1.5px}
+.say svg{width:16px;height:16px}.say.sm svg{width:13px;height:13px}
+.py{font-size:14px;color:var(--muted);letter-spacing:.02em}
+.zh{font-family:"Noto Serif TC",serif;font-size:26px;font-weight:600;line-height:1.25}
+.gl{font-size:15px}
+.links{font-size:14px;display:flex;gap:14px;margin-top:2px;flex-wrap:wrap}
+.goal{font-size:18px;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--red);border-radius:8px;margin-top:14px}
+.vary{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px}
+.vary .items{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:3px 6px 3px 12px;background:var(--bg);font-size:17px}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:8px}
+.rel .w{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:8px}
+.rel .w b{font-family:"Noto Serif TC",serif;font-size:20px;display:block;line-height:1.2}
+.tool{background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:14px;margin-top:12px}
+.tool .big{font-size:40px;font-weight:700;text-align:center;letter-spacing:.03em;margin:8px 0;font-family:system-ui,sans-serif;min-height:56px}
+.tool .forms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:36px}
+.navstrip{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0}
+.nb{width:34px;height:34px;border-radius:50%;border:2px solid var(--red);background:var(--paper);color:var(--red);font-weight:700;font-size:13px;padding:0}
+.nb.cur{outline:3px solid var(--blue);outline-offset:1px}
+.nb.done{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.nb.ok{background:var(--green);border-color:var(--green);color:#fff}
+.nb.no{background:var(--red);color:#fff}
+.q{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px}
+.qhead{display:flex;justify-content:space-between;gap:8px;font-size:14px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:8px}
+.qhead .part{color:var(--red);font-weight:700}
+.scene{margin:14px auto 4px;max-width:320px;aspect-ratio:4/3;border:2px solid var(--ink);border-radius:6px;display:grid;place-items:center;text-align:center;background:var(--paper)}
+.scene b{display:block;font-size:30px;font-family:system-ui,sans-serif}
+.player{display:flex;align-items:center;gap:14px;margin:16px 0}
+.play{width:72px;height:72px;border-radius:50%;border:3px solid var(--red);background:var(--paper);color:var(--red);display:grid;place-items:center;flex:none}
+.play svg{width:26px;height:26px;margin-left:4px}
+.play.on{background:var(--red);color:#fff}
+.wave{display:flex;gap:4px;align-items:center;height:36px}
+.wave i{display:block;width:5px;height:8px;border-radius:3px;background:var(--line)}
+.play.on + .wave i{background:var(--red);animation:wv .9s ease-in-out infinite}
+.play.on + .wave i:nth-child(2){animation-delay:.12s}.play.on + .wave i:nth-child(3){animation-delay:.24s}
+.play.on + .wave i:nth-child(4){animation-delay:.36s}.play.on + .wave i:nth-child(5){animation-delay:.48s}
+@keyframes wv{0%,100%{height:8px}50%{height:34px}}
+@media (prefers-reduced-motion:reduce){.play.on + .wave i{animation:none;height:22px}}
+.player .hint{font-size:14px;color:var(--muted)}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:10px 12px;min-height:54px}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.bub{flex:none;width:32px;height:32px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:grid;place-items:center;font-weight:700;font-size:15px}
+.opt.sel .bub{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.opt.right{border-color:var(--green);background:var(--green-soft)}
+.opt.right .bub{background:var(--green);border-color:var(--green);color:#fff}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+.opt.wrong .bub{background:var(--red);color:#fff}
+.opt:disabled{cursor:default}
+.opts.pics{display:grid;grid-template-columns:repeat(3,1fr)}
+.opts.pics .opt{flex-direction:column;align-items:stretch;padding:8px}
+.pic{font-size:44px;line-height:1.15;text-align:center;padding:8px 0;min-height:90px;display:grid;place-items:center}
+.pic b{font-size:18px;display:block;font-family:system-ui,sans-serif}
+.pic svg{width:88px;height:88px}
+.art .f{fill:currentColor}.art .w{fill:var(--paper)}.art .g{fill:var(--art-g)}.art .g2{fill:var(--art-g2)}
+.art .t{fill:currentColor;stroke:none;font-weight:700;font-family:system-ui,sans-serif}
+.scene .art{width:auto;height:92%}
+.hidden-opt{color:var(--muted);font-size:15px}
+.fb{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.verdict{font-weight:700;font-size:18px}
+.verdict.ok{color:var(--green)}.verdict.no{color:var(--red)}
+.script{margin:8px 0;padding:10px 12px;background:var(--bg);border-radius:8px;font-size:16px}
+.script p{margin:2px 0}
+.who{color:var(--muted);font-size:14px;margin-right:4px}
+.key{font-size:15px}
+.tr{margin-top:8px;font-size:15px}
+.tr ol{margin:6px 0 0;padding-left:22px}
+.tr li{margin:2px 0}
+.trl{display:block;color:var(--blue);font-family:"Noto Sans TC","Noto Sans Thai","Noto Sans Myanmar","Noto Sans Khmer",system-ui,sans-serif;font-size:15px;font-weight:400;line-height:1.5;margin:1px 0 4px}
+.trl:empty{display:none}
+.sent+.trl{font-size:16px}
+.langbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.gl .lab{color:var(--muted);font-size:13px;margin-right:6px}
+.trout{border-left:3px solid var(--blue);padding:4px 10px;margin-top:6px;background:var(--blue-soft);border-radius:4px}
+.card{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.sent{font-family:"Noto Serif TC",serif;font-size:24px;font-weight:600;line-height:1.5;margin:2px 0}
+.sent .ok{color:var(--green)}.sent .miss{color:var(--red);text-decoration:underline wavy;text-underline-offset:5px}
+.rec{background:var(--red);border-color:var(--red);color:#fff}
+.rec.on{animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.rec.on{animation:none}}
+.res{margin-top:10px;font-size:15px}
+.score{font-weight:700;font-size:20px}
+.kw{display:inline-block;margin:2px 6px 2px 0;padding:1px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px}
+.kw.ok{border-color:var(--green);color:var(--green);background:var(--green-soft)}
+.samples{margin:10px 0 0;padding-left:0;list-style:none}
+.samples li{display:flex;gap:8px;align-items:center;padding:4px 0}
+textarea{width:100%;min-height:72px;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg);resize:vertical}
+.pat{padding:10px 0;border-bottom:1px solid var(--line)}
+.pat .zh{font-size:21px}
+.res-list{list-style:none;padding:0;margin:0}
+.res-list li{padding:10px 0;border-bottom:1px solid var(--line)}
+.res-list b{display:block}
+.result-big{font-family:"Noto Serif TC",serif;font-size:56px;font-weight:700;line-height:1}
+table{width:100%;border-collapse:collapse;font-size:16px;margin-top:8px}
+th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-weight:500;color:var(--muted);font-size:14px}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--green)}
+footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:6px double var(--red);padding-top:12px}
+@media (max-width:420px){.pic{font-size:36px}.scene{font-size:54px}.tabs button{font-size:15px}}
+.uit{display:block;font-size:13px;color:var(--blue);font-weight:400;line-height:1.4;font-family:"Noto Sans TC","Noto Sans Thai","Noto Sans Myanmar","Noto Sans Khmer",system-ui,sans-serif;letter-spacing:0}
+h3 .uit,h2 .uit{font-size:14px;margin-top:2px}.h1t{font-size:16px;margin-top:4px}
+.bl{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1.2;text-align:left}
+.bl small{font-size:11px;font-weight:400;opacity:.85;white-space:normal}
+.tabs .bl,.nb .bl{align-items:center;text-align:center}
+.btn.xs{padding:3px 10px;font-size:13px;border-width:1.5px}
+.ml-zh{font-size:24px;font-weight:700;font-family:"Noto Serif TC",serif;color:var(--red)}
+.ml-tr{font-size:16px;font-weight:700;color:var(--ink)}
+.star{border:0;background:none;font-size:24px;color:var(--muted);padding:0 4px;line-height:1;align-self:start}
+.star.on{color:#E0A100}
+.vlist li{grid-template-columns:44px 1fr auto}
+.rel .w{position:relative}.rel .w .star{margin-left:auto;font-size:20px}
+.linkbtn{border:0;background:none;color:var(--red);padding:0;font-size:14px;text-decoration:underline}
+h2.sect{margin:40px 0 0;padding-top:12px;border-top:6px double var(--red);font-family:"Noto Serif TC",serif;font-size:24px}
+details.mic{margin-top:12px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+details.mic summary{cursor:pointer;font-weight:700}
+details.mic ol{padding-left:22px;margin:8px 0 0}details.mic li{margin:4px 0;font-size:15px}
+.ans{color:var(--green)}
+.chip>span{display:inline-flex;flex-direction:column}
+.chip .trl{font-size:12px;margin:0}
+.tabs button{padding:7px 2px}
+
+/* ===== 版面設計：區塊卡片、色彩分區、黏住的導覽 ===== */
+:root{--c-info:#2C5D8F;--c-decode:#127A57;--c-topic:#7A4FB5;--c-book:#B7791F;--c-mock:#C8323F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c-info:#8DB6E3;--c-decode:#4DC598;--c-topic:#B79BE6;--c-book:#E3B35C;--c-mock:#F0707B}}
+:root[data-theme="dark"]{--c-info:#8DB6E3;--c-decode:#4DC598;--c-topic:#B79BE6;--c-book:#E3B35C;--c-mock:#F0707B}
+.ml-zh{font-size:20px;font-weight:700;color:var(--red)}
+.ml-tr{font-size:14px;font-weight:700;color:var(--ink)}
+.settings .mylang{grid-column:1/-1;border:3px solid var(--red);background:var(--red-soft);border-radius:10px;padding:10px 12px}
+.settings .mylang select{font-size:17px;font-weight:700;border:2px solid var(--red);background:var(--paper)}
+.intro{margin-top:6px;color:var(--muted)}
+.quick{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:16px -16px 0;padding:8px 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.quick button{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:6px 2px;font-size:14px;font-weight:700;min-width:0}
+.quick .qi{font-size:18px;line-height:1}
+.quick .bl{align-items:center;text-align:center}.quick .bl small{font-size:10px}
+.panel{position:relative;margin-top:18px;background:var(--paper);border-radius:16px;padding:14px 16px 16px;border:1px solid var(--line);border-top:6px solid var(--accent,var(--ink));box-shadow:0 2px 0 rgba(28,43,57,.04);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 110px)}
+.panel .ph{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.panel .ph h3{margin:0}
+.panel .pi{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:700;color:#fff;background:var(--accent)}
+.c-info{--accent:var(--c-info)}.c-decode{--accent:var(--c-decode)}.c-topic{--accent:var(--c-topic)}.c-book{--accent:var(--c-book)}.c-mock{--accent:var(--c-mock)}
+.panel .sub{padding:12px 0 4px;border-top:1px dashed var(--line);margin-top:10px}
+.panel .sub:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.panel h4{margin:0 0 6px;font-family:"Noto Serif TC",serif;font-size:17px}
+details.acc{border:1px solid var(--line);border-radius:10px;margin-top:8px;background:var(--bg)}
+details.acc summary{cursor:pointer;padding:10px 12px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:8px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"＋";color:var(--accent);font-weight:700}
+details.acc[open] summary::after{content:"－"}
+.accb{padding:0 12px 12px}
+ol.steps{margin:0;padding-left:22px}ol.steps li{margin:6px 0}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:600px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+.tcard{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--bg);min-width:0}
+.tcard:hover{border-color:var(--accent)}
+.tcard .ic{font-size:30px;line-height:1;margin-bottom:4px}
+.tcard .nm{font-weight:700;font-size:16px;line-height:1.3}
+.tcard .uit{font-size:12px}
+.tcard .dots{margin-top:6px;justify-content:flex-start}.tcard .dot{width:11px;height:11px}
+.tcard .sp{font-size:12px;color:var(--muted)}.tcard .sp .uit{display:inline;margin-left:2px}
+.stick{position:sticky;top:0;z-index:20;margin:0 -16px;padding:0 16px 8px;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.stick .topbar{padding:8px 0}.stick .tabs{margin:8px 0 0}
+.tabs button{position:relative}
+.tn{display:block;font-size:10px;font-weight:700;opacity:.6}
+.syl{white-space:nowrap}
+.py{overflow-wrap:normal;word-break:keep-all}
+.totop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:var(--paper);font-size:22px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.totop.show{opacity:.9;pointer-events:auto}
+footer .credit{font-weight:700;color:var(--ink)}
+/* 卡片與題目區塊更清楚 */
+.q,.card,.vary,.tool,.goal{border-radius:14px}
+.card{border-left:4px solid var(--c-topic)}
+.vary{border-left:4px solid var(--c-info)}
+
+.resume{margin-top:10px;padding:12px;border:2px solid var(--c-mock);border-radius:12px;background:var(--red-soft)}
+.setgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.setbtn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 6px;border:2px solid var(--c-mock);border-radius:14px;background:var(--paper);font-weight:700;min-width:0}
+.setbtn .bl{align-items:center;text-align:center}
+.setbtn .sn{width:34px;height:34px;border-radius:50%;background:var(--c-mock);color:#fff;display:grid;place-items:center;font-size:17px}
+.setbtn:disabled{opacity:.4;cursor:not-allowed}
+.warnline{margin:10px 0 0;padding:6px 10px;border-radius:8px;background:var(--red-soft);color:var(--ink);font-weight:700}
+.warnline .uit{display:inline;margin-left:6px;font-weight:400}
+
+/* ===================== 學院風格 Academic theme ===================== */
+:root{--bg:#F3EEE3;--paper:#FFFDF8;--ink:#1D2940;--muted:#6E665A;--line:#DCD2BF;--red:#7B1E2B;--red-soft:#F4E6E3;--green:#2E5E4E;--green-soft:#E3EFE8;--blue:#24477A;--blue-soft:#E8EDF5;
+  --gold:#A8843E;--gold-soft:#F3EAD6;--crest:#1D2940;--c-info:#24477A;--c-decode:#2E5E4E;--c-topic:#5B3A6B;--c-book:#A8843E;--c-mock:#7B1E2B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151E;--paper:#18202B;--ink:#ECE5D5;--muted:#A69E8F;--line:#334050;--red:#DA8D96;--red-soft:#3A2329;--green:#83C4A9;--green-soft:#183429;--blue:#9DB7E0;--blue-soft:#1C2A3D;--gold:#D2B272;--gold-soft:#2E2817;--crest:#1E2B42;--c-info:#9DB7E0;--c-decode:#83C4A9;--c-topic:#C3A6D6;--c-book:#D2B272;--c-mock:#DA8D96}}
+:root[data-theme="dark"]{--bg:#10151E;--paper:#18202B;--ink:#ECE5D5;--muted:#A69E8F;--line:#334050;--red:#DA8D96;--red-soft:#3A2329;--green:#83C4A9;--green-soft:#183429;--blue:#9DB7E0;--blue-soft:#1C2A3D;--gold:#D2B272;--gold-soft:#2E2817;--crest:#1E2B42;--c-info:#9DB7E0;--c-decode:#83C4A9;--c-topic:#C3A6D6;--c-book:#D2B272;--c-mock:#DA8D96}
+body{background:var(--bg);background-image:radial-gradient(circle at 20% 0%,rgba(168,132,62,.07),transparent 40%),radial-gradient(circle at 100% 30%,rgba(29,41,64,.05),transparent 40%);background-attachment:fixed}
+h1,h2,h3,h4,.topbar h2,.panel h3,.tcard .nm,.zh,.sent{font-family:"Noto Serif TC","Songti TC",serif}
+.hero{display:flex;align-items:center;gap:16px;margin:0 -16px;padding:22px 18px 20px;background:var(--crest);color:#F3EEE3;border-bottom:5px double var(--gold);border-radius:0 0 20px 20px;box-shadow:0 6px 18px rgba(29,41,64,.18)}
+.crest{flex:none;width:64px}.crest svg{width:64px;height:72px;display:block}
+.hero .eyebrow{font-size:10.5px;letter-spacing:.22em;color:var(--gold);font-weight:700}
+.hero h1{margin:4px 0 0;font-size:clamp(28px,7vw,40px);letter-spacing:.08em;color:#FBF6EA;line-height:1.15}
+.hero .uit{color:#E7D7B1}.hero .band{margin-top:6px;font-size:13px;letter-spacing:.12em;color:#D9CFBC;border-top:1px solid rgba(210,178,114,.45);padding-top:6px;display:inline-block}
+.intro{margin:14px 2px 0;color:var(--muted)}
+.settings{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.settings .mylang{border:2px solid var(--red);background:var(--red-soft)}
+.ml-zh{font-family:"Noto Serif TC",serif;color:var(--red);letter-spacing:.1em}
+.quick{border-bottom:2px solid var(--gold)}
+.quick button{border-radius:10px 10px 4px 4px;border:1px solid var(--line);border-bottom:3px solid var(--gold);background:var(--paper);font-family:"Noto Serif TC",serif}
+.quick .qi{font-size:15px;color:var(--gold)}
+.panel{border-radius:4px 4px 16px 16px;border:1px solid var(--line);border-top:4px solid var(--accent);box-shadow:0 2px 10px rgba(29,41,64,.06)}
+.panel .ph{border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.panel .pi{border-radius:50%;background:transparent;color:var(--accent);border:2px solid var(--accent);font-family:"Noto Serif TC",serif;font-size:15px;width:40px;height:40px;letter-spacing:-.02em}
+.panel h3{letter-spacing:.06em}
+.panel h4{color:var(--accent);letter-spacing:.06em}
+details.acc{background:var(--gold-soft);border-color:var(--line)}
+details.acc summary::after{color:var(--gold)}
+.tcard{background:var(--paper);border-radius:6px 14px 14px 6px;border:1px solid var(--line);border-left:6px solid var(--accent);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.tcard .nm{letter-spacing:.04em}
+.btn{border-radius:8px;letter-spacing:.03em}
+.btn.red{background:var(--red);border-color:var(--red)}
+.btn.ghost{border-color:var(--ink)}
+.setbtn{border-color:var(--gold);background:var(--paper);border-radius:12px}
+.setbtn .sn{background:var(--crest);color:var(--gold);border:2px solid var(--gold);font-family:"Noto Serif TC",serif}
+.stick{border-bottom:2px solid var(--gold)}
+.topbar{border-bottom:1px solid var(--line)}
+.tabs{border-color:var(--line);border-radius:10px}
+.tabs button[aria-selected="true"]{background:var(--crest);color:#F3EEE3}
+.tabs button[aria-selected="true"] .bl small{color:#E7D7B1}
+.tn{color:var(--gold);opacity:1}
+.q,.card,.vary,.tool,.goal{background:var(--paper);border-color:var(--line)}
+.q{border-top:3px solid var(--gold)}
+.goal{border-left-color:var(--gold)}
+.qhead .part{color:var(--red);font-family:"Noto Serif TC",serif;letter-spacing:.05em}
+.play{border-color:var(--red);color:var(--red)}.play.on{background:var(--red)}
+.bub{border-color:var(--red);color:var(--red)}
+.note{border-left-color:var(--gold);background:var(--gold-soft)}
+.warn{border-left-color:var(--red)}
+.printed{margin:10px 0;padding:10px 12px;border:1px dashed var(--gold);border-radius:8px;background:var(--gold-soft)}
+.printed .pq{font-family:"Noto Serif TC",serif;font-weight:700;font-size:18px;margin-top:4px}
+footer{border-top:5px double var(--gold);text-align:center}
+footer .credit{font-family:"Noto Serif TC",serif;letter-spacing:.05em}
+.totop{background:var(--crest);color:var(--gold);border:2px solid var(--gold)}
+.dot{border-color:var(--gold)}.dot.ok{background:var(--green);border-color:var(--green)}
+
+.hero .series{margin-top:4px;font-size:13px;letter-spacing:.3em;color:#F3EEE3;opacity:.92;font-family:"Noto Serif TC",serif}
+
+/* ===================== 科技風 1：深色霓虹 ===================== */
+html:not(#_)[data-style="tech1"]{--bg:#070B16;--paper:#0E1526;--ink:#E6F1FF;--muted:#8DA2C0;--line:#1E2A44;--red:#FF4D8D;--red-soft:#2A1022;--green:#22E3A4;--green-soft:#0D2A22;--blue:#38BDF8;--blue-soft:#0C2236;--gold:#22D3EE;--gold-soft:#0B2230;--crest:#0B1222;--c-info:#38BDF8;--c-decode:#22E3A4;--c-topic:#A78BFA;--c-book:#FBBF24;--c-mock:#FF4D8D;color-scheme:dark}
+html[data-style="tech1"] body{background-color:#070B16;background-image:linear-gradient(rgba(56,189,248,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.07) 1px,transparent 1px);background-size:28px 28px}
+html[data-style="tech1"] h1,html[data-style="tech1"] h2,html[data-style="tech1"] h3,html[data-style="tech1"] h4,html[data-style="tech1"] .tcard .nm,html[data-style="tech1"] .zh,html[data-style="tech1"] .sent{font-family:"Noto Sans TC",system-ui,sans-serif}
+html[data-style="tech1"] .hero{background:radial-gradient(120% 140% at 0% 0%,#1B2A55 0%,#0B1222 55%,#070B16 100%);border-bottom:1px solid rgba(34,211,238,.6);box-shadow:0 0 30px rgba(34,211,238,.18)}
+html[data-style="tech1"] .hero h1{background:linear-gradient(90deg,#22D3EE,#A78BFA);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900}
+html[data-style="tech1"] .hero .eyebrow,html[data-style="tech1"] .tn,html[data-style="tech1"] .qhead span:last-child{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+html[data-style="tech1"] .crest svg path:first-child{fill:#0E1526}
+html[data-style="tech1"] .panel,html[data-style="tech1"] .settings,html[data-style="tech1"] .q,html[data-style="tech1"] .card,html[data-style="tech1"] .vary,html[data-style="tech1"] .goal,html[data-style="tech1"] .tool{background:rgba(14,21,38,.88);border:1px solid rgba(56,189,248,.22);box-shadow:0 0 0 1px rgba(56,189,248,.05),0 10px 30px rgba(0,0,0,.45);border-radius:14px}
+html[data-style="tech1"] .panel{border-top:2px solid var(--accent)}
+html[data-style="tech1"] .panel .pi{border-radius:10px;font-family:ui-monospace,monospace;box-shadow:0 0 12px var(--accent)}
+html[data-style="tech1"] .btn{background:linear-gradient(90deg,#22D3EE,#A78BFA);border:0;color:#04101F}
+html[data-style="tech1"] .btn.red{background:linear-gradient(90deg,#FF4D8D,#A78BFA);color:#fff}
+html[data-style="tech1"] .btn.ghost{background:transparent;border:1px solid #38BDF8;color:#E6F1FF}
+html[data-style="tech1"] .tcard{background:#0B1222;border:1px solid #1E2A44;border-left:3px solid var(--accent)}
+html[data-style="tech1"] .tcard:hover{box-shadow:0 0 18px rgba(167,139,250,.35)}
+html[data-style="tech1"] .tabs button[aria-selected="true"]{background:linear-gradient(90deg,#22D3EE,#A78BFA);color:#04101F}
+html[data-style="tech1"] .quick button,html[data-style="tech1"] .setbtn{background:#0B1222;border:1px solid #1E2A44;border-bottom:2px solid #22D3EE}
+html[data-style="tech1"] .quick,html[data-style="tech1"] .stick{background:rgba(7,11,22,.85);border-bottom:1px solid rgba(34,211,238,.4)}
+html[data-style="tech1"] .opt{background:#0B1222;border-color:#1E2A44}
+html[data-style="tech1"] .art{color:#BFE9FF}
+html[data-style="tech1"] footer{border-top:1px solid rgba(34,211,238,.5)}
+html[data-style="tech1"] select,html[data-style="tech1"] textarea{background:#0B1222;color:#E6F1FF;border-color:#1E2A44}
+/* ===================== 科技風 2：明亮未來感 ===================== */
+html:not(#_)[data-style="tech2"]{--bg:#F4F7FF;--paper:#FFFFFF;--ink:#0F172A;--muted:#64748B;--line:#E2E8F0;--red:#E11D74;--red-soft:#FDE7F1;--green:#059669;--green-soft:#E3F7EF;--blue:#2563EB;--blue-soft:#EAF1FF;--gold:#06B6D4;--gold-soft:#E6FBFF;--crest:#1E3A8A;--c-info:#2563EB;--c-decode:#059669;--c-topic:#7C3AED;--c-book:#F59E0B;--c-mock:#E11D74}
+@media (prefers-color-scheme:dark){html:not(#_)[data-style="tech2"]:not([data-theme="light"]){--bg:#0B1220;--paper:#111A2E;--ink:#E2E8F0;--muted:#94A3B8;--line:#22304A;--red:#F472B6;--red-soft:#33142A;--blue:#60A5FA;--blue-soft:#13233F;--gold:#22D3EE;--gold-soft:#0C2A33;--crest:#1E3A8A;--c-info:#60A5FA;--c-decode:#34D399;--c-topic:#A78BFA;--c-book:#FBBF24;--c-mock:#F472B6}}
+html[data-style="tech2"] body{background-image:radial-gradient(circle at 10% 0%,rgba(37,99,235,.10),transparent 35%),radial-gradient(circle at 90% 20%,rgba(6,182,212,.10),transparent 35%)}
+html[data-style="tech2"] h1,html[data-style="tech2"] h2,html[data-style="tech2"] h3,html[data-style="tech2"] h4,html[data-style="tech2"] .tcard .nm,html[data-style="tech2"] .zh,html[data-style="tech2"] .sent{font-family:"Noto Sans TC",system-ui,sans-serif}
+html[data-style="tech2"] .hero{background:linear-gradient(120deg,#1E3A8A 0%,#2563EB 55%,#06B6D4 100%);border:0;border-radius:0 0 28px 28px;box-shadow:0 12px 30px rgba(37,99,235,.28);position:relative;overflow:hidden}
+html[data-style="tech2"] .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 18px);pointer-events:none}
+html[data-style="tech2"] .hero h1{font-weight:900;letter-spacing:.04em}
+html[data-style="tech2"] .hero .eyebrow{color:#A5F3FC;font-family:ui-monospace,monospace}
+html[data-style="tech2"] .crest{--gold:#FFFFFF}
+html[data-style="tech2"] .crest svg path:first-child{fill:rgba(255,255,255,.15)}
+html[data-style="tech2"] .panel,html[data-style="tech2"] .settings,html[data-style="tech2"] .q,html[data-style="tech2"] .card,html[data-style="tech2"] .vary,html[data-style="tech2"] .goal,html[data-style="tech2"] .tool{border-radius:22px;border:1px solid var(--line);box-shadow:0 8px 24px rgba(15,23,42,.06)}
+html[data-style="tech2"] .panel{border-top:0;background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(90deg,var(--accent),transparent) border-box;border:1.5px solid transparent}
+html[data-style="tech2"] .panel .pi{border-radius:14px;background:var(--accent);color:#fff;border:0}
+html[data-style="tech2"] .btn{background:linear-gradient(90deg,#2563EB,#06B6D4);border:0;border-radius:999px}
+html[data-style="tech2"] .btn.red{background:linear-gradient(90deg,#E11D74,#7C3AED)}
+html[data-style="tech2"] .btn.ghost{background:var(--paper);border:1.5px solid #2563EB;color:var(--ink)}
+html[data-style="tech2"] .tcard{border-radius:20px;border:1px solid var(--line);border-top:4px solid var(--accent);box-shadow:0 6px 18px rgba(15,23,42,.06)}
+html[data-style="tech2"] .tabs{border-radius:999px}
+html[data-style="tech2"] .tabs button[aria-selected="true"]{background:linear-gradient(90deg,#2563EB,#06B6D4);color:#fff;border-radius:999px}
+html[data-style="tech2"] .quick button,html[data-style="tech2"] .setbtn{border-radius:18px;border:1px solid var(--line);border-bottom:3px solid #06B6D4}
+html[data-style="tech2"] .quick,html[data-style="tech2"] .stick{border-bottom:1px solid var(--line)}
+html[data-style="tech2"] .setbtn .sn{background:linear-gradient(135deg,#2563EB,#06B6D4);color:#fff;border:0}
+html[data-style="tech2"] footer{border-top:2px solid var(--line)}
+/* ===================== 牛津風（Band B 另一版） ===================== */
+html:not(#_)[data-style="oxford"]{--bg:#FFFFFF;--paper:#FFFFFF;--ink:#002147;--muted:#5B6770;--line:#D9DDE1;--red:#994636;--red-soft:#F6ECE9;--green:#426A5A;--green-soft:#E7EFEB;--blue:#002147;--blue-soft:#EDF3F9;--gold:#002147;--gold-soft:#F2F2F2;--crest:#002147;--c-info:#002147;--c-decode:#426A5A;--c-topic:#776885;--c-book:#CC8604;--c-mock:#994636}
+@media (prefers-color-scheme:dark){html:not(#_)[data-style="oxford"]:not([data-theme="light"]){--bg:#0A1424;--paper:#0F1D33;--ink:#EAF0F7;--muted:#A6B2C1;--line:#24364F;--red:#E39A8A;--red-soft:#2E1C19;--green:#8FC1A9;--blue:#B9D6F2;--blue-soft:#15263F;--gold:#B9D6F2;--gold-soft:#15263F;--crest:#002147;--c-info:#B9D6F2;--c-decode:#8FC1A9;--c-topic:#C9B8D6;--c-book:#E8B24A;--c-mock:#E39A8A}}
+html[data-style="oxford"] body{background:var(--bg);background-image:none}
+html[data-style="oxford"] .hero{background:#002147;border:0;border-radius:0;box-shadow:none;border-bottom:6px solid #B9D6F2}
+html[data-style="oxford"] .hero .eyebrow{color:#B9D6F2;letter-spacing:.18em}
+html[data-style="oxford"] .hero h1{color:#fff;font-weight:600;letter-spacing:.04em}
+html[data-style="oxford"] .crest{--gold:#FFFFFF}
+html[data-style="oxford"] .crest svg path:first-child{fill:#002147}
+html[data-style="oxford"] .hero .band{border-top-color:rgba(185,214,242,.5)}
+html[data-style="oxford"] .panel,html[data-style="oxford"] .settings,html[data-style="oxford"] .q,html[data-style="oxford"] .card,html[data-style="oxford"] .vary,html[data-style="oxford"] .goal,html[data-style="oxford"] .tool,html[data-style="oxford"] .tcard,html[data-style="oxford"] .quick button,html[data-style="oxford"] .setbtn,html[data-style="oxford"] .opt,html[data-style="oxford"] details.acc,html[data-style="oxford"] .tabs,html[data-style="oxford"] .tabs button{border-radius:0}
+html[data-style="oxford"] .panel{border:1px solid var(--line);border-top:0;border-left:6px solid var(--accent);box-shadow:none;background:var(--paper)}
+html[data-style="oxford"] .panel .ph{border-bottom:1px solid var(--line)}
+html[data-style="oxford"] .panel .pi{border-radius:0;background:var(--accent);color:#fff;border:0;font-family:"Noto Serif TC",serif}
+html[data-style="oxford"] .panel h3{font-weight:600}
+html[data-style="oxford"] .tcard{background:var(--gold-soft);border:0;border-top:4px solid var(--accent)}
+html[data-style="oxford"] .btn{border-radius:0;background:#002147;border-color:#002147;color:#fff;text-transform:none}
+html[data-style="oxford"] .btn.red{background:#994636;border-color:#994636}
+html[data-style="oxford"] .btn.ghost{background:transparent;color:var(--ink);border:2px solid currentColor}
+html[data-style="oxford"] .quick{background:#fff;border-bottom:1px solid var(--line)}
+html[data-style="oxford"] .quick button{background:#F2F2F2;border:0;border-bottom:3px solid #002147}
+html[data-style="oxford"] .stick{background:var(--bg);border-bottom:1px solid var(--line)}
+html[data-style="oxford"] .tabs button[aria-selected="true"]{background:#002147;color:#fff}
+html[data-style="oxford"] .tn{color:#776885}
+html[data-style="oxford"] .q{border:1px solid var(--line);border-top:4px solid #002147}
+html[data-style="oxford"] .note{background:#EDF3F9;border-left-color:#002147}
+html[data-style="oxford"] details.acc{background:#F2F2F2}
+html[data-style="oxford"] .setbtn{border:1px solid var(--line);border-top:4px solid #002147}
+html[data-style="oxford"] .setbtn .sn{background:#002147;color:#fff;border:0;border-radius:0}
+html[data-style="oxford"] footer{border-top:6px solid #002147;text-align:left}
+html[data-style="oxford"] .totop{border-radius:0;background:#002147;color:#fff;border:0}
+/* 授權資訊 */
+details.lic{margin-top:10px;text-align:left}details.lic summary{cursor:pointer;font-weight:700}
+details.lic pre{white-space:pre-wrap;font-size:11px;line-height:1.5;background:var(--gold-soft);padding:10px;border-radius:8px;max-height:260px;overflow:auto}
+.hero.has-banner{background-size:cover!important;background-position:center!important;min-height:180px}
+
+/* ===================== 木質溫暖風（Band A，配合 banner） ===================== */
+html:not(#_)[data-style="wood"]{--bg:#F7F2EA;--paper:#FFFDF9;--ink:#4A3B2C;--muted:#8A7A68;--line:#E6DACB;--red:#B9735A;--red-soft:#F6E7DF;--green:#6E8B68;--green-soft:#E8EFE4;--blue:#6F8FA8;--blue-soft:#E9EFF4;--gold:#B88A5A;--gold-soft:#F3E9DC;--crest:#8C6A48;--c-info:#6F8FA8;--c-decode:#6E8B68;--c-topic:#B88A5A;--c-book:#C9A24D;--c-mock:#B9735A}
+@media (prefers-color-scheme:dark){html:not(#_)[data-style="wood"]:not([data-theme="light"]){--bg:#1E1A16;--paper:#29231D;--ink:#F1E7DA;--muted:#B8A894;--line:#3E352C;--red:#E0A48C;--red-soft:#3A2820;--green:#A7C19F;--green-soft:#26301F;--blue:#A9C2D6;--blue-soft:#1F2A33;--gold:#D9B48A;--gold-soft:#332A21;--crest:#5C4632;--c-info:#A9C2D6;--c-decode:#A7C19F;--c-topic:#D9B48A;--c-book:#E3C278;--c-mock:#E0A48C}}
+html[data-style="wood"] body{background-image:radial-gradient(circle at 15% 0%,rgba(184,138,90,.10),transparent 40%),radial-gradient(circle at 90% 25%,rgba(110,139,104,.10),transparent 40%)}
+html[data-style="wood"] h1,html[data-style="wood"] h2,html[data-style="wood"] h3,html[data-style="wood"] h4,html[data-style="wood"] .tcard .nm{font-family:"Noto Sans TC",system-ui,sans-serif;font-weight:700}
+.banner{margin:0 -16px;overflow:hidden;border-radius:0 0 26px 26px;box-shadow:0 8px 22px rgba(74,59,44,.18)}
+.banner img{display:block;width:100%;height:auto}
+html[data-style="wood"] .hero.hero-under{margin:14px 0 0;border-radius:22px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-bottom:5px solid var(--gold);box-shadow:0 6px 18px rgba(74,59,44,.08);padding:16px}
+html[data-style="wood"] .hero.hero-under h1{color:var(--ink);letter-spacing:.06em;font-size:clamp(26px,6.5vw,36px)}
+html[data-style="wood"] .hero.hero-under .eyebrow{color:var(--green)}
+html[data-style="wood"] .hero.hero-under .series{color:var(--gold);opacity:1}
+html[data-style="wood"] .hero.hero-under .uit{color:var(--blue)}
+html[data-style="wood"] .hero.hero-under .band{color:var(--muted);border-top-color:var(--line)}
+html[data-style="wood"] .crest{--gold:#FFFDF9}
+html[data-style="wood"] .crest svg path:first-child{fill:#8C6A48}
+html[data-style="wood"] .panel,html[data-style="wood"] .settings,html[data-style="wood"] .q,html[data-style="wood"] .card,html[data-style="wood"] .vary,html[data-style="wood"] .goal,html[data-style="wood"] .tool{border-radius:20px;border:1px solid var(--line);box-shadow:0 4px 14px rgba(74,59,44,.06)}
+html[data-style="wood"] .panel{border-top:5px solid var(--accent)}
+html[data-style="wood"] .panel .pi{border-radius:14px;background:var(--accent);color:#FFFDF9;border:0}
+html[data-style="wood"] .btn{background:var(--green);border-color:var(--green);border-radius:999px;color:#fff}
+html[data-style="wood"] .btn.red{background:var(--red);border-color:var(--red)}
+html[data-style="wood"] .btn.ghost{background:var(--paper);color:var(--ink);border:1.5px solid var(--gold)}
+html[data-style="wood"] .tcard{border-radius:18px;border:1px solid var(--line);border-left:0;border-top:5px solid var(--accent);background:var(--paper)}
+html[data-style="wood"] .quick button,html[data-style="wood"] .setbtn{border-radius:16px;border:1px solid var(--line);border-bottom:3px solid var(--green);background:var(--paper)}
+html[data-style="wood"] .quick,html[data-style="wood"] .stick{border-bottom:2px solid var(--gold)}
+html[data-style="wood"] .tabs{border-radius:16px}
+html[data-style="wood"] .tabs button[aria-selected="true"]{background:var(--green);color:#fff}
+html[data-style="wood"] .tabs button[aria-selected="true"] .bl small{color:#F3EEE3}
+html[data-style="wood"] .setbtn .sn{background:var(--gold);color:#fff;border:0}
+html[data-style="wood"] .settings .mylang{border-color:var(--red);background:var(--red-soft);border-radius:14px}
+html[data-style="wood"] .note{background:var(--gold-soft);border-left-color:var(--gold)}
+html[data-style="wood"] details.acc{background:var(--green-soft);border-radius:14px}
+html[data-style="wood"] .q{border-top:4px solid var(--green)}
+html[data-style="wood"] .play{border-color:var(--red);color:var(--red)}
+html[data-style="wood"] footer{border-top:4px solid var(--gold)}
+html[data-style="wood"] .totop{background:var(--green);color:#fff;border:2px solid #fff}
+.hero .band{white-space:normal;font-size:clamp(11px,3.3vw,13px)}.hero .band .seg{white-space:nowrap}
+
+/* ===== TOEIC 版新增 ===== */
+.sent{font-size:21px;line-height:1.45}
+.vlist .ex{display:flex;gap:8px;align-items:center;margin:4px 0;font-size:16px}
+.rel .w .py{display:block}
+.vis{margin:8px 0;padding:10px;border:2px solid var(--ink);border-radius:6px;background:var(--paper);overflow-x:auto}
+.vis table{margin-top:4px;font-size:15px}.vis th{color:var(--ink);font-weight:700}
+.script .ans{color:var(--green)}
+.opt>span[lang=en]{font-size:17px}
+.setbtn .small{font-weight:400}
+.chip .trl{font-size:12px;margin:0}
+</style>
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script>
+const LEVEL='B';
+const PAIRS=[
+ ['num','fifteen','/ˌfɪfˈtin/','fifty','/ˈfɪfti/','15','50','-teen 的重音在後面，尾音拉長；-ty 的重音在前面，尾音很短。'],
+ ['num','thirteenth','/ˌθɝˈtinθ/','thirtieth','/ˈθɝtiəθ/','第 13；13 日','第 30；30 日'],
+ ['num','eighteen dollars','','eighty dollars','','18 元','80 元'],
+ ['num','four fifteen','','four fifty','','4:15','4:50'],
+ ['num','sixteen percent','','sixty percent','','16%','60%'],
+ ['sim','contact','/ˈkɑntækt/','contract','/ˈkɑntrækt/','聯絡','合約'],
+ ['sim','launch','/lɔntʃ/','lunch','/lʌntʃ/','上市；推出','午餐'],
+ ['sim','personal','/ˈpɝsənəl/','personnel','/ˌpɝsəˈnɛl/','個人的','人事；全體員工','personnel 的重音在最後一個音節。'],
+ ['sim','receipt','/rɪˈsit/','recipe','/ˈrɛsəpi/','收據','食譜'],
+ ['sim','expect','/ɪkˈspɛkt/','inspect','/ɪnˈspɛkt/','預期','檢查'],
+ ['sim','apartment','/əˈpɑrtmənt/','department','/dɪˈpɑrtmənt/','公寓','部門'],
+ ['sim','collect','/kəˈlɛkt/','correct','/kəˈrɛkt/','收集；領取','正確的；更正'],
+ ['sim','letter','/ˈlɛtɚ/','ladder','/ˈlædɚ/','信','梯子','美式發音中間的 t 和 d 聽起來很像，要靠母音分辨。'],
+ ['sim','file','/faɪl/','pile','/paɪl/','檔案；歸檔','一疊'],
+ ['sim','quite','/kwaɪt/','quiet','/ˈkwaɪət/','相當','安靜的'],
+ ['sent','The shelves are being stocked.','','The shelves have been stocked.','','架子正在補貨（有人正在做）。','架子已經補好貨了。','Part 1 的經典陷阱：照片裡沒有人在做動作，就不能選 being。'],
+ ['sent','We can ship it by Friday.','','We can\'t ship it by Friday.','','我們星期五前可以出貨。','我們星期五前沒辦法出貨。','can 念得很輕；can\'t 念得比較重，母音比較長。'],
+ ['sent','The meeting was moved to four fifteen.','','The meeting was moved to four fifty.','','會議改到四點十五分。','會議改到四點五十分。'],
+ ['sent','He\'s walking near the station.','','He\'s working near the station.','','他在車站附近走路。','他在車站附近工作。'],
+ ['sent','The launch is at noon.','','The lunch is at noon.','','發表會在中午。','午餐在中午。'],
+ ['sent','I\'ll have him call you.','','I\'ll have to call you.','','我會請他打給你。','我得打給你。']
+];
+const T=[
+{id:'t1',icon:'🧑‍💼',name:'人事與招募',en:'Personnel & Hiring',
+ goal:'聽懂徵才、面試、新人訓練和調職的對話，抓到「誰負責」「為什麼」和「下一步」。',
+ vocab:[
+  ['applicant','/ˈæplɪkənt/','應徵者','We received over forty applicants.'],
+  ['candidate','/ˈkændɪˌdeɪt/','候選人；人選','She is the strongest candidate.'],
+  ['qualification','/ˌkwɑləfəˈkeɪʃən/','資格；條件','What qualifications are required?'],
+  ['interview','/ˈɪntɚˌvju/','面試','The interview is scheduled for Monday.'],
+  ['hire','/haɪr/','雇用','We plan to hire two more engineers.'],
+  ['promote','/prəˈmoʊt/','升遷','He was promoted to manager.'],
+  ['benefits','/ˈbɛnəfɪts/','福利','The job offers good benefits.'],
+  ['orientation','/ˌɔriənˈteɪʃən/','新進人員訓練','Orientation begins at nine.']],
+ related:[['human resources','人力資源部'],['position','職位'],['job opening','職缺'],['transfer','調職'],['supervisor','主管'],['paperwork','文件作業'],['ID badge','識別證'],['reference','推薦人']],
+ vary:[
+  {t:'徵才與面試',items:[['We\'re looking for a marketing assistant.','我們在找一位行銷助理。'],['Could you set up interviews for next week?','可以安排下星期的面試嗎？'],['She has the experience we need.','她有我們需要的經驗。']],n:'set up、arrange、schedule 都是「安排」。選項常常換一個字說同一件事。'},
+  {t:'否定問句',items:[['Haven\'t you finished the orientation yet?','你還沒完成新人訓練嗎？'],['Didn\'t he apply for a transfer?','他不是申請調職了嗎？']],n:'否定問句照事實回答：做了就說 Yes，沒做就說 No，和中文的「對，還沒」相反。'},
+  {t:'交代工作',items:[['I\'ll e-mail them this afternoon.','我今天下午寄電子郵件給他們。'],['Please wear your badge at all times.','請隨時配戴識別證。'],['Report it to the security desk right away.','請馬上向警衛櫃台報告。']],n:'I\'ll… 常常是「下一步會做什麼」的答案。'}],
+ qs:[
+  {p:1,pic:'@b-two',o:[['They\'re shaking hands.','他們正在握手。'],['They\'re standing side by side.','他們並肩站著。'],['They\'re sitting across from each other.','他們面對面坐著。'],['They\'re handing out documents.','他們正在發文件。']],ans:1,k:'照片裡兩個人站在一起：standing side by side（並肩站著）。',w:'兩人的手沒有握在一起；他們是站著，不是坐著；手上也沒有文件。'},
+  {p:2,a:[['W','Who\'s going to interview the candidates?','誰要面試這些人選？']],o:[['The HR manager will.','人資經理。'],['In the conference room.','在會議室。'],['It has an interesting view.','那裡的景色很有趣。']],ans:0,k:'Who 問人，回答 The HR manager will（interview them）。',w:'B 回答的是地點；C 的 interesting view 聽起來像 interview，是相似音陷阱。'},
+  {p:2,a:[['M','Why did Mr. Ito apply for a transfer?','伊藤先生為什麼申請調職？']],o:[['By the end of the month.','月底以前。'],['He wants to be closer to his family.','他想離家人近一點。'],['The application form is online.','申請表在網路上。']],ans:1,k:'Why 問原因。回答不一定有 because，直接說原因也可以。',w:'A 回答的是時間；C 的 application 和 apply 是同一個字根，是陷阱。'},
+  {p:2,a:[['W','Haven\'t you finished the orientation yet?','你還沒完成新人訓練嗎？']],o:[['The new employees are here.','新員工到了。'],['It\'s a finished product.','那是成品。'],['No, there\'s one more session tomorrow.','還沒，明天還有一場。']],ans:2,k:'否定問句照事實回答：還沒完成就說 No。',w:'A 沒有回答有沒有完成；B 只是重複 finished。'},
+  {p:3,kind:'conversation',a:[
+    ['M','Hi Rachel, hi Tom. Have you two looked at the applications for the marketing assistant position?','嗨 Rachel，嗨 Tom。你們兩位看過行銷助理職位的應徵資料了嗎？'],
+    ['W','I have. We received over forty, but only five people have the experience we need.','我看過了。我們收到四十多份，可是只有五個人有我們需要的經驗。'],
+    ['M2','I agree. And two of them speak Spanish, which would really help with our new clients in Mexico.','我同意。而且其中兩位會說西班牙文，對我們在墨西哥的新客戶很有幫助。'],
+    ['M','Great. Rachel, could you set up interviews with those five for next week?','太好了。Rachel，可以請你安排下星期和這五位面試嗎？'],
+    ['W','Sure. I\'ll e-mail them this afternoon and book the conference room.','沒問題。我今天下午寄電子郵件給他們，並且預約會議室。']],
+   g:[
+    {q:['What are the speakers mainly discussing?','說話的人主要在討論什麼？'],o:[['Job applicants','應徵者'],['A marketing budget','行銷預算'],['A business trip','出差'],['A training schedule','訓練時間表']],ans:0,k:'applications、position、interviews 都和應徵者有關。marketing 只是職位名稱。'},
+    {q:['Why would speaking Spanish be useful?','為什麼會說西班牙文有幫助？'],o:[['The company is opening an office in Spain.','公司要在西班牙設辦公室。'],['The company has new clients in Mexico.','公司在墨西哥有新客戶。'],['The manager is from Mexico.','經理來自墨西哥。'],['The position requires a lot of travel.','這個職位需要常常出差。']],ans:1,k:'which would really help with our new clients in Mexico。這是三人對話，這句話是第二位男子說的。'},
+    {q:['What will the woman do this afternoon?','女子今天下午會做什麼？'],o:[['Review more applications','看更多應徵資料'],['Meet with clients','和客戶見面'],['Contact some candidates','聯絡幾位人選'],['Post a job advertisement','刊登徵才廣告']],ans:2,k:'I\'ll e-mail them this afternoon。e-mail them 換句話說是 contact some candidates。'}]},
+  {p:4,kind:'talk',a:[
+    ['W','Welcome, everyone, to your first day at Hartwell Industries. I\'m Maria Santos from human resources. This morning, you\'ll complete some paperwork and receive your ID badges. After lunch, your department supervisors will give you a tour of the building. One reminder: your badge is required to enter the building, so please wear it at all times. If you lose it, report it to the security desk right away. Now, let\'s begin by filling out the tax forms in your folders.','歡迎各位第一天來到 Hartwell Industries。我是人力資源部的 Maria Santos。今天早上，各位要完成一些文件，並且領取識別證。午餐之後，各部門的主管會帶各位參觀大樓。提醒一件事：進入大樓需要識別證，所以請隨時配戴。如果遺失，請馬上向警衛櫃台報告。現在，我們先從填寫資料夾裡的稅務表格開始。']],
+   g:[
+    {q:['Who are the listeners?','聽的人是誰？'],o:[['Security guards','警衛'],['New employees','新進員工'],['Department supervisors','部門主管'],['Building visitors','大樓訪客']],ans:1,k:'Welcome to your first day at Hartwell Industries：第一天上班的人就是新進員工。'},
+    {q:['What will happen after lunch?','午餐之後會做什麼？'],o:[['A tour will be given.','會有導覽。'],['Badges will be handed out.','會發識別證。'],['A test will be given.','會有測驗。'],['Tax forms will be collected.','會收稅務表格。']],ans:0,k:'After lunch, your department supervisors will give you a tour。識別證是早上領的。'},
+    {q:['What are the listeners asked to do next?','聽的人接下來要做什麼？'],o:[['Go to the security desk','去警衛櫃台'],['Meet their supervisors','見主管'],['Have their photos taken','拍照'],['Complete some forms','填寫一些表格']],ans:3,k:'最後一句 let\'s begin by filling out the tax forms。filling out 換句話說是 complete。'}]}],
+ shadow:[['Could you set up interviews for next week?','可以安排下星期的面試嗎？'],['Only five people have the experience we need.','只有五個人有我們需要的經驗。'],['Please wear your badge at all times.','請隨時配戴識別證。']],
+ qa:[{q:['Why do you want to work for our company?','你為什麼想來我們公司工作？'],kw:[['because','i want','i would like','i am interested'],['experience','learn','skills','company','career','team']],s:[['Because I want to learn new skills and grow with your team.','因為我想學習新的技能，和貴公司的團隊一起成長。'],['I\'m interested in this position because it matches my experience.','我對這個職位有興趣，因為它符合我的經驗。']]},
+     {q:['What are your strengths?','你的優點是什麼？'],kw:[['i am','i can','my'],['good at','work','team','careful','learn','hard','communication']],s:[['I\'m good at working with a team, and I learn quickly.','我擅長團隊合作，而且學得很快。'],['I\'m careful with details, and I always meet deadlines.','我很注意細節，而且總是準時完成工作。']]}],
+ pat:[['be required to + 動詞（必須）','A badge is required to enter the building.','進入大樓必須有識別證。'],['which + 動詞（補充說明前一句）','Two of them speak Spanish, which would really help.','其中兩位會說西班牙文，這會很有幫助。'],['set up / arrange + 名詞','Could you set up a meeting with the client?','可以安排和客戶開會嗎？']]},
+
+{id:'t2',icon:'📊',name:'會議與簡報',en:'Meetings & Presentations',tool:['time','num'],
+ goal:'聽懂會議安排、業績報告和指派工作，學會把聽到的資訊和圖表對起來。',
+ vocab:[
+  ['quarter','/ˈkwɔrtɚ/','季度','Sales rose last quarter.'],
+  ['handout','/ˈhændˌaʊt/','講義','Please take a handout.'],
+  ['projector','/prəˈdʒɛktɚ/','投影機','The projector isn\'t working.'],
+  ['due','/du/','到期的；應繳交的','The report is due on Friday.'],
+  ['survey','/ˈsɝveɪ/','問卷調查','We conducted a customer survey.'],
+  ['findings','/ˈfaɪndɪŋz/','調查結果','She will present the findings.'],
+  ['branch','/bræntʃ/','分公司；分店','The downtown branch is closing.'],
+  ['submit','/səbˈmɪt/','提交','Please submit your ideas by Friday.']],
+ related:[['budget review','預算審查'],['in a row','連續'],['overall','整體來說'],['equipment','設備'],['director','處長；主任'],['in the meantime','在這段期間'],['suggestion','建議'],['conference call','電話會議']],
+ vary:[
+  {t:'期限',items:[['When is the sales report due?','業績報告什麼時候要交？'],['By Friday at noon.','星期五中午以前。'],['Please do that by Friday.','請在星期五以前完成。']],n:'by + 時間 是「在…以前」；until 是「一直到」。due 是「到期、該交了」。'},
+  {t:'數字的變化',items:[['Sales rose by eight percent.','業績成長了百分之八。'],['Sales dropped for the third quarter in a row.','業績連續第三季下滑。'],['The training budget has been cut in half.','訓練預算被砍了一半。']],n:'上升：rise、increase、go up。下降：drop、fall、decrease、decline。'},
+  {t:'直述句也要回應',items:[['The projector in room B isn\'t working.','B 會議室的投影機壞了。'],['Then let\'s use room C instead.','那我們改用 C 會議室吧。']],n:'Part 2 有些題目不是問句。聽到一個問題，合理的回應通常是「解決方法」。'}],
+ qs:[
+  {p:1,pic:'@i-presentation',o:[['A screen is being installed on a wall.','有人正在把螢幕裝到牆上。'],['Some charts have been left on a desk.','一些圖表被留在桌上。'],['A graph is being displayed on a screen.','螢幕上正顯示著一張圖表。'],['A presenter is pointing at a chart.','簡報者正指著圖表。']],ans:2,k:'螢幕上有一張折線圖。display（展示）是少數「沒有人也可以用 being」的動詞。',w:'A 的 being installed 需要有人正在安裝；照片裡沒有桌子，也沒有人。'},
+  {p:2,a:[['M','When is the sales report due?','業績報告什麼時候要交？']],o:[['Twenty percent higher.','高了百分之二十。'],['It\'s in the report.','在報告裡。'],['By Friday at noon.','星期五中午以前。']],ans:2,k:'When…due? 問期限，回答 By Friday at noon。',w:'A 回答的是數字；B 只是重複 report。'},
+  {p:2,a:[['W','Should we print the handouts or just e-mail them?','講義要印出來，還是用電子郵件寄就好？']],o:[['Let\'s e-mail them to save paper.','用寄的吧，可以省紙。'],['Yes, we should.','是的，我們應該。'],['The printer on the second floor.','二樓的印表機。']],ans:0,k:'A or B 的選擇問句，選一個並說明理由。',w:'B 用 Yes 回答選擇問句，不對；C 的 printer 只是和 print 有關。'},
+  {p:2,a:[['M','The projector in room B isn\'t working.','B 會議室的投影機壞了。']],o:[['I worked on the project.','那個專案是我做的。'],['Then let\'s use room C instead.','那我們改用 C 會議室吧。'],['It was a great presentation.','那場簡報很棒。']],ans:1,k:'對方說出一個問題，合理的回應是提出解決方法。',w:'A 的 project 聽起來像 projector，worked 重複了 working，都是陷阱。'},
+  {p:3,kind:'conversation',vis:{t:'Meeting Room Schedule (Tuesday)',head:true,rows:[['Room','Morning','Afternoon'],['Room A','Sales team','Available'],['Room B','Available','Client visit'],['Room C','Training','Training']]},a:[
+    ['W','Hi, James. I need a room for the budget review on Tuesday. It will take about two hours.','嗨，James。我星期二需要一間會議室開預算審查會，大約要兩個小時。'],
+    ['M','Let me look at the schedule. Do you prefer the morning or the afternoon?','我看一下時間表。你想要早上還是下午？'],
+    ['W','The morning, if possible. Our director is leaving for the airport at one.','可以的話，早上。我們處長一點要去機場。'],
+    ['M','Then there\'s only one room free. I\'ll put your name down. Do you need any equipment?','那只有一間有空，我把你的名字登記上去。需要什麼設備嗎？'],
+    ['W','Just a projector. And could you make sure there are at least ten chairs?','只要投影機。另外，可以請你確認至少有十張椅子嗎？']],
+   g:[
+    {q:['What is the purpose of the meeting?','這場會議的目的是什麼？'],o:[['To train new staff','訓練新員工'],['To review a budget','審查預算'],['To welcome a client','歡迎客戶'],['To plan a trip','規劃旅行']],ans:1,k:'I need a room for the budget review。'},
+    {q:['Look at the graphic. Which room will the woman most likely use?','請看圖表。女子最可能使用哪一間會議室？'],o:[['Room A','A 會議室'],['Room B','B 會議室'],['Room C','C 會議室'],['Room D','D 會議室']],ans:1,k:'女子要早上，男子說只有一間有空。圖表上早上是 Available 的只有 Room B。圖表題要把「聽到的條件」和「圖表」對起來。'},
+    {q:['What does the woman ask the man to do?','女子請男子做什麼？'],o:[['Call the director','打電話給處長'],['Order lunch','訂午餐'],['Repair a projector','修理投影機'],['Check the number of chairs','確認椅子的數量']],ans:3,k:'could you make sure there are at least ten chairs? 換句話說是 check the number of chairs。'}]},
+  {p:4,kind:'talk',a:[
+    ['M','Before we finish, I\'d like to share last quarter\'s results. Overall sales rose by eight percent, mainly thanks to our online store. However, sales in our downtown branch dropped for the third quarter in a row. I\'ve asked Karen to prepare a customer survey so we can find out why. She\'ll present the findings at next month\'s meeting. In the meantime, I\'d like each of you to send me one idea for bringing more customers into the downtown branch. Please do that by Friday.','結束之前，我想報告上一季的成果。整體業績成長了百分之八，主要歸功於我們的網路商店。不過，市中心分店的業績已經連續第三季下滑。我已經請 Karen 準備一份顧客問卷，讓我們找出原因。她會在下個月的會議報告調查結果。在這段期間，請各位每人給我一個點子，讓更多顧客來市中心分店。請在星期五以前完成。']],
+   g:[
+    {q:['What does the speaker say about the online store?','說話者提到網路商店的什麼事？'],o:[['It will be redesigned.','會重新設計。'],['It helped increase sales.','它幫助業績成長。'],['It received complaints.','收到客訴。'],['It will close next month.','下個月會關閉。']],ans:1,k:'sales rose…mainly thanks to our online store。thanks to 是「多虧、歸功於」。'},
+    {q:['What has Karen been asked to do?','Karen 被要求做什麼？'],o:[['Manage the downtown branch','管理市中心分店'],['Hire more staff','多請員工'],['Prepare a survey','準備問卷'],['Lead next month\'s meeting','主持下個月的會議']],ans:2,k:'I\'ve asked Karen to prepare a customer survey。'},
+    {q:['What should the listeners do by Friday?','聽的人星期五以前要做什麼？'],o:[['Submit a suggestion','提交一個建議'],['Visit the downtown branch','去市中心分店'],['Complete a survey','填問卷'],['Review a report','看報告']],ans:0,k:'send me one idea 換句話說是 submit a suggestion。'}]}],
+ shadow:[['Overall sales rose by eight percent.','整體業績成長了百分之八。'],['Could you make sure there are at least ten chairs?','可以請你確認至少有十張椅子嗎？'],['She\'ll present the findings at next month\'s meeting.','她會在下個月的會議報告調查結果。']],
+ qa:[{q:['When is your next report or assignment due?','你下一份報告或作業什麼時候要交？'],kw:[['it is due','due','i have to'],['by','on','next','tomorrow','friday','monday','week']],s:[['It\'s due next Monday.','下星期一要交。'],['I have to submit it by Friday at noon.','我必須在星期五中午以前交。']]},
+     {q:['How can a store bring in more customers?','一家店可以怎麼吸引更多顧客？'],kw:[['it can','they can','i think','by'],['discount','online','advertise','social media','service','sale','price']],s:[['I think it can offer discounts and advertise on social media.','我認為可以提供折扣，並且在社群媒體打廣告。'],['They can improve their service and sell products online.','他們可以改善服務，並且在網路上賣產品。']]}],
+ pat:[['thanks to + 名詞（多虧）','Sales rose thanks to our online store.','多虧了網路商店，業績成長了。'],['for the + 序數 + 時間 + in a row（連續）','Profits fell for the second year in a row.','獲利連續第二年下滑。'],['make sure (that) + 句子','Please make sure the door is locked.','請確認門有鎖好。']]},
+
+{id:'t3',icon:'🛒',name:'採購與訂單',en:'Purchasing & Orders',tool:['price','num'],
+ goal:'聽懂訂貨、缺貨、出貨和請款的對話，分辨數字，並且聽出說話者「話裡的意思」。',
+ vocab:[
+  ['invoice','/ˈɪnvɔɪs/','請款單；發票','I\'m calling about the invoice.'],
+  ['shipment','/ˈʃɪpmənt/','一批貨；出貨','We expect a new shipment on Monday.'],
+  ['out of stock','/aʊt əv ˈstɑk/','缺貨','That model is out of stock.'],
+  ['in bulk','/ɪn ˈbʌlk/','大量地','We get a discount if we order in bulk.'],
+  ['supplier','/səˈplaɪɚ/','供應商','We need to find a new supplier.'],
+  ['quantity','/ˈkwɑntəti/','數量','Please check the quantity.'],
+  ['charge','/tʃɑrdʒ/','收費','There is no extra charge.'],
+  ['remaining','/rɪˈmeɪnɪŋ/','剩下的','The remaining items will arrive later.']],
+ related:[['place an order','下訂單'],['business day','工作天'],['unit','單位；件'],['at no extra charge','不另外收費'],['make up for','補償'],['corrected invoice','更正後的請款單'],['purchase order','採購單'],['wholesale','批發']],
+ vary:[
+  {t:'交貨時間',items:[['How soon can you deliver the chairs?','椅子最快什麼時候可以送到？'],['Within three business days.','三個工作天內。'],['We expect a new shipment on Monday.','我們預計星期一會進貨。']],n:'How soon 問「多快」，回答 within…（在…以內）或 by…（在…以前）。'},
+  {t:'訂單出錯',items:[['Only twelve arrived this morning.','今天早上只到了十二個。'],['They sent the wrong color.','他們寄錯顏色了。'],['We charged you for fifteen boxes by mistake.','我們誤收了您十五箱的費用。']],n:'注意數字：ordered（訂了多少）、arrived（到了多少）、remaining（還差多少）。'},
+  {t:'補救方法',items:[['I can send a similar model today.','我今天可以寄類似的型號。'],['We\'ll take ten percent off your next order.','您下一筆訂單我們會打九折。'],['I\'ve e-mailed you a corrected invoice.','我已經把更正的請款單寄給您了。']],n:'offer to do（主動提出要做）常常是第三題的答案。'}],
+ qs:[
+  {p:1,pic:'@moving',o:[['A box has been placed next to a truck.','一個箱子被放在卡車旁邊。'],['A truck is being loaded with furniture.','有人正在把家具搬上卡車。'],['A driver is opening the truck\'s door.','司機正在打開卡車的門。'],['Some boxes are being stacked in a warehouse.','有人正在倉庫裡堆箱子。']],ans:0,k:'卡車旁邊有一個箱子。has been placed 表示「已經放好了」，不需要有人在照片裡。',w:'B、D 的 being loaded、being stacked 都需要有人正在做；照片裡沒有人，也沒有家具。'},
+  {p:2,a:[['W','How soon can you deliver the office chairs?','辦公椅最快什麼時候可以送到？']],o:[['They\'re very comfortable.','坐起來很舒服。'],['Within three business days.','三個工作天內。'],['To the main office.','送到總公司。']],ans:1,k:'How soon 問「多快」，回答 Within three business days。',w:'A 在形容椅子；C 回答的是送到哪裡（Where）。'},
+  {p:2,a:[['M','Didn\'t we order the blue folders?','我們訂的不是藍色的文件夾嗎？']],o:[['In the supply cabinet.','在用品櫃裡。'],['I\'ll put them in order.','我會把它們排好。'],['Yes, but they sent the wrong color.','是啊，可是他們寄錯顏色了。']],ans:2,k:'否定問句照事實回答：確實訂了藍色，所以說 Yes，再補充發生了什麼事。',w:'A 回答的是地點；B 的 in order 是「按順序」，和 order（訂購）意思不同。'},
+  {p:2,a:[['W','Can I get a discount if I order in bulk?','如果大量訂購，可以有折扣嗎？']],o:[['Yes, ten percent off orders over a hundred units.','可以，超過一百件打九折。'],['The bulk of the work is done.','大部分的工作做完了。'],['I counted them twice.','我數了兩次。']],ans:0,k:'Yes/No 問句，回答 Yes 並說明條件。',w:'B 的 the bulk of 是「大部分」；C 的 counted 聽起來像 discount，是相似音陷阱。'},
+  {p:3,kind:'conversation',a:[
+    ['W','Hello, this is Nina from Brightway Offices. I\'m calling about order number four four seven one. We ordered twenty desk lamps, but only twelve arrived this morning.','你好，我是 Brightway Offices 的 Nina。我打來是關於訂單 4471 號。我們訂了二十盞檯燈，可是今天早上只到了十二盞。'],
+    ['M','Let me check. I\'m very sorry. It looks like the remaining eight are out of stock at the moment. We expect a new shipment on Monday.','我查一下。非常抱歉，看起來剩下的八盞目前缺貨。我們預計星期一會進貨。'],
+    ['W','Monday? We\'re opening our new office this Friday.','星期一？我們的新辦公室這個星期五就要開幕了。'],
+    ['M','I understand. In that case, I can send you eight lamps of a similar model today at no extra charge. Would that work?','我了解。這樣的話，我今天可以寄八盞類似型號的檯燈給您，不另外收費。這樣可以嗎？'],
+    ['W','That would be great. Could you e-mail me a picture of that model first?','那太好了。可以先把那個型號的照片用電子郵件寄給我嗎？']],
+   g:[
+    {q:['Why is the woman calling?','女子為什麼打電話？'],o:[['To cancel an order','取消訂單'],['To report that part of an order is missing','告知訂單少了一部分'],['To ask about a price','詢問價錢'],['To change a delivery address','更改送貨地址']],ans:1,k:'訂了二十盞，只到十二盞：訂單少了一部分。'},
+    {q:['Why does the woman say, "We\'re opening our new office this Friday"?','女子為什麼說「我們的新辦公室這個星期五就要開幕了」？'],o:[['To invite the man to an event','邀請男子參加活動'],['To explain why she is busy','說明她為什麼很忙'],['To show that the matter is urgent','表示這件事很急'],['To request a larger order','要求增加訂購數量']],ans:2,k:'這是「話裡的意思」題。男子說星期一才有貨，女子說星期五就要開幕，意思是「星期一太晚了」。'},
+    {q:['What does the man offer to do?','男子主動提出要做什麼？'],o:[['Send a different model','寄另一種型號'],['Give a full refund','全額退款'],['Deliver the items himself','親自送貨'],['Provide free delivery next time','下次免運費']],ans:0,k:'I can send you eight lamps of a similar model。a similar model 換句話說是 a different model。'}]},
+  {p:4,kind:'message',a:[
+    ['M','Hi, this message is for Ms. Alvarez. This is Greg from Delta Paper Supply. I\'m calling about the invoice we sent you last week. It seems there was an error. We charged you for fifteen boxes of copy paper, but you only ordered five. I apologize for the mistake. I\'ve already e-mailed you a corrected invoice, so please ignore the first one. Also, to make up for the trouble, we\'ll take ten percent off your next order. If you have any questions, you can reach me directly at extension two oh four.','你好，這是給 Alvarez 小姐的留言。我是 Delta Paper Supply 的 Greg。我打來是關於上星期寄給您的請款單。看來上面有一個錯誤：我們向您收了十五箱影印紙的費用，可是您只訂了五箱。很抱歉出了這個錯。我已經用電子郵件寄了更正後的請款單給您，所以請不用理會第一份。另外，為了補償造成的麻煩，您下一筆訂單我們會打九折。如果有任何問題，可以直接打分機 204 找我。']],
+   g:[
+    {q:['What is the purpose of the call?','這通電話的目的是什麼？'],o:[['To confirm a delivery date','確認送貨日期'],['To correct a billing error','更正帳單上的錯誤'],['To promote a new product','推銷新產品'],['To request a payment','催繳款項']],ans:1,k:'the invoice…there was an error。invoice 的錯誤就是 a billing error。'},
+    {q:['What does the speaker say he has already done?','說話者說他已經做了什麼？'],o:[['Sent a revised invoice','寄了修正的請款單'],['Shipped the extra boxes','寄出多的箱子'],['Called the manager','打電話給經理'],['Issued a refund','辦理退款']],ans:0,k:'I\'ve already e-mailed you a corrected invoice。corrected 換句話說是 revised。'},
+    {q:['What will the listener receive on her next order?','聽的人下一筆訂單會得到什麼？'],o:[['Free shipping','免運費'],['A free sample','免費樣品'],['Faster delivery','更快送達'],['A discount','折扣']],ans:3,k:'we\'ll take ten percent off your next order：打九折就是 a discount。'}]}],
+ shadow:[['We ordered twenty desk lamps, but only twelve arrived.','我們訂了二十盞檯燈，可是只到了十二盞。'],['The remaining eight are out of stock at the moment.','剩下的八盞目前缺貨。'],['I\'ve already e-mailed you a corrected invoice.','我已經用電子郵件寄了更正後的請款單給您。']],
+ qa:[{q:['Your order arrived, but two items are missing. What would you say?','你訂的貨到了，可是少了兩件。你會怎麼說？'],kw:[['i ordered','my order','i am calling','i received'],['missing','only','arrived','but','send']],s:[['I\'m calling about my order. I ordered ten boxes, but only eight arrived.','我打來是關於我的訂單。我訂了十箱，可是只到了八箱。'],['Two items are missing from my order. Could you send them today?','我的訂單少了兩件。可以今天寄出嗎？']]},
+     {q:['How soon do you need the items?','您多快需要這些東西？'],kw:[['i need','we need','by','before','within'],['friday','monday','tomorrow','week','days','today','as soon as possible']],s:[['We need them by this Friday.','我們這個星期五以前需要。'],['As soon as possible. We need them within two days.','越快越好。我們兩天內需要。']]}],
+ pat:[['charge + 人 + for + 東西','They charged us for fifteen boxes.','他們向我們收了十五箱的費用。'],['at no extra charge（不另外收費）','We can deliver it at no extra charge.','我們可以送貨，不另外收費。'],['to make up for + 名詞（補償）','To make up for the delay, we\'ll offer a discount.','為了補償延誤，我們會提供折扣。']]},
+
+{id:'t4',icon:'📣',name:'行銷與業務',en:'Marketing & Sales',tool:['num'],
+ goal:'聽懂產品上市、顧客調查和廣告的內容，練習聽出「換句話說」。',
+ vocab:[
+  ['launch','/lɔntʃ/','上市；推出','The product launch is in June.'],
+  ['advertise','/ˈædvɚˌtaɪz/','打廣告','We should advertise online.'],
+  ['competitor','/kəmˈpɛtətɚ/','競爭對手','Our competitor lowered its prices.'],
+  ['consumer','/kənˈsumɚ/','消費者','Consumers liked the new taste.'],
+  ['promotion','/prəˈmoʊʃən/','促銷；升遷','The promotion ends this Sunday.'],
+  ['account','/əˈkaʊnt/','客戶；帳戶','Who is in charge of the Henderson account?'],
+  ['consultation','/ˌkɑnsəlˈteɪʃən/','諮詢','The first consultation is free.'],
+  ['review','/rɪˈvju/','評論；審閱','Read reviews from our customers.']],
+ related:[['in charge of','負責'],['take over','接手'],['packaging','包裝'],['beverage','飲料'],['social media','社群媒體'],['free of charge','免費'],['bring up','提出（話題）'],['satisfied','滿意的']],
+ vary:[
+  {t:'提議',items:[['Why don\'t we advertise on social media?','我們何不在社群媒體打廣告？'],['That\'s worth trying.','值得試試看。'],['I think we should change the color.','我認為我們應該換顏色。']],n:'Why don\'t we…? 是提議，不是問原因。回答 Good idea. / That\'s worth trying.，不會用 Because。'},
+  {t:'負責人',items:[['Who\'s in charge of the Henderson account?','誰負責 Henderson 這個客戶？'],['I think Olivia took it over.','我想是 Olivia 接手了。']],n:'account 在業務上是「客戶」。in charge of 是負責，no charge 是不收費，不要搞混。'},
+  {t:'調查結果',items:[['Most of them liked the taste.','大部分的人喜歡它的味道。'],['Nearly half said the can looks too similar.','將近一半的人說罐子看起來太像了。'],['I\'ll bring it up at the meeting.','我會在會議上提出來。']],n:'most（大部分）、nearly half（將近一半）、a few（少數）是常考的數量說法。'}],
+ qs:[
+  {p:1,pic:'@store',o:[['Customers are lining up outside a shop.','顧客在商店外面排隊。'],['A sign is being hung above a door.','有人正在門上方掛招牌。'],['Merchandise is displayed on the sidewalk.','商品陳列在人行道上。'],['An awning extends over the store entrance.','遮雨棚延伸到商店入口的上方。']],ans:3,k:'商店門口上方有條紋的遮雨棚（awning）。extend over 是「延伸到…上方」。',w:'照片裡沒有人，所以 A、B 不對；店外面也沒有擺商品。'},
+  {p:2,a:[['M','How did the product launch go?','產品發表進行得怎麼樣？']],o:[['Better than we expected.','比我們預期的好。'],['At noon, in the cafeteria.','中午，在員工餐廳。'],['By express mail.','用快遞。']],ans:0,k:'How did…go? 問「進行得怎麼樣」，回答評價。',w:'B 是把 launch 聽成 lunch 的陷阱；C 回答的是寄送方式。'},
+  {p:2,a:[['W','Why don\'t we advertise on social media?','我們何不在社群媒體打廣告？']],o:[['Because the meeting ran late.','因為會議開太久了。'],['That\'s worth trying.','值得試試看。'],['I read it in the newspaper.','我在報紙上看到的。']],ans:1,k:'Why don\'t we…? 是提議。回答同意或不同意，不是回答原因。',w:'A 用 Because 回答，是把提議當成問原因的陷阱；C 只是和媒體有關。'},
+  {p:2,a:[['M','Who\'s in charge of the Henderson account?','誰負責 Henderson 這個客戶？']],o:[['There\'s no charge.','不用錢。'],['About five thousand dollars.','大約五千元。'],['I think Olivia took it over.','我想是 Olivia 接手了。']],ans:2,k:'Who 問人，回答 Olivia。took it over 是「接手」。',w:'A 重複了 charge，可是意思是「費用」；B 把 account 當成帳戶金額。'},
+  {p:3,kind:'conversation',a:[
+    ['M','Lisa, do you have a minute? I just got the results of the customer survey for our new energy drink.','Lisa，你有空嗎？我剛拿到新能量飲料的顧客調查結果。'],
+    ['W','Oh, good. What did people think?','喔，太好了。大家覺得怎麼樣？'],
+    ['M','Well, most of them liked the taste, but nearly half said the can looks too much like our competitor\'s.','嗯，大部分的人喜歡它的味道，可是將近一半的人說罐子看起來太像競爭對手的了。'],
+    ['W','Hmm, that\'s a problem. The design team spent months on it.','嗯，這是個問題。設計團隊花了好幾個月做的。'],
+    ['M','I know. But we still have six weeks before the launch. I think we should at least ask them to change the color.','我知道。可是離上市還有六個星期。我認為至少應該請他們換顏色。'],
+    ['W','All right. I\'ll bring it up at this afternoon\'s meeting with the design team.','好吧。我會在今天下午和設計團隊開會時提出來。']],
+   g:[
+    {q:['What product are the speakers discussing?','說話的人在討論什麼產品？'],o:[['A beverage','飲料'],['A snack','零食'],['A magazine','雜誌'],['A software program','軟體']],ans:0,k:'energy drink 換句話說是 a beverage（飲料）。'},
+    {q:['What problem does the man mention?','男子提到什麼問題？'],o:[['The price is too high.','價格太高。'],['The taste is too sweet.','味道太甜。'],['The packaging looks similar to another product.','包裝看起來和別的產品很像。'],['The launch has been delayed.','上市延後了。']],ans:2,k:'the can looks too much like our competitor\'s。can（罐子）換成 packaging（包裝）。'},
+    {q:['What does the woman say she will do?','女子說她會做什麼？'],o:[['Contact a competitor','聯絡競爭對手'],['Raise an issue at a meeting','在會議上提出一個問題'],['Conduct another survey','再做一次調查'],['Postpone the launch','延後上市']],ans:1,k:'I\'ll bring it up at this afternoon\'s meeting。bring up 換句話說是 raise an issue。'}]},
+  {p:4,kind:'advertisement',a:[
+    ['W','Is your small business ready to grow? At Brightline Marketing, we help local companies reach more customers online. Our team will design your website, manage your social media, and send you a clear report every month, so you always know what\'s working. This month only, new clients get their first consultation free of charge. Don\'t just take our word for it. Visit our website to read reviews from over two hundred satisfied business owners. Brightline Marketing: let\'s grow together.','您的小型企業準備好成長了嗎？在 Brightline Marketing，我們幫助在地公司在網路上接觸更多顧客。我們的團隊會設計您的網站、管理您的社群媒體，而且每個月寄給您一份清楚的報告，讓您隨時知道哪些方法有效。只有這個月，新客戶第一次諮詢免費。不要只聽我們說，請上我們的網站，看看兩百多位滿意的企業主寫的評論。Brightline Marketing，讓我們一起成長。']],
+   g:[
+    {q:['What type of business is being advertised?','這是哪一種公司的廣告？'],o:[['A printing company','印刷公司'],['A marketing firm','行銷公司'],['An accounting office','會計事務所'],['A computer store','電腦店']],ans:1,k:'Brightline Marketing 幫公司做網站和社群媒體，是行銷公司。firm 就是公司。'},
+    {q:['What does the business provide every month?','這家公司每個月提供什麼？'],o:[['A report','一份報告'],['A coupon','折價券'],['A new website','新網站'],['A training session','訓練課程']],ans:0,k:'send you a clear report every month。'},
+    {q:['According to the speaker, what can listeners find on the website?','根據說話者，聽的人可以在網站上找到什麼？'],o:[['A price list','價目表'],['Job openings','職缺'],['Discount codes','折扣碼'],['Customer reviews','顧客評論']],ans:3,k:'Visit our website to read reviews from…business owners。'}]}],
+ shadow:[['Most of them liked the taste.','大部分的人喜歡它的味道。'],['We still have six weeks before the launch.','離上市還有六個星期。'],['New clients get their first consultation free of charge.','新客戶第一次諮詢免費。']],
+ qa:[{q:['How would you advertise a new coffee shop?','你會怎麼宣傳一家新開的咖啡店？'],kw:[['i would','i will','we can','we could'],['social media','online','discount','free','coupon','photos','poster']],s:[['I would post photos on social media and offer a discount in the first week.','我會在社群媒體貼照片，並且在第一個星期提供折扣。'],['We could give free coffee to the first fifty customers.','我們可以送免費咖啡給前五十位顧客。']]},
+     {q:['What do you think of this design?','你覺得這個設計怎麼樣？'],kw:[['i think','i like','in my opinion','it looks'],['color','but','should','simple','great','change','bright']],s:[['I like it, but I think we should change the color.','我喜歡，可是我認為應該換顏色。'],['It looks great. The design is simple and easy to remember.','看起來很棒。設計很簡單，容易記住。']]}],
+ pat:[['Why don\'t we + 動詞原形?（提議）','Why don\'t we ask the design team?','我們何不問問設計團隊？'],['look like + 名詞（看起來像）','The can looks like our competitor\'s.','這個罐子看起來像競爭對手的。'],['be in charge of + 名詞（負責）','She\'s in charge of the marketing team.','她負責行銷團隊。']]},
+
+{id:'t5',icon:'📦',name:'物流與倉儲',en:'Logistics & Warehousing',tool:['time','num'],
+ goal:'聽懂出貨、庫存和倉庫廣播，分清楚「正在做」和「已經做好」，並且把時間和圖表對起來。',
+ vocab:[
+  ['inventory','/ˈɪnvənˌtɔri/','庫存；存貨清單','The inventory report is wrong.'],
+  ['warehouse','/ˈwɛrˌhaʊs/','倉庫','The boxes are in the warehouse.'],
+  ['customs','/ˈkʌstəmz/','海關','The shipment cleared customs.'],
+  ['loading dock','/ˈloʊdɪŋ dɑk/','裝卸貨區','Take these to the loading dock.'],
+  ['inspection','/ɪnˈspɛkʃən/','檢查','The safety inspection is on Thursday.'],
+  ['fragile','/ˈfrædʒəl/','易碎的','Be careful. These items are fragile.'],
+  ['tracking number','/ˈtrækɪŋ ˌnʌmbɚ/','追蹤號碼','Here is your tracking number.'],
+  ['behind schedule','/bɪˈhaɪnd ˈskɛdʒul/','進度落後','The truck is behind schedule.']],
+ related:[['stack','堆疊'],['load','裝貨'],['unload','卸貨'],['recount','重新清點'],['walkway','走道'],['give a hand','幫忙'],['ahead of schedule','進度超前'],['volunteer','自願者']],
+ vary:[
+  {t:'貨到了沒',items:[['Has the shipment cleared customs yet?','那批貨通關了嗎？'],['Yes, it was released this morning.','通關了，今天早上放行的。'],['The truck is running an hour behind schedule.','卡車比預定時間晚了一個小時。']],n:'clear customs 是「通關」；behind schedule 是落後，ahead of schedule 是超前。'},
+  {t:'正在做 和 已經做好',items:[['Boxes are being unloaded from a truck.','有人正在從卡車上卸箱子。'],['Boxes have been stacked on a cart.','箱子已經堆在推車上了。']],n:'Part 1 最重要的觀念：are being + p.p. 要有人正在做；have been + p.p. 是已經完成的狀態。'},
+  {t:'庫存問題',items:[['I can only find a hundred fifty on the shelves.','我在架上只找到一百五十箱。'],['The count in the system is wrong.','系統裡的數量是錯的。'],['I\'d better recount everything.','我最好全部重新清點。']],n:'I\'d better = I had better，「我最好…」，後面加動詞原形。'}],
+ qs:[
+  {p:1,pic:'@x-boxes',o:[['Some boxes are stacked on a cart.','一些箱子堆在推車上。'],['Some boxes are being unloaded from a truck.','有人正在從卡車上卸箱子。'],['A worker is sealing a package.','工人正在封箱。'],['Shelves are being assembled.','有人正在組裝架子。']],ans:0,k:'推車上堆了三個箱子。are stacked 是「堆著」的狀態。',w:'照片裡沒有人、沒有卡車，所以 being unloaded、sealing、being assembled 都不對。'},
+  {p:2,a:[['W','Has the shipment from Osaka cleared customs yet?','大阪來的那批貨通關了嗎？']],o:[['Our customers are happy.','我們的顧客很滿意。'],['Yes, it was released this morning.','通關了，今天早上放行的。'],['By ship, I believe.','我想是用船運。']],ans:1,k:'Has…yet? 問「是否已經」，回答 Yes，並說明時間。',w:'A 的 customers 聽起來像 customs；C 的 ship 聽起來像 shipment，都是相似音陷阱。'},
+  {p:2,a:[['M','Where should I put these returned items?','這些退回來的商品要放在哪裡？']],o:[['On the shelf marked "Returns."','放在標示「Returns」的架子上。'],['They returned yesterday.','他們昨天回來了。'],['About thirty items.','大約三十件。']],ans:0,k:'Where 問地點，回答 On the shelf。',w:'B 的 returned 是「回來」；C 回答的是數量。'},
+  {p:2,a:[['W','The delivery truck is running an hour behind schedule.','送貨的卡車比預定時間晚了一個小時。']],o:[['He runs every morning.','他每天早上跑步。'],['Behind the warehouse.','在倉庫後面。'],['I\'ll let the customer know.','我來通知客戶。']],ans:2,k:'直述句說出一個問題，合理的回應是「我來處理」。',w:'A 重複 run，可是意思是跑步；B 重複 behind，可是說的是位置。'},
+  {p:3,kind:'conversation',a:[
+    ['W','Carlos, the inventory report says we have two hundred boxes of the T-40 filters, but I can only find a hundred and fifty on the shelves.','Carlos，庫存報告說我們有兩百箱 T-40 濾網，可是我在架上只找到一百五十箱。'],
+    ['M','That\'s strange. Did you check the loading dock? Sometimes new stock sits there for a day before it\'s put away.','真奇怪。你看過裝卸貨區了嗎？有時候新到的貨會在那裡放一天才上架。'],
+    ['W','I did. There\'s nothing there. I\'m worried that the count in the system is wrong.','我看過了，那裡什麼都沒有。我擔心系統裡的數量是錯的。'],
+    ['M','It could be. We switched to the new scanning software last week, and a few people have had trouble with it.','有可能。我們上星期換了新的掃描軟體，有幾個人用起來有問題。'],
+    ['W','I see. I\'d better recount everything in that section, then.','原來如此。那我最好把那一區全部重新清點一次。'],
+    ['M','Good idea. I\'ll ask Dana to give you a hand so it goes faster.','好主意。我請 Dana 幫你，這樣比較快。']],
+   g:[
+    {q:['What problem does the woman report?','女子提出什麼問題？'],o:[['A delivery arrived late.','貨太晚到。'],['Some items were damaged.','有些商品損壞了。'],['Some numbers do not match.','有些數字對不起來。'],['A shelf is broken.','架子壞了。']],ans:2,k:'報告說兩百箱，架上只有一百五十箱：數字對不起來。'},
+    {q:['What does the man suggest may have caused the problem?','男子認為可能是什麼造成這個問題？'],o:[['A new software system','新的軟體系統'],['A supplier\'s mistake','供應商的錯誤'],['A lack of storage space','儲存空間不夠'],['A late shipment','貨太晚到']],ans:0,k:'We switched to the new scanning software last week, and a few people have had trouble with it。'},
+    {q:['What does the man say he will do?','男子說他會做什麼？'],o:[['Recount the items himself','自己重新清點'],['Call the software company','打電話給軟體公司'],['Check the loading dock','檢查裝卸貨區'],['Ask a coworker to help','請一位同事幫忙']],ans:3,k:'I\'ll ask Dana to give you a hand。give a hand 是「幫忙」，Dana 換成 a coworker。'}]},
+  {p:4,kind:'announcement',vis:{t:'Delivery Schedule',head:true,rows:[['Truck','Destination','Departure'],['Truck 1','Riverside','8:00 A.M.'],['Truck 2','Lakewood','9:30 A.M.'],['Truck 3','Hillcrest','11:00 A.M.'],['Truck 4','Bayview','1:00 P.M.']]},a:[
+    ['M','Attention, all warehouse staff. I have an update on today\'s deliveries. Because of road construction on Highway Nine, the truck going to Lakewood will leave thirty minutes earlier than scheduled. Loading team, please make sure that truck is ready first. Also, a reminder: the safety inspection is this Thursday. All walkways must be clear of boxes and equipment before then. Finally, we\'re still looking for two volunteers to work this Saturday. If you\'re interested, see me in my office before the end of the day.','所有倉庫同仁請注意，今天的送貨有一項更新。因為九號公路道路施工，前往 Lakewood 的卡車會比預定時間提早三十分鐘出發。裝貨組，請先確認那輛卡車準備好。另外提醒：安全檢查是這個星期四，在那之前，所有走道都不能有箱子和設備。最後，我們還需要兩位自願者在這個星期六上班。有興趣的人，請在今天下班前到我的辦公室找我。']],
+   g:[
+    {q:['Look at the graphic. What time will the truck to Lakewood leave today?','請看圖表。前往 Lakewood 的卡車今天幾點出發？'],o:[['8:00 A.M.','早上 8:00'],['9:00 A.M.','早上 9:00'],['9:30 A.M.','早上 9:30'],['11:00 A.M.','早上 11:00']],ans:1,k:'圖表上 Lakewood 是 9:30，廣播說提早三十分鐘，所以是 9:00。圖表題的答案通常要「圖表 + 聽到的資訊」一起算。'},
+    {q:['What will take place on Thursday?','星期四會有什麼事？'],o:[['A safety inspection','安全檢查'],['Road construction','道路施工'],['A staff meeting','員工會議'],['A software update','軟體更新']],ans:0,k:'the safety inspection is this Thursday。'},
+    {q:['Why should listeners visit the speaker\'s office?','聽的人為什麼要去說話者的辦公室？'],o:[['To pick up a schedule','拿時間表'],['To report a problem','報告問題'],['To sign up for extra work','登記額外的上班'],['To collect safety equipment','領安全裝備']],ans:2,k:'looking for two volunteers to work this Saturday…see me in my office。自願星期六上班就是 extra work。'}]}],
+ shadow:[['Has the shipment cleared customs yet?','那批貨通關了嗎？'],['The truck is running an hour behind schedule.','卡車比預定時間晚了一個小時。'],['All walkways must be clear of boxes and equipment.','所有走道都不能有箱子和設備。']],
+ qa:[{q:['A delivery will be late. What would you tell the customer?','貨會晚到。你會怎麼告訴客戶？'],kw:[['i am sorry','sorry','apologize','unfortunately'],['late','delay','behind schedule','arrive','tomorrow','delivery']],s:[['I\'m sorry, but your delivery is running behind schedule. It will arrive tomorrow morning.','很抱歉，您的貨比預定時間晚，明天早上會送到。'],['We apologize for the delay. The truck will arrive about an hour late.','造成延誤，我們很抱歉。卡車大約會晚一個小時到。']]},
+     {q:['Where should we store fragile items?','易碎的物品應該放在哪裡？'],kw:[['we should','you should','put','store','keep'],['shelf','shelves','box','boxes','top','carefully','separate']],s:[['We should keep them on the lower shelves and mark the boxes clearly.','應該放在比較低的架子上，並且在箱子上標示清楚。'],['Put them in a separate area and handle them carefully.','放在另外一區，並且小心搬運。']]}],
+ pat:[['be + 時間 + behind schedule','We are two days behind schedule.','我們的進度落後兩天。'],['had better + 動詞原形（最好）','I\'d better check the numbers again.','我最好再檢查一次數字。'],['be clear of + 名詞（沒有…）','The exits must be clear of boxes.','出口不能堆放箱子。']]},
+
+{id:'t6',icon:'💻',name:'技術與設備',en:'Tech & Facilities',tool:['time'],
+ goal:'聽懂電腦問題、設備報修和大樓公告，抓到「原因」「解決方法」和「要聽的人做什麼」。',
+ vocab:[
+  ['maintenance','/ˈmeɪntənəns/','維護；保養','The elevator is closed for maintenance.'],
+  ['install','/ɪnˈstɔl/','安裝','I can install the latest version.'],
+  ['update','/ˈʌpˌdeɪt/','更新','It started after the system update.'],
+  ['back up','/bæk ˈʌp/','備份','Have you backed up your files?'],
+  ['technician','/tɛkˈnɪʃən/','技術人員','A technician will come at two.'],
+  ['out of order','/aʊt əv ˈɔrdɚ/','故障','The copy machine is out of order.'],
+  ['password','/ˈpæsˌwɝd/','密碼','How do I reset my password?'],
+  ['facility','/fəˈsɪləti/','設施','The facilities office is on the first floor.']],
+ related:[['freeze','當機'],['restart','重新開機'],['remotely','遠端地'],['outdated','過時的'],['shut down','關閉；停止運作'],['parking garage','停車場'],['inconvenience','不便'],['technical support','技術支援']],
+ vary:[
+  {t:'描述問題',items:[['My computer keeps freezing.','我的電腦一直當機。'],['The projector isn\'t working.','投影機不能用。'],['The air conditioner is out of order.','冷氣故障了。']],n:'keep + V-ing 是「一直…」。isn\'t working、is broken、is out of order 都是「壞了」。'},
+  {t:'解決方法',items:[['I can install the latest version remotely.','我可以遠端安裝最新版本。'],['Just save your work and leave the computer on.','把工作存檔，電腦開著就好。'],['There\'s a guide on the company website.','公司網站上有說明。']],n:'leave + 東西 + on 是「讓它開著」；turn off 是關掉。'},
+  {t:'施工公告',items:[['The elevators will be shut down for maintenance.','電梯將停止運作，進行保養。'],['Use the Oak Street entrance instead.','請改用 Oak 街的入口。'],['We apologize for the inconvenience.','造成不便，敬請見諒。']],n:'instead 是「改成」。公告常考：什麼地方關閉、到什麼時候、改用什麼。'}],
+ qs:[
+  {p:1,pic:'@i-device-laptop',o:[['A technician is repairing a monitor.','技術人員正在修理螢幕。'],['A keyboard is being packed into a box.','有人正在把鍵盤裝進箱子。'],['A laptop has been left open.','一台筆電開著放在那裡。'],['Some cables are lying on the floor.','地上有一些電線。']],ans:2,k:'照片裡只有一台打開的筆電。has been left open 是「被打開放著」的狀態。',w:'照片裡沒有人，所以 A、B 不對；也沒有電線。'},
+  {p:2,a:[['M','Who should I call about the air conditioner?','冷氣的問題我應該打給誰？']],o:[['It\'s too cold in here.','這裡太冷了。'],['Around three o\'clock.','大約三點。'],['The maintenance department.','維修部門。']],ans:2,k:'Who 不一定回答人名，也可以回答部門。',w:'A 只是和冷氣有關；B 回答的是時間。'},
+  {p:2,a:[['W','Have you backed up the files on your computer?','你電腦裡的檔案備份了嗎？']],o:[['I\'ll be back at two.','我兩點回來。'],['Not yet. I\'ll do it right now.','還沒，我現在就做。'],['They\'re filed by date.','它們是按日期歸檔的。']],ans:1,k:'Have you…? 問是否已經做了，回答 Not yet（還沒）。',w:'A 的 back 是「回來」；C 的 filed 是「歸檔」。都是重複聲音，意思不同。'},
+  {p:2,a:[['M','Do you know how to reset the password?','你知道怎麼重設密碼嗎？']],o:[['There\'s a guide on the company website.','公司網站上有說明。'],['Yes, I passed the test.','是的，我通過考試了。'],['The word was misspelled.','那個字拼錯了。']],ans:0,k:'間接回答：沒有說 Yes 或 No，而是告訴你去哪裡找方法。這種回答在中級很常見。',w:'B 的 passed 和 C 的 word 都是從 password 拆出來的相似音陷阱。'},
+  {p:3,kind:'conversation',a:[
+    ['M','Hi, this is Aaron in accounting. My computer keeps freezing whenever I open the payroll program.','你好，我是會計部的 Aaron。我每次打開薪資程式，電腦就當機。'],
+    ['W','Hi, Aaron. When did this start?','嗨，Aaron。這是什麼時候開始的？'],
+    ['M','Yesterday afternoon, right after the system update. I\'ve restarted it three times already.','昨天下午，就在系統更新之後。我已經重新開機三次了。'],
+    ['W','OK. We\'ve had a few reports like that. The update doesn\'t work well with older versions of the payroll program. I can install the latest version for you remotely. It\'ll take about twenty minutes.','好。我們收到幾個類似的回報。這次更新和舊版的薪資程式不太相容。我可以遠端幫你安裝最新版本，大約要二十分鐘。'],
+    ['M','That\'s fine, but I have to send out the salary data by noon.','可以，不過我中午以前必須把薪資資料送出去。'],
+    ['W','No problem. I\'ll start right away. Just save your work and leave the computer on.','沒問題，我馬上開始。你只要把工作存檔，電腦開著就好。']],
+   g:[
+    {q:['What department does the woman most likely work in?','女子最可能在哪個部門工作？'],o:[['Accounting','會計'],['Technical support','技術支援'],['Human resources','人力資源'],['Sales','業務']],ans:1,k:'女子處理電腦問題、幫忙安裝程式，是技術支援。會計部是男子的部門。'},
+    {q:['According to the woman, what is causing the problem?','根據女子的說法，問題的原因是什麼？'],o:[['A broken keyboard','鍵盤壞了'],['A computer virus','電腦病毒'],['A weak Internet connection','網路訊號不好'],['An outdated program','程式版本太舊']],ans:3,k:'The update doesn\'t work well with older versions。older versions 換句話說是 an outdated program。'},
+    {q:['What is the man told to do?','男子被告知要做什麼？'],o:[['Keep his computer turned on','讓電腦開著'],['Restart his computer','重新開機'],['Come back after noon','中午以後再來'],['Bring his computer to her office','把電腦拿到她的辦公室']],ans:0,k:'leave the computer on 換句話說是 keep his computer turned on。'}]},
+  {p:4,kind:'announcement',a:[
+    ['W','Good morning. This is a message from the facilities office for everyone in the Carter Building. This weekend, the elevators on the east side will be shut down for regular maintenance. The work will begin Saturday at 8 A.M. and should be finished by Sunday evening. During this time, please use the elevators on the west side or the stairs. In addition, the parking garage will remain open, but the entrance on Pine Street will be closed. Use the Oak Street entrance instead. We apologize for the inconvenience.','早安。這是設施管理處給 Carter 大樓所有人的訊息。這個週末，東側的電梯將停止運作，進行定期保養。工程從星期六早上八點開始，預計星期天晚上以前完成。這段期間，請使用西側的電梯或樓梯。另外，停車場照常開放，但是 Pine 街的入口將會關閉，請改用 Oak 街的入口。造成不便，敬請見諒。']],
+   g:[
+    {q:['What is the announcement mainly about?','這段公告主要是關於什麼？'],o:[['A building renovation plan','大樓整修計畫'],['Elevator maintenance','電梯保養'],['A new parking fee','新的停車費'],['An office relocation','辦公室搬遷']],ans:1,k:'the elevators…will be shut down for regular maintenance。'},
+    {q:['When is the work expected to be completed?','工程預計什麼時候完成？'],o:[['Saturday morning','星期六早上'],['Saturday evening','星期六晚上'],['Sunday evening','星期天晚上'],['Monday morning','星期一早上']],ans:2,k:'should be finished by Sunday evening。星期六早上是「開始」的時間。'},
+    {q:['What does the speaker say about the parking garage?','說話者提到停車場的什麼事？'],o:[['It will be closed all weekend.','整個週末都關閉。'],['It will be free of charge.','會免費。'],['It is being repainted.','正在重新油漆。'],['One of its entrances will be closed.','其中一個入口會關閉。']],ans:3,k:'the parking garage will remain open, but the entrance on Pine Street will be closed。but 後面是重點。'}]}],
+ shadow:[['My computer keeps freezing whenever I open the program.','我每次打開那個程式，電腦就當機。'],['I can install the latest version for you remotely.','我可以遠端幫你安裝最新版本。'],['Use the Oak Street entrance instead.','請改用 Oak 街的入口。']],
+ qa:[{q:['What\'s wrong with your computer?','你的電腦怎麼了？'],kw:[['it','my computer','the screen','i can not'],['freezing','slow','working','turn on','open','connect','keeps']],s:[['It keeps freezing when I open my e-mail.','我一打開電子郵件它就當機。'],['My computer is very slow, and I can\'t connect to the Internet.','我的電腦很慢，而且連不上網路。']]},
+     {q:['The elevator is out of order. What should visitors do?','電梯故障了，訪客應該怎麼做？'],kw:[['they should','they can','please','visitors'],['stairs','other','elevator','instead','west','use']],s:[['They should use the stairs or the elevator on the other side.','他們應該走樓梯，或是搭另一側的電梯。'],['Please use the stairs instead.','請改走樓梯。']]}],
+ pat:[['keep + V-ing（一直…）','The printer keeps making a strange noise.','印表機一直發出奇怪的聲音。'],['leave + 名詞 + on / open','Please leave the door open.','請讓門開著。'],['A is closed. Use B instead.','The front door is closed. Use the side door instead.','前門關閉，請改用側門。']]},
+
+{id:'t7',icon:'💰',name:'財務與預算',en:'Finance & Budgets',tool:['price','num'],
+ goal:'聽懂預算、費用核銷和金額的討論，聽出大數字、百分比和「擔心什麼」。',
+ vocab:[
+  ['budget','/ˈbʌdʒɪt/','預算','The training budget has been cut.'],
+  ['expense','/ɪkˈspɛns/','費用；支出','Please submit your travel expenses.'],
+  ['approve','/əˈpruv/','核准','Could you approve this report?'],
+  ['reimburse','/ˌriɪmˈbɝs/','核銷退款','You will be reimbursed within five days.'],
+  ['revenue','/ˈrɛvəˌnu/','營收','Revenue increased by ten percent.'],
+  ['proposal','/prəˈpoʊzəl/','提案','I looked over the budget proposal.'],
+  ['figure','/ˈfɪɡjɚ/','數字','Could you update the figures?'],
+  ['in advance','/ɪn ədˈvæns/','事先','You need approval in advance.']],
+ related:[['expense report','費用報告'],['push back','延後'],['look over','仔細看過'],['cut in half','減半'],['revise','修改'],['receipt','收據'],['pay back','還錢；退款'],['accounting','會計']],
+ vary:[
+  {t:'大數字',items:[['About twelve thousand dollars.','大約一萬兩千元。'],['We could save about ten thousand dollars.','我們大約可以省下一萬元。'],['Any expense over five hundred dollars.','任何超過五百元的費用。']],n:'英文沒有「萬」：10,000 是 ten thousand，120,000 是 a hundred and twenty thousand。'},
+  {t:'會議改期',items:[['It\'s been pushed back to Thursday.','已經延到星期四了。'],['It\'s been moved up to Monday.','已經提前到星期一了。']],n:'push back 是「延後」，move up 是「提前」。'},
+  {t:'請人核准或修改',items:[['Could you approve this expense report today?','你今天可以核准這份費用報告嗎？'],['Could you revise the numbers and send them to me?','你可以修改數字再寄給我嗎？'],['Sure, just leave it on my desk.','好，放在我桌上就可以了。']],n:'revise the numbers 和 update the figures 意思一樣，是常見的換句話說。'}],
+ qs:[
+  {p:1,pic:'@i-building-bank',o:[['People are entering a building.','人們正走進一棟建築物。'],['A roof is being repaired.','有人正在修理屋頂。'],['Flags are flying in front of a building.','建築物前面有旗子在飄。'],['Columns line the front of the building.','建築物的正面有一排柱子。']],ans:3,k:'建築物正面有一排柱子（columns）。line 當動詞是「沿著…排成一排」，是 Part 1 的常考字。',w:'照片裡沒有人，所以 A、B 不對；也沒有旗子。'},
+  {p:2,a:[['W','How much did we spend on travel last quarter?','我們上一季的差旅花了多少錢？']],o:[['About twelve thousand dollars.','大約一萬兩千元。'],['To Singapore and Seoul.','去新加坡和首爾。'],['A quarter past nine.','九點十五分。']],ans:0,k:'How much 問金額，回答 About twelve thousand dollars。',w:'B 回答的是去哪裡；C 的 quarter 是「十五分鐘」，和「季度」意思不同。'},
+  {p:2,a:[['M','Could you approve this expense report today?','你今天可以核准這份費用報告嗎？']],o:[['It was expensive.','那很貴。'],['Sure, just leave it on my desk.','好，放在我桌上就可以了。'],['The reporter is here.','記者來了。']],ans:1,k:'Could you…? 是請求，回答 Sure，並告訴對方怎麼做。',w:'A 的 expensive 聽起來像 expense；C 的 reporter 聽起來像 report，都是相似音陷阱。'},
+  {p:2,a:[['W','Isn\'t the budget meeting scheduled for tomorrow?','預算會議不是排在明天嗎？']],o:[['Yes, it\'s a tight budget.','是的，預算很緊。'],['In the main conference room.','在大會議室。'],['No, it\'s been pushed back to Thursday.','不是，已經延到星期四了。']],ans:2,k:'否定問句照事實回答：不是明天，所以說 No，再說出新的時間。',w:'A 只是重複 budget，沒有回答時間；B 回答的是地點。'},
+  {p:3,kind:'conversation',a:[
+    ['W','Mr. Grant, I\'ve finished looking over the budget proposal for next year.','Grant 先生，我看完明年的預算提案了。'],
+    ['M','Thanks, Emily. Is there anything we should change?','謝謝你，Emily。有什麼應該修改的地方嗎？'],
+    ['W','Well, the advertising budget is up by thirty percent, but the training budget has been cut in half. I\'m concerned about that. We\'re hiring six new people in the spring.','嗯，廣告預算增加了百分之三十，可是訓練預算被砍了一半。我很擔心這一點，因為我們春天要請六位新人。'],
+    ['M','Good point. They\'ll all need training. Do you think we could move some money from advertising?','說得對，他們都需要訓練。你覺得可以從廣告那邊挪一些錢過來嗎？'],
+    ['W','I think so. If we advertise less in print and more online, we could save about ten thousand dollars.','我想可以。如果少做一點平面廣告，多做網路廣告，我們大約可以省下一萬元。'],
+    ['M','That sounds reasonable. Could you revise the numbers and send them to me by Wednesday?','聽起來很合理。你可以修改數字，星期三以前寄給我嗎？']],
+   g:[
+    {q:['What are the speakers discussing?','說話的人在討論什麼？'],o:[['A hiring plan','徵才計畫'],['A budget proposal','預算提案'],['An advertising campaign','廣告活動'],['A training manual','訓練手冊']],ans:1,k:'第一句就說 the budget proposal for next year。徵才、廣告、訓練都只是預算裡的項目。'},
+    {q:['What is the woman concerned about?','女子擔心什麼？'],o:[['Advertising costs too much.','廣告太花錢。'],['The deadline is too soon.','期限太趕。'],['There may not be enough money for training.','訓練的錢可能不夠。'],['Too many people are being hired.','請了太多人。']],ans:2,k:'the training budget has been cut in half. I\'m concerned about that。因為要請六位新人，訓練經費卻減半。'},
+    {q:['What does the man ask the woman to do?','男子請女子做什麼？'],o:[['Update some figures','更新一些數字'],['Contact an advertising agency','聯絡廣告公司'],['Schedule a training session','安排訓練課程'],['Interview job candidates','面試應徵者']],ans:0,k:'Could you revise the numbers? 換句話說是 update some figures。'}]},
+  {p:4,kind:'talk',a:[
+    ['M','Thanks for joining this short training session on our new expense system. Starting next month, paper receipts will no longer be accepted. Instead, you\'ll take a photo of each receipt with your phone and upload it using the company app. Once your manager approves the report, you\'ll be paid back within five business days, much faster than the three weeks it takes now. Keep in mind that any expense over five hundred dollars still needs approval in advance. I\'ll now show you how to use the app, so please take out your phones.','謝謝各位參加這場關於新費用系統的簡短訓練。從下個月開始，不再接受紙本收據。各位要改用手機拍下每一張收據，再用公司的應用程式上傳。主管核准報告之後，各位會在五個工作天內拿到退款，比現在的三個星期快很多。請記得，任何超過五百元的費用，還是需要事先核准。我現在示範怎麼使用這個應用程式，請各位把手機拿出來。']],
+   g:[
+    {q:['What is the talk mainly about?','這段談話主要是關於什麼？'],o:[['A new way to report expenses','申報費用的新方法'],['A change in salaries','薪資的調整'],['A company phone plan','公司的手機方案'],['A new travel agency','新的旅行社']],ans:0,k:'training session on our new expense system：新的費用系統。'},
+    {q:['What is an advantage of the new system?','新系統有什麼優點？'],o:[['Higher spending limits','花費上限提高'],['Fewer approvals','需要的核准變少'],['Faster repayment','退款比較快'],['Free phones','免費手機']],ans:2,k:'paid back within five business days, much faster than the three weeks it takes now。paid back 換成 repayment。'},
+    {q:['What will the listeners most likely do next?','聽的人接下來最可能做什麼？'],o:[['Fill out a paper form','填紙本表格'],['Watch a demonstration','看示範'],['Talk to their managers','找主管談'],['Submit their receipts','交出收據']],ans:1,k:'I\'ll now show you how to use the app。show you how 換句話說是 a demonstration（示範）。'}]}],
+ shadow:[['The training budget has been cut in half.','訓練預算被砍了一半。'],['We could save about ten thousand dollars.','我們大約可以省下一萬元。'],['You\'ll be paid back within five business days.','你會在五個工作天內拿到退款。']],
+ qa:[{q:['How can a company save money?','一家公司可以怎麼省錢？'],kw:[['it can','they can','we can','by','i think'],['less','save','online','paper','cut','reduce','travel','energy']],s:[['It can save money by using less paper and holding meetings online.','可以少用紙，並且在線上開會來省錢。'],['I think they can reduce travel costs and advertise online.','我認為他們可以降低差旅費，並且改在網路上打廣告。']]},
+     {q:['What do you spend the most money on each month?','你每個月花最多錢在什麼地方？'],kw:[['i spend','most of','the most'],['food','rent','on','transportation','clothes','phone']],s:[['I spend the most money on food and rent.','我花最多錢在吃和房租上。'],['Most of my money goes to rent and transportation.','我大部分的錢花在房租和交通上。']]}],
+ pat:[['be up / down by + 百分比','The advertising budget is up by thirty percent.','廣告預算增加了百分之三十。'],['no longer + 動詞（不再）','Paper receipts will no longer be accepted.','不再接受紙本收據。'],['Once + 句子, 句子（一旦…就）','Once your manager approves it, you\'ll be paid.','主管一核准，你就會拿到錢。']]},
+
+{id:'t8',icon:'🌐',name:'出差與活動',en:'Business Travel & Events',tool:['date','time'],
+ goal:'聽懂研討會報到、行程變更和訂位的對話，抓到「什麼取消了」「改成什麼」和「還需要做什麼」。',
+ vocab:[
+  ['itinerary','/aɪˈtɪnəˌrɛri/','行程表','I\'m e-mailing your new itinerary.'],
+  ['register','/ˈrɛdʒɪstɚ/','報名；註冊','Eighty people have registered.'],
+  ['venue','/ˈvɛnju/','場地','The venue is near the station.'],
+  ['accommodation','/əˌkɑməˈdeɪʃən/','住宿','Accommodation is not included.'],
+  ['aisle seat','/ˈaɪl sit/','走道座位','I\'d prefer an aisle seat.'],
+  ['keynote speaker','/ˈkiˌnoʊt ˈspikɚ/','主講人','The keynote speaker arrived late.'],
+  ['convention','/kənˈvɛnʃən/','大型會議','The hotel is across from the convention center.'],
+  ['catering','/ˈkeɪtərɪŋ/','外燴；餐飲服務','We need catering for fifty people.']],
+ related:[['sign up for','報名'],['name tag','名牌'],['session','場次'],['workshop','工作坊'],['look over','仔細看過'],['in time for','趕得上'],['window seat','靠窗座位'],['business trip','出差']],
+ vary:[
+  {t:'都可以',items:[['Would you prefer an aisle seat or a window seat?','你想要走道還是靠窗的座位？'],['Either is fine with me.','哪一個都可以。'],['I don\'t have a preference.','我沒有特別的偏好。']],n:'選擇問句除了選一個，也可以回答 Either（都可以）、Neither（都不要）、Whichever…（看哪個…）。'},
+  {t:'行程變更',items:[['The airline has canceled your morning flight.','航空公司取消了您早上的班機。'],['I\'ve booked you on a flight that leaves at two.','我幫您訂了兩點起飛的班機。'],['You\'ll arrive in time for the dinner meeting.','您趕得上晚餐會議。']],n:'in time for 是「趕得上」；miss 是「錯過」。常考「哪一個活動不能參加」。'},
+  {t:'活動報到',items:[['I\'m checking in for the technology conference.','我要報到參加科技研討會。'],['I signed up for the workshop on data security.','我報名了資料安全的工作坊。'],['Lunch is included.','午餐包含在內。']],n:'sign up for 和 register for 都是「報名」。'}],
+ qs:[
+  {p:1,pic:'@i-train',o:[['Passengers are boarding a train.','乘客正在上火車。'],['There is a train on the tracks.','軌道上有一列火車。'],['Tickets are being checked at a gate.','有人正在閘門驗票。'],['Luggage has been piled on a platform.','行李被堆在月台上。']],ans:1,k:'照片裡只有一列火車在軌道上。tracks 是軌道。',w:'照片裡沒有人，所以 A、C 不對；也沒有行李和月台。'},
+  {p:2,a:[['M','Which hotel are the conference guests staying at?','研討會的來賓住在哪一家飯店？']],o:[['The one across from the convention center.','會議中心對面的那一家。'],['For three nights.','三個晚上。'],['Yes, they\'re staying.','是的，他們要住。']],ans:0,k:'Which hotel 問哪一家，回答常用 The one…（…的那一家）。',w:'B 回答的是住多久；C 用 Yes 回答 Wh- 問句，不對。'},
+  {p:2,a:[['W','Would you prefer an aisle seat or a window seat?','你想要走道還是靠窗的座位？']],o:[['Yes, I\'d prefer that.','是的，我比較想要那個。'],['Either is fine with me.','哪一個都可以。'],['I\'ll see you there.','到時候見。']],ans:1,k:'選擇問句也可以回答「都可以」：Either is fine with me。',w:'A 用 Yes 回答選擇問句，不對；C 的 see 聽起來像 seat，是相似音陷阱。'},
+  {p:2,a:[['M','How many people have registered for the workshop?','有多少人報名工作坊？']],o:[['At the front desk.','在櫃台。'],['It works well.','它很好用。'],['Nearly eighty so far.','到目前為止將近八十人。']],ans:2,k:'How many 問數量。so far 是「到目前為止」。注意 eighty（80）和 eighteen（18）。',w:'A 回答的是地點；B 的 works 聽起來像 workshop，是相似音陷阱。'},
+  {p:3,kind:'conversation',a:[
+    ['M','Hi, I\'m checking in for the technology conference. My name is Paul Becker.','你好，我要報到參加科技研討會。我的名字是 Paul Becker。'],
+    ['W','Welcome, Mr. Becker. Here\'s your name tag and the program. The opening speech starts at nine in the main hall.','歡迎，Becker 先生。這是您的名牌和議程。開幕致詞九點在大廳開始。'],
+    ['M','Thanks. Actually, I signed up for the workshop on data security this afternoon, but I don\'t see it on the program.','謝謝。其實我報名了今天下午資料安全的工作坊，可是議程上沒有看到。'],
+    ['W','Oh, I\'m afraid that one was canceled because the speaker\'s flight was delayed. But there\'s a similar session at three in Room two ten. Shall I add your name to the list?','喔，很抱歉，那一場取消了，因為講者的班機延誤。不過三點在 210 室有一場類似的。要我把您的名字加到名單上嗎？'],
+    ['M','Yes, please. And is lunch provided, or should I go out?','好，麻煩你。另外，有提供午餐嗎？還是我要出去吃？'],
+    ['W','Lunch is included. It\'ll be served in the dining area on the first floor at noon.','午餐包含在內，中午在一樓的用餐區供應。']],
+   g:[
+    {q:['Where most likely are the speakers?','說話的人最可能在哪裡？'],o:[['At a hotel front desk','在飯店櫃台'],['At a conference registration desk','在研討會的報到處'],['At an airline counter','在航空公司櫃台'],['At a restaurant','在餐廳']],ans:1,k:'checking in for the technology conference、name tag、program：研討會的報到處。check in 不一定是飯店。'},
+    {q:['Why was the workshop canceled?','工作坊為什麼取消？'],o:[['Not enough people signed up.','報名人數不夠。'],['The room was double-booked.','場地重複預約。'],['The speaker could not arrive in time.','講者沒辦法及時到。'],['The equipment was not working.','設備故障。']],ans:2,k:'because the speaker\'s flight was delayed：班機延誤，所以講者沒辦法及時到。'},
+    {q:['What does the woman say about lunch?','女子提到午餐的什麼事？'],o:[['It is included.','包含在內。'],['It costs extra.','要另外付費。'],['It will be served in Room 210.','會在 210 室供應。'],['It must be ordered in advance.','必須事先訂。']],ans:0,k:'Lunch is included。210 室是工作坊的地點，午餐在一樓。'}]},
+  {p:4,kind:'message',a:[
+    ['W','Hello, Mr. Tanaka. This is Julia from Global Travel Service, calling about your business trip to Chicago next week. Unfortunately, the airline has canceled your Monday morning flight. I\'ve booked you on a flight that leaves at 2 P.M. on the same day instead. That means you\'ll miss the welcome lunch, but you\'ll arrive in time for the dinner meeting at seven. Your hotel reservation hasn\'t changed. I\'m e-mailing your new itinerary now. Please look it over and call me back today if there\'s any problem.','田中先生您好。我是 Global Travel Service 的 Julia，打來是關於您下星期去芝加哥出差的事。很遺憾，航空公司取消了您星期一早上的班機。我幫您改訂了同一天下午兩點起飛的班機。這表示您會錯過歡迎午餐，不過趕得上七點的晚餐會議。您的飯店訂房沒有變動。我現在把新的行程表用電子郵件寄給您。請仔細看一下，如果有任何問題，請今天回電給我。']],
+   g:[
+    {q:['Why is the speaker calling?','說話者為什麼打電話？'],o:[['To confirm a hotel booking','確認飯店訂房'],['To report a change in travel plans','告知旅行計畫有變動'],['To offer a discount','提供折扣'],['To ask for a payment','要求付款']],ans:1,k:'班機取消、改訂下午的班機：旅行計畫有變動。飯店訂房沒有變。'},
+    {q:['What event will the listener be unable to attend?','聽的人沒辦法參加哪一個活動？'],o:[['A lunch','午餐'],['A dinner meeting','晚餐會議'],['A morning workshop','早上的工作坊'],['A factory tour','工廠參觀']],ans:0,k:'you\'ll miss the welcome lunch。miss 換句話說是 be unable to attend。'},
+    {q:['What does the speaker ask the listener to do?','說話者請聽的人做什麼？'],o:[['Pay a fee','付費'],['Choose a seat','選座位'],['Call the airline','打電話給航空公司'],['Review a document','看一份文件']],ans:3,k:'Please look it over：it 是 new itinerary。look over 換成 review，itinerary 換成 a document。'}]}],
+ shadow:[['I signed up for the workshop on data security.','我報名了資料安全的工作坊。'],['The airline has canceled your Monday morning flight.','航空公司取消了您星期一早上的班機。'],['You\'ll arrive in time for the dinner meeting.','您趕得上晚餐會議。']],
+ qa:[{q:['Would you prefer an aisle seat or a window seat?','你想要走道還是靠窗的座位？'],kw:[['i would prefer','i prefer','i would like','either','please'],['aisle','window','fine','seat']],s:[['I\'d prefer a window seat, please.','我想要靠窗的座位，謝謝。'],['Either is fine with me.','哪一個都可以。']]},
+     {q:['Your flight was canceled. What would you ask the airline?','你的班機被取消了。你會問航空公司什麼？'],kw:[['can i','could you','is there','when','what time'],['next flight','another flight','book','refund','today','tomorrow','later']],s:[['Could you book me on the next flight today?','可以幫我訂今天的下一班飛機嗎？'],['Is there another flight later today, or can I get a refund?','今天晚一點還有別的班機嗎？或是可以退費嗎？']]}],
+ pat:[['sign up for / register for + 活動','I signed up for the afternoon session.','我報名了下午的場次。'],['in time for + 名詞（趕得上）','We arrived in time for the opening speech.','我們趕上了開幕致詞。'],['Shall I + 動詞原形?（要我…嗎）','Shall I add your name to the list?','要我把你的名字加到名單上嗎？']]}
+];
+
+const CREST='<svg viewBox="0 0 64 72"><path d="M32 3 L59 12 V36 C59 53 47 64 32 69 C17 64 5 53 5 36 V12 Z" fill="var(--crest)" stroke="var(--gold)" stroke-width="2.5"/><path d="M18 26 Q25 22 32 26 Q39 22 46 26 V46 Q39 42 32 46 Q25 42 18 46 Z" fill="none" stroke="var(--gold)" stroke-width="2"/><path d="M32 26 V46" stroke="var(--gold)" stroke-width="2"/><path d="M22 53 q3-4 6 0 t6 0 t6 0" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="16" r="2.5" fill="var(--gold)"/></svg>';
+const LIC="Tabler Icons\nMIT License\n\nCopyright (c) 2020-2024 Paweł Kuna\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n\nLucide\nISC License\n\nCopyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2022.\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n";
+const ICON_PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4l15 8-15 8z"/></svg>';
+const ICON_SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>';
+const ART={"i-device-laptop": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"8\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M3 19l18 0\" /> <path d=\"M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z\" /></svg></svg>", "b-two": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"0\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M10 16v5\" /> <path d=\"M14 16v5\" /> <path d=\"M9 9h6l-1 7h-4z\" /> <path d=\"M5 11c1.333 -1.333 2.667 -2 4 -2\" /> <path d=\"M19 11c-1.333 -1.333 -2.667 -2 -4 -2\" /> <path d=\"M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /></svg><svg x=\"36\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M10 16v5\" /> <path d=\"M14 16v5\" /> <path d=\"M8 16h8l-2 -7h-4z\" /> <path d=\"M5 11c1.667 -1.333 3.333 -2 5 -2\" /> <path d=\"M19 11c-1.667 -1.333 -3.333 -2 -5 -2\" /> <path d=\"M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /></svg></svg>", "store": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"8\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M3 21l18 0\" /> <path d=\"M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4\" /> <path d=\"M5 21l0 -10.15\" /> <path d=\"M19 21l0 -10.15\" /> <path d=\"M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4\" /></svg></svg>", "i-train": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"8\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M21 13c0 -3.87 -3.37 -7 -10 -7h-8\" /> <path d=\"M3 15h16a2 2 0 0 0 2 -2\" /> <path d=\"M3 6v5h17.5\" /> <path d=\"M3 11v4\" /> <path d=\"M8 11v-5\" /> <path d=\"M13 11v-4.5\" /> <path d=\"M3 19h18\" /></svg></svg>", "moving": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"2\" y=\"14\" width=\"72\" height=\"72\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /> <path d=\"M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /> <path d=\"M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5\" /></svg><svg x=\"62\" y=\"50\" width=\"38\" height=\"38\" viewBox=\"0 0 24 24\" stroke-width=\"1.64\"><path d=\"M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5\" /> <path d=\"M12 12l8 -4.5\" /> <path d=\"M12 12l0 9\" /> <path d=\"M12 12l-8 -4.5\" /> <path d=\"M16 5.25l-8 4.5\" /></svg></svg>", "i-presentation": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"8\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M3 4l18 0\" /> <path d=\"M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10\" /> <path d=\"M12 16l0 4\" /> <path d=\"M9 20l6 0\" /> <path d=\"M8 12l3 -3l2 2l3 -3\" /></svg></svg>", "i-building-bank": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><svg x=\"8\" y=\"8\" width=\"84\" height=\"84\" viewBox=\"0 0 24 24\" stroke-width=\"1.2\"><path d=\"M3 21l18 0\" /> <path d=\"M3 10l18 0\" /> <path d=\"M5 6l7 -3l7 3\" /> <path d=\"M4 10l0 11\" /> <path d=\"M20 10l0 11\" /> <path d=\"M8 14l0 3\" /> <path d=\"M12 14l0 3\" /> <path d=\"M16 14l0 3\" /></svg></svg>", "x-boxes": "<svg class=\"art\" viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 12q8 0 8 8v62h54\"/><circle cx=\"30\" cy=\"88\" r=\"5\"/><rect x=\"34\" y=\"58\" width=\"42\" height=\"24\"/><rect x=\"34\" y=\"34\" width=\"42\" height=\"24\"/><rect x=\"42\" y=\"14\" width=\"28\" height=\"20\"/><path d=\"M55 58v7M55 34v7M56 14v6\"/></svg>"};
+/* ---------- 題目整理：把題組展開成一題一題 ---------- */
+T.forEach(t=>{const out=[];let n=0;t.qs.forEach(x=>{
+  if(x.g){const grp=t.id+'g'+(n++);x.g.forEach((g,i)=>out.push({p:x.p,a:x.a,kind:x.kind,vis:x.vis,grp,gpos:i,q:g.q,o:g.o,ans:g.ans,k:g.k,w:g.w}))}
+  else out.push(Object.assign({a:[]},x))});t.qs=out});
+const PARTS={
+  1:{n:'照片描述',en:'Photographs',c:6,d:'看一張照片，聽四個句子，選出最符合照片的描述。四個句子只用聽的，題本上沒有字，只念一次。'},
+  2:{n:'應答問題',en:'Question-Response',c:25,d:'聽一個問句或直述句，再聽三個回應，選出最合適的。題目和選項都只用聽的，只念一次。'},
+  3:{n:'簡短對話',en:'Conversations',c:39,d:'聽兩個人或三個人的對話，每段對話回答三個問題。題目和四個選項印在題本上，對話只念一次。'},
+  4:{n:'簡短獨白',en:'Talks',c:30,d:'聽一個人說的話，例如廣播、留言、廣告、會議談話，每段回答三個問題。題目和選項印在題本上，只念一次。'}};
+const PART_NO={1:'Part 1',2:'Part 2',3:'Part 3',4:'Part 4'},PLIST=[1,2,3,4];
+const KIND={conversation:'對話',announcement:'廣播',message:'電話留言',talk:'談話',advertisement:'廣告',broadcast:'廣播節目',tour:'導覽',notice:'公告',speech:'致詞'};
+const TIPS={
+ A:{1:'先看照片：有誰？在做什麼？東西在哪裡？聽到照片裡「沒有」的人或東西，就可以刪掉那個選項。',
+    2:'最重要的是第一個字：Who 問人、When 問時間、Where 問地點、How much 問價錢。Wh- 問句不會用 Yes 或 No 回答。',
+    3:'播放前先讀三個問題，知道要聽什麼。看清楚問的是 the man 還是 the woman。',
+    4:'先讀三個問題。第一句話通常會告訴你「這是誰、在哪裡、要說什麼事」。數字、時間、地點最常考。'},
+ B:{1:'注意動作的狀態：is being + p.p. 表示「有人正在做」，has been + p.p. 表示「已經做好了」。照片裡沒有人，就不會是 being。',
+    2:'小心相似音和重複的字，聽起來像的選項常常是錯的。間接回答（例如「我問一下」「還沒決定」）常常是正確答案。',
+    3:'先讀題目，分清楚問的是主旨、細節還是下一步。選項很少照抄對話，要聽懂「換句話說」。三人對話先分清楚誰是誰。',
+    4:'先看題目和圖表。開頭抓主題和說話者身分，結尾常常是「請聽的人做什麼」。有圖表的題目要把聽到的資訊和圖表對起來。'}}[LEVEL];
+const LT={
+ A:{title:'聽得懂，答得對',en:'TOEIC Listening · Basic',band:'初級',badge:'BASIC',target:'目標：CEFR A2 到 B1（多益聽力 110 到 270 分）',
+    intro:'多益（TOEIC）聽力測驗初級的主題練習。每個主題先看重點，再學單字、做聽力題，最後跟讀和開口回答。句子比較短，預設語速比較慢。',
+    credit:'正修科技大學英語聽力補充教材—TOEIC Listening（初級）'},
+ B:{title:'聽得準，答得快',en:'TOEIC Listening · Intermediate',band:'中級',badge:'INTERMEDIATE',target:'目標：CEFR B1 到 B2（多益聽力 275 到 395 分）',
+    intro:'多益（TOEIC）聽力測驗中級的主題練習。題目用正式考試的語速，加入三人對話、圖表題、「換句話說」和推論題。每個主題先看重點，再學單字、做聽力題，最後跟讀和開口回答。',
+    credit:'正修科技大學英語聽力補充教材—TOEIC Listening（中級）'}}[LEVEL];
+const FOOT='本教材為課堂補充教材，練習題參照多益聽力測驗的題型自編，不是官方試題，答對題數也不是正式的量尺分數。';
+const DECODE_INTRO=LEVEL==='A'?'先聽清楚聲音，才聽得懂句子。這裡練習最容易聽錯的數字、母音和子音。':'多益最常用「聽起來很像的字」當陷阱。這裡練習相似音單字、數字，還有只差一個字的句子。';
+const PAIR_GROUP=LEVEL==='A'?{num:'數字',vow:'母音',con:'子音',sent:'句子'}:{num:'數字',sim:'相似音',sent:'句子'};
+const TOOL_NAME={date:'日期練習器',time:'時間練習器',price:'價錢練習器',num:'數字練習器'};
+const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const L='ABCD';
+const picHTML=s=>s.startsWith('@')?(ART[s.slice(1)]||''):s;
+
+/* ---------- 儲存 ---------- */
+const store={get(k,d){try{const v=localStorage.getItem('toeic'+LEVEL+'_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('toeic'+LEVEL+'_'+k,JSON.stringify(v))}catch(e){}}};
+let settings=Object.assign({rate:LEVEL==='A'?0.85:1,accent:'mix',zh:'btn'},store.get('settings',{}));
+let progress=store.get('progress',{});
+function prog(id){if(!progress[id])progress[id]={q:{},s:{}};return progress[id]}
+function saveProg(){store.set('progress',progress)}
+let book=store.get('book',[]);           /* 生字收藏：{w,p,z,t} */
+let notes=store.get('notes',[]);         /* 筆記：{id,type:'text'|'q',t,k,text,time} */
+const saveBook=()=>store.set('book',book),saveNotes=()=>store.set('notes',notes);
+let state={view:'home',topic:null,tab:'focus',bookTab:'words'};
+let lp={qi:0,ans:{},show:{},qtr:{}};
+let mock=null,dc=null,wq=null,reviewAll=false,qaOpen={},toolState={},mySent={};
+const $=s=>document.querySelector(s);
+const app=$('#app');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const en=s=>`<span lang="en">${esc(s)}</span>`;
+const bt=(zh,extra='')=>`<span class="bl"><span>${esc(zh)}${extra}</span></span>`;
+function hashKey(s){let h=0;for(const c of s)h=(h*31+c.codePointAt(0))|0;return Math.abs(h)}
+
+/* ---------- 中文翻譯（顯示在英文下面） ---------- */
+const trReg={};let trSeq=0;const trShown=new Set();
+function trGroup(zhs){
+  const id='tr'+(++trSeq),key=String(hashKey(zhs.join('\u0001')));
+  trReg[id]={zhs,key};const always=settings.zh==='always',shown=always||trShown.has(key);
+  return{id,
+    slot:k=>settings.zh==='none'?'':`<span class="trl" id="${id}-${k}">${shown?esc(zhs[k]||''):''}</span>`,
+    btn:settings.zh!=='btn'?'':`<div class="tr"><button class="btn ghost xs" data-act="${shown?'trHide':'tr'}" data-id="${id}">${bt(shown?'隱藏翻譯':'中文翻譯')}</button></div>`};
+}
+function doTr(id){const r=trReg[id];if(!r)return;trShown.add(r.key);
+  r.zhs.forEach((t,k)=>{const el=document.getElementById(id+'-'+k);if(el)el.textContent=t||''});
+  const b=document.querySelector(`[data-id="${id}"]`);if(b){b.dataset.act='trHide';b.innerHTML=bt('隱藏翻譯')}}
+function hideTr(id){const r=trReg[id];if(!r)return;trShown.delete(r.key);
+  r.zhs.forEach((_,k)=>{const el=document.getElementById(id+'-'+k);if(el)el.textContent=''});
+  const b=document.querySelector(`[data-id="${id}"]`);if(b){b.dataset.act='tr';b.innerHTML=bt('中文翻譯')}}
+
+/* ---------- 語音合成：美、英、澳、加口音，男聲女聲 ---------- */
+let voices=[];
+const NOVELTY=/albert|bad news|bahh|bells|boing|bubbles|cellos|deranged|good news|hysterical|jester|junior|organ|princess|ralph|superstar|trinoids|whisper|wobble|zarvox|fred|kathy|grandma|grandpa|eddy|flo\b|reed|rocko|sandy|shelley/i;
+const MALE=/\bmale\b|david|mark|guy|daniel|alex|aaron|arthur|oliver|george|james|ryan|william|thomas|gordon|\blee\b|\btom\b|rishi|christopher|eric|roger|steffan|andrew|brian|liam|connor|duncan|davis|jason|tony|brandon|jacob|mitchell|darren|ken\b|neil|clayton|sean/i;
+const isMale=v=>!/female/i.test(v.name)&&MALE.test(v.name);
+function loadVoices(){try{const all=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang)&&!NOVELTY.test(v.name));
+  const main=all.filter(v=>/^en[-_](US|GB|AU|CA|NZ|IE)/i.test(v.lang));voices=main.length?main:all}catch(e){voices=[]}}
+function primaryVoice(){return voices.find(v=>/google us english/i.test(v.name))||voices.find(v=>/en[-_]US/i.test(v.lang)&&!isMale(v))||voices.find(v=>/en[-_]US/i.test(v.lang))||voices[0]||null}
+function pool(){if(settings.accent==='us'){const us=voices.filter(v=>/en[-_]US/i.test(v.lang));if(us.length)return us}return voices}
+function voiceFor(g,seed){
+  if(g==='N'||!voices.length)return{voice:primaryVoice(),pitch:1};
+  const male=g[0]==='M',n=g.endsWith('2')?1:0,same=pool().filter(v=>isMale(v)===male);
+  if(same.length)return{voice:same[(seed+n)%same.length],pitch:n&&same.length<2?(male?0.8:1.25):1};
+  return{voice:primaryVoice(),pitch:male?(n?0.55:0.7):(n?1.3:1)};
+}
+const accentCount=()=>new Set(voices.map(v=>v.lang.replace('_','-').toLowerCase())).size;
+if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=()=>{loadVoices();if(state.view==='home')renderHome()}}
+let tok=0,warmed=false;
+function speak(lines,onend,rate){
+  if(!('speechSynthesis' in window)){alert('這個瀏覽器不能播放語音。');return}
+  speechSynthesis.cancel();const my=++tok;let i=0;
+  const seed=hashKey(lines.map(l=>l[1]).join('|'));
+  const next=()=>{
+    if(my!==tok)return;
+    if(i>=lines.length){onend&&onend();return}
+    const [g,t]=lines[i++];
+    if(g==='PAUSE'){setTimeout(next,t);return}
+    const v=voiceFor(g,seed);
+    const u=new SpeechSynthesisUtterance(String(t).trim());
+    u.lang=v.voice?v.voice.lang:'en-US';if(v.voice)u.voice=v.voice;u.pitch=v.pitch;u.rate=rate||settings.rate;
+    u.onend=()=>setTimeout(next,g==='N'?400:300);u.onerror=()=>setTimeout(next,100);
+    speechSynthesis.speak(u);
+  };
+  /* 第一次播放先送出一段無聲的語音，讓喇叭先準備好，第一個字才不會被吃掉 */
+  if(!warmed){warmed=true;const w=new SpeechSynthesisUtterance('a');w.volume=0;const pv=primaryVoice();if(pv){w.voice=pv;w.lang=pv.lang}else w.lang='en-US';w.onend=()=>setTimeout(next,60);w.onerror=()=>setTimeout(next,60);setTimeout(()=>speechSynthesis.speak(w),200)}
+  else setTimeout(next,250);
+}
+function stopSpeak(){tok++;try{speechSynthesis.cancel()}catch(e){}}
+const say1=(t,g)=>speak([[g||'W',t]]);
+
+/* ---------- 數字的英文說法 ---------- */
+const ON=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'],TN=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+function numEn(n){n=+n;if(n<20)return ON[n];if(n<100)return TN[n/10|0]+(n%10?'-'+ON[n%10]:'');if(n<1000)return ON[n/100|0]+' hundred'+(n%100?' '+numEn(n%100):'');if(n<1e6)return numEn(n/1000|0)+' thousand'+(n%1000?' '+numEn(n%1000):'');return String(n)}
+const ORD={one:'first',two:'second',three:'third',five:'fifth',eight:'eighth',nine:'ninth',twelve:'twelfth'};
+function ordEn(n){const w=numEn(n),i=Math.max(w.lastIndexOf('-'),w.lastIndexOf(' '))+1,last=w.slice(i);
+  return w.slice(0,i)+(ORD[last]||(last.endsWith('y')?last.slice(0,-1)+'ieth':last+'th'))}
+const ordSuffix=n=>n+(n%10===1&&n!==11?'st':n%10===2&&n!==12?'nd':n%10===3&&n!==13?'rd':'th');
+
+/* ---------- 語音辨識 ---------- */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const ERR={'not-allowed':'麥克風沒有開啟權限。請看上面的「麥克風打不開怎麼辦？」。','service-not-allowed':'這個瀏覽器不能使用語音辨識。電腦和 Android 手機請用 Chrome；iPhone 請用 Safari。','no-speech':'沒有聽到聲音。請靠近麥克風，再說一次。','network':'語音辨識需要網路，請確認網路連線。','audio-capture':'找不到麥克風，請檢查裝置。','aborted':'錄音停止了，請再試一次。'};
+const REC_FAIL='沒辦法啟動錄音。請確認已允許麥克風，並用 Chrome（電腦、Android）或 Safari（iPhone）開啟。';
+let recH=null;
+function recognize(h){
+  const r=new SR();r.lang='en-US';r.interimResults=true;r.continuous=false;r.maxAlternatives=3;
+  let finalAlts=null,last='',ended=false,started=false,t1=0,t2=0;
+  const clear=()=>{clearTimeout(t1);clearTimeout(t2);recH=null};
+  const finish=()=>{if(ended)return;ended=true;clear();
+    if(finalAlts)h.res(finalAlts);else if(last)h.res([last]);else h.err(ERR['no-speech'])};
+  h.stop=()=>{try{r.stop()}catch(_){}setTimeout(finish,1500)};
+  r.onstart=()=>{started=true};
+  r.onresult=e=>{
+    for(let i=e.resultIndex;i<e.results.length;i++){const x=e.results[i];
+      if(x.isFinal)finalAlts=[...x].map(a=>a.transcript);else last=x[0].transcript}
+    h.interim&&h.interim(finalAlts?finalAlts[0]:last);
+    if(finalAlts){try{r.stop()}catch(_){}setTimeout(finish,800)}};
+  r.onerror=e=>{if(ended)return;
+    if((e.error==='no-speech'||e.error==='aborted')&&(last||finalAlts)){finish();return}
+    ended=true;clear();h.err(ERR[e.error]||ERR.aborted)};
+  r.onend=finish;
+  t1=setTimeout(()=>{if(!started&&!ended){ended=true;clear();try{r.abort()}catch(_){}h.err(REC_FAIL)}},5000);
+  t2=setTimeout(()=>h.stop(),20000);
+  recH=h;
+  try{r.start()}catch(e){ended=true;clear();h.err(REC_FAIL)}
+}
+const CONTR={"i'm":"i am","it's":"it is","he's":"he is","she's":"she is","that's":"that is","there's":"there is","what's":"what is","where's":"where is","who's":"who is","we're":"we are","they're":"they are","you're":"you are","i'll":"i will","we'll":"we will","you'll":"you will","it'll":"it will","i'd":"i would","we'd":"we would","don't":"do not","doesn't":"does not","didn't":"did not","can't":"can not","cannot":"can not","won't":"will not","isn't":"is not","aren't":"are not","wasn't":"was not","haven't":"have not","hasn't":"has not","i've":"i have","we've":"we have","you've":"you have","let's":"let us","couldn't":"could not","wouldn't":"would not","shouldn't":"should not","ok":"okay"};
+/* 把一個字（或辨識結果）變成可以比對的小寫單字 */
+function toks(s){
+  s=String(s).toLowerCase().replace(/[’‘`]/g,"'")
+    .replace(/(\d{1,2}):(\d\d)/g,(m,a,b)=>numEn(a)+' '+(+b===0?"o'clock":(+b<10?'oh ':'')+numEn(b)))
+    .replace(/\$\s?(\d+)\.(\d\d)/g,(m,a,b)=>numEn(a)+' dollars '+numEn(b)+' cents').replace(/\$\s?([\d,]+)/g,(m,a)=>numEn(a.replace(/,/g,''))+' dollars')
+    .replace(/(\d+)%/g,(m,a)=>numEn(a)+' percent').replace(/(\d+)(st|nd|rd|th)\b/g,(m,a)=>ordEn(a)).replace(/\d[\d,]*/g,m=>numEn(m.replace(/,/g,'')));
+  const out=[];(s.match(/[a-z]+(?:'[a-z]+)?/g)||[]).forEach(w=>{(CONTR[w]||w).split(' ').forEach(x=>out.push(x.replace(/'s$/,'')))});return out;
+}
+function compare(target,heard){
+  const ws=target.split(/\s+/).filter(Boolean),A=[],own=[];
+  ws.forEach((w,i)=>toks(w).forEach(x=>{A.push(x);own.push(i)}));
+  const B=toks(heard),n=A.length,m=B.length,dp=Array.from({length:n+1},()=>new Array(m+1).fill(0));
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)dp[i][j]=A[i]===B[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+  const hit=new Array(n).fill(false);let i=0,j=0;while(i<n&&j<m){if(A[i]===B[j]){hit[i]=true;i++;j++}else if(dp[i+1][j]>=dp[i][j+1])i++;else j++}
+  const bad=new Set();hit.forEach((h,k)=>{if(!h)bad.add(own[k])});
+  return{score:n?Math.round(hit.filter(Boolean).length/n*100):0,html:ws.map((w,k)=>`<span class="${bad.has(k)?'miss':'ok'}">${esc(w)}</span>`).join(' ')};
+}
+
+/* ---------- 共用 ---------- */
+function dict(w){const s=w.toLowerCase().trim();return{cam:`https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/${encodeURIComponent(s.replace(/\s+/g,'-'))}`,yg:`https://youglish.com/pronounce/${encodeURIComponent(s)}/english`}}
+function sayBtn(text,sm,g){return `<button class="say${sm?' sm':''}" data-act="sayText" data-text="${esc(text)}"${g?` data-g="${g}"`:''} aria-label="播放 ${esc(text)}">${ICON_SPK}</button>`}
+const inBook=w=>book.some(b=>b.w===w);
+function starBtn(w,p,z,t){const on=inBook(w);return `<button class="star ${on?'on':''}" data-act="star" data-w="${esc(w)}" data-p="${esc(p||'')}" data-z="${esc(z||'')}" data-t="${t}" aria-label="收藏 ${esc(w)}" title="收藏">${on?'★':'☆'}</button>`}
+const other=g=>g[0]==='M'?'W':'M';
+/* 這一題念出來的內容。short：題組已經聽過本文，只念問題 */
+function audioFor(q,short){
+  const lines=[];
+  if(q.p===1){const g=hashKey(q.o[0][0])%2?'M':'W';q.o.forEach((o,i)=>lines.push([g,`${L[i]}. ${o[0]}`]));return lines}
+  if(q.p===2){const g=q.a[0][0];lines.push([g,q.a[0][1]]);q.o.forEach((o,i)=>lines.push([other(g),`${L[i]}. ${o[0]}`]));return lines}
+  if(!short){lines.push(['N',`Questions refer to the following ${q.kind||'conversation'}.`]);q.a.forEach(x=>lines.push([x[0],x[1]]))}
+  lines.push(['N',q.q[0]]);return lines;
+}
+const whoLabel=g=>({M:'男',W:'女',M2:'男二',W2:'女二'}[g]||g);
+function reviewBlock(q,idx,{noteBtn}={}){
+  const zhs=[...q.a.map(x=>x[2]),...(q.q?[q.q[1]]:[]),...q.o.map(o=>o[1])];const g=trGroup(zhs);let k=0;
+  const lb=(gd,t)=>`<button class="say sm" data-act="sayLine" data-g="${gd}" data-text="${esc(t)}" aria-label="聽這一句">${ICON_SPK}</button> `;
+  const lines=q.a.map(x=>`<p>${lb(x[0],x[1])}<span class="who">${esc(whoLabel(x[0]))}：</span>${en(x[1])}${g.slot(k++)}</p>`).join('');
+  const qq=q.q?`<p>${lb('N',q.q[0])}<span class="who">問題：</span>${en(q.q[0])}${g.slot(k++)}</p>`:'';
+  const og=q.p===1?(hashKey(q.o[0][0])%2?'M':'W'):q.p===2?other(q.a[0][0]):'N';
+  const opts=q.o.map((o,i)=>`<p>${q.p<3?lb(og,o[0]):''}<span class="who">${L[i]}</span>${i===q.ans?`<b class="ans">${en(o[0])}</b>`:en(o[0])}${g.slot(k++)}</p>`).join('');
+  let key=`<div class="key"><b>聽力重點　</b>${esc(q.k)}</div>`;
+  if(q.w)key+=`<div class="key" style="margin-top:8px"><b>其他選項為什麼不對　</b>${esc(q.w)}</div>`;
+  return `<div class="small muted" style="margin:10px 0 0">聽後檢查：一句一句聽，找出剛才沒聽懂的地方，再大聲跟著說。</div>${q.vis?visHTML(q.vis):''}<div class="script">${lines}${qq}${opts}</div>${g.btn}${key}
+  <div class="row" style="margin-top:10px"><button class="btn ghost sm" data-act="replay" data-i="${idx}">${ICON_SPK}${bt('重聽題目')}</button><button class="btn ghost sm" data-act="slow" data-i="${idx}">${ICON_SPK}${bt('慢速再聽')}</button>${noteBtn||''}</div>`;
+}
+function visHTML(v){return `<div class="vis" lang="en"><b>${esc(v.t)}</b><table>${v.rows.map((r,i)=>`<tr>${r.map(c=>i===0&&v.head?`<th>${esc(c)}</th>`:`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`}
+function qTransPanel(q){
+  const rows=[`<p><span class="who">問題</span>${en(q.q[0])}<span class="trl">${esc(q.q[1])}</span></p>`];
+  q.o.forEach((o,i)=>rows.push(`<p><span class="who">${L[i]}</span>${en(o[0])}<span class="trl">${esc(o[1])}</span></p>`));
+  return `<div class="script">${rows.join('')}</div>`;
+}
+function questionHTML(q,{num,total,chosen,reveal,playsLeft,showText,idx,qtr,noteBtn}){
+  const answered=chosen!=null,done=answered&&reveal,practice=playsLeft==null,heard=q.p<3;
+  const optHTML=q.o.map((o,i)=>{
+    let cls='opt';if(done){if(i===q.ans)cls+=' right';else if(i===chosen)cls+=' wrong'}else if(i===chosen)cls+=' sel';
+    const body=heard&&!showText&&!done?`<span class="hidden-opt">用聽的</span>`:en(o[0]);
+    return `<button class="${cls}" data-act="choose" data-i="${i}" ${done?'disabled':''}><span class="bub">${L[i]}</span>${body}</button>`;
+  }).join('');
+  let fb='';
+  if(done){const ok=chosen===q.ans;
+    fb=`<div class="fb" aria-live="polite"><div class="verdict ${ok?'ok':'no'}">${ok?'答對了！':`答錯了 <span class="ans">→ ${L[q.ans]}</span>`}</div>${reviewBlock(q,idx,{noteBtn})}</div>`}
+  const hint=practice?'按下播放，仔細聽。可以重聽。':(playsLeft>0?'按一次播放，只念一次，和正式考試一樣。':'播放完了，請作答。');
+  const pre=practice&&!done?`<div class="note"><b>聽之前　</b>${esc(TIPS[q.p])}</div>`:'';
+  const tools=(practice&&!done)?`<div class="row" style="margin-bottom:8px">${heard?`<button class="btn ghost sm" data-act="showText">${bt(showText?'隱藏選項文字':'看選項文字')}</button>`:`<button class="btn ghost sm" data-act="qtr">${bt(qtr?'收起題目翻譯':'題目和選項翻譯')}</button>`}</div>${!heard&&qtr?qTransPanel(q):''}`:'';
+  const printed=heard?'':`<div class="printed"><div class="small muted" lang="en">Questions refer to the following ${esc(q.kind||'conversation')}.（${KIND[q.kind||'conversation']}，第 ${q.gpos+1} 題，共 3 題）</div>${q.vis&&!done?visHTML(q.vis):''}<div class="pq" lang="en">${esc(q.q[0])}</div></div>`;
+  return `<div class="q">
+    <div class="qhead"><span class="part">${PART_NO[q.p]}　${PARTS[q.p].n}</span><span>${num} / ${total}</span></div>
+    ${pre}${printed}${q.pic?`<div class="scene" role="img" aria-label="題目照片">${picHTML(q.pic)}</div>`:''}
+    <div class="player"><button class="play" id="playBtn" data-act="play" aria-label="播放題目" ${playsLeft===0?'disabled':''}>${ICON_PLAY}</button><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span class="hint">${hint}</span></div>
+    ${tools}<div class="opts">${optHTML}</div>${fb}</div>`;
+}
+function playLines(lines,onDone){
+  const b=$('#playBtn');if(b)b.classList.add('on');
+  speak(lines,()=>{const b2=$('#playBtn');if(b2)b2.classList.remove('on');onDone&&onDone()});
+}
+
+/* ---------- 數字・日期・時間練習器 ---------- */
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'],DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+function genItem(kind){
+  const r=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),pick=a=>a[r(0,a.length-1)];
+  if(kind==='date'){const y=2026,m=r(1,12),d=r(1,new Date(y,m,0).getDate()),w=new Date(y,m-1,d).getDay(),M=MONTHS[m-1];
+    return{big:`${m}/${d}`,sub:`${DAYS[w]}, ${M} ${d}, ${y}`,forms:[`${M} ${ordEn(d)}`,`the ${ordEn(d)} of ${M}`,`${M} ${ordSuffix(d)}`],say:`${DAYS[w]}, ${M} ${ordEn(d)}`}}
+  if(kind==='time'){const h=r(1,12),m=r(0,11)*5,ap=pick(['a.m.','p.m.']),H=numEn(h),N=numEn(h%12+1);
+    const dig=m===0?`${H} o'clock`:`${H} ${m<10?'oh ':''}${numEn(m)}`;const forms=[dig];
+    if(m===15)forms.push(`a quarter past ${H}`);else if(m===30)forms.push(`half past ${H}`);else if(m===45)forms.push(`a quarter to ${N}`);else if(m>0&&m<30)forms.push(`${numEn(m)} past ${H}`);else if(m>30)forms.push(`${numEn(60-m)} to ${N}`);
+    return{big:`${h}:${String(m).padStart(2,'0')} ${ap}`,sub:'',forms,say:`${dig} ${ap}`}}
+  if(kind==='price'){
+    if(r(0,1)){const d=r(1,99),c=pick([25,50,75,95,99,10,40]);return{big:`$${d}.${c}`,sub:'',forms:[`${numEn(d)} dollars and ${numEn(c)} cents`,`${numEn(d)} ${numEn(c)}`],say:`${numEn(d)} ${numEn(c)}`}}
+    const n=pick([r(1,9)*100+r(1,9)*10,r(11,99)*100,r(1,9)*1000+r(1,9)*100+50]);const forms=[`${numEn(n)} dollars`];if(n>=1100&&n<10000&&n%100===0&&n%1000!==0)forms.push(`${numEn(n/100)} hundred dollars`);
+    return{big:`$${n.toLocaleString('en-US')}`,sub:'',forms,say:forms[0]}}
+  if(kind==='num'){const t=r(0,3);
+    if(t===0){const d=r(3,9),teen=r(0,1);const n=teen?10+d:d*10;return{big:String(n),sub:teen?'-teen：重音在後面':'-ty：重音在前面',forms:[numEn(n)],say:numEn(n)}}
+    if(t===1){const n=r(1,9)*100+r(1,9);const f=`${numEn(n/100|0)} oh ${numEn(n%100)}`;return{big:`Room ${n}`,sub:'房間號碼、班機號碼常常一個數字一個數字念',forms:[`room ${f}`,`room ${numEn(n)}`],say:`room ${f}`}}
+    if(t===2){const n=pick([r(11,99)*100,r(2,99)*1000,r(1,9)*100000+r(1,9)*10000]);const forms=[numEn(n)];if(n<10000&&n%1000!==0)forms.push(`${numEn(n/100)} hundred`);return{big:n.toLocaleString('en-US'),sub:'',forms,say:forms[0]}}
+    const n=pick([15,50,13,30,14,40,25,75,10,20]);return{big:`${n}%`,sub:'',forms:[`${numEn(n)} percent`],say:`${numEn(n)} percent`}}
+}
+function toolHTML(kind){
+  const s=toolState[kind]||(toolState[kind]={item:genItem(kind),mode:'see',open:false});
+  const it=s.item,see=s.mode==='see';
+  return `<div class="tool" id="tool-${kind}"><div class="row" style="justify-content:space-between"><b>${TOOL_NAME[kind]}</b>
+    <div class="row"><button class="btn sm ${see?'':'ghost'}" data-act="toolMode" data-k="${kind}" data-m="see">${bt('看數字說說看')}</button><button class="btn sm ${see?'ghost':''}" data-act="toolMode" data-k="${kind}" data-m="hear">${bt('聽英文猜數字')}</button></div></div>
+    <div class="big">${see||s.open?esc(it.big):'？'}</div><div class="small muted" style="text-align:center">${see||s.open?esc(it.sub):'先聽，再想想是哪一個數字'}</div>
+    <div class="forms" style="margin-top:8px">${s.open?it.forms.map(f=>`<span class="chip">${en(f)}${sayBtn(f,1)}</span>`).join(''):''}</div>
+    <div class="row" style="justify-content:center;margin-top:10px"><button class="btn ghost sm" data-act="toolSay" data-k="${kind}">${ICON_SPK}${bt('聽')}</button><button class="btn ghost sm" data-act="toolOpen" data-k="${kind}">${bt(s.open?'收起說法':'看答案和說法')}</button><button class="btn sm" data-act="toolNext" data-k="${kind}">${bt('下一個')}</button></div></div>`;
+}
+
+/* ---------- 首頁 ---------- */
+const getQ=(src,k)=>T.find(t=>t.id===src).qs[k];
+const HALF=T.length/2,TOTAL=T.reduce((a,t)=>a+t.qs.length,0);
+const SET_NAME={A:'第一回',B:'第二回',R:'隨機組卷',F:'完整練習'};
+function wrongList(){const out=[];T.forEach(t=>{const p=prog(t.id);t.qs.forEach((q,k)=>{if(p.q[k]===false)out.push([t.id,k])})});return out}
+function renderHome(){
+  trSeq=0;
+  const noVoice=('speechSynthesis' in window)&&voices.length===0;
+  const cards=T.map(t=>{
+    const p=prog(t.id);const sp=t.shadow.filter((_,i)=>(p.s['s'+i]||0)>=85).length;
+    const dots=t.qs.map((_,i)=>{const v=p.q[i];return `<span class="dot ${v===true?'ok':v===false?'no':''}"></span>`}).join('');
+    return `<button class="tcard" data-act="topic" data-t="${t.id}"><span class="ic" aria-hidden="true">${t.icon}</span>
+      <span class="nm">${esc(t.name)}</span><span class="uit" lang="en">${esc(t.en)}</span>
+      <span class="dots" aria-label="聽力答對情況">${dots}</span><span class="sp">跟讀 ${sp}/${t.shadow.length}</span></button>`;
+  }).join('');
+  const parts=PLIST.map(n=>`<li><span class="num">${n}</span><span><b>${PARTS[n].n} <span lang="en">${PARTS[n].en}</span>（${PARTS[n].c} 題）</b><span>${PARTS[n].d}</span></span></li>`).join('');
+  const wrongCount=wrongList().length;
+  const saved=store.get('mocksave',null);
+  const sec=(id,cls,icon,title,body)=>`<section class="panel ${cls}" id="${id}"><div class="ph"><span class="pi" aria-hidden="true">${icon}</span><h3>${title}</h3></div>${body}</section>`;
+  const half=HALF*10;
+  app.innerHTML=`
+  <header class="hero"><div class="crest" aria-hidden="true">${CREST}</div><div class="hero-t"><div class="eyebrow">CHENG SHIU UNIVERSITY · TOEIC ${LT.badge}</div><div class="series">多益聽力補充教材</div><h1>${esc(LT.title)}</h1><span class="uit h1t" lang="en">${esc(LT.en)}</span>
+  <div class="band"><span class="seg">多益聽力測驗</span>　<span class="seg">${esc(LT.band)}</span>　<span class="seg">聽力與口說</span></div></div></header>
+  <div class="intro">${esc(LT.intro)}</div>
+  <div class="settings">
+    <label>語速<select data-set="rate"><option value="0.7">慢一點</option><option value="0.85">稍慢${LEVEL==='A'?'（建議）':''}</option><option value="1">考試速度${LEVEL==='B'?'（建議）':''}</option></select></label>
+    <label>口音<select data-set="accent"><option value="mix">混合口音（美、英、澳、加，和考試一樣）</option><option value="us">只用美式口音</option></select></label>
+    <label>中文翻譯<select data-set="zh"><option value="btn">需要時按「中文翻譯」</option><option value="always">一律顯示</option><option value="none">不顯示（全英文）</option></select></label>
+  </div>
+  ${noVoice?`<div class="warn">這台裝置找不到英文語音。請到系統設定加入「英文（美國）」語音，或改用 Chrome、Edge 開啟。</div>`:''}
+  ${voices.length&&settings.accent==='mix'&&accentCount()<2?`<div class="note">這台裝置只有一種英文口音。電腦用 Edge 或 Chrome 開啟，可以聽到美、英、澳等不同口音。</div>`:''}
+  <nav class="quick" aria-label="快速前往">
+    <button data-act="jumpTo" data-id="sec-decode"><span class="qi" aria-hidden="true">👂</span>${bt('基礎聽辨')}</button>
+    <button data-act="jumpTo" data-id="sec-topics"><span class="qi" aria-hidden="true">📚</span>${bt('主題練習')}</button>
+    <button data-act="jumpTo" data-id="sec-book"><span class="qi" aria-hidden="true">★</span>${bt('單字本')}</button>
+    <button data-act="jumpTo" data-id="sec-mock"><span class="qi" aria-hidden="true">📝</span>${bt('模擬測驗')}</button>
+  </nav>
+  ${sec('sec-info','c-info','I','考試說明',`
+    <details class="acc"><summary>使用建議</summary><div class="accb">電腦請用 Edge 或 Chrome 開啟：Edge 有美、英、澳、加等多種自然語音，最接近考試；Chrome 有美式和英式語音。Android 手機請用 Chrome，iPhone、iPad 請用 Safari。口說錄音需要網路和麥克風。</div></details>
+    <details class="acc"><summary>多益聽力測驗有四個部分</summary><div class="accb"><ol class="parts">${parts}</ol>
+      <div class="small muted" style="margin-top:8px">正式考試聽力共 100 題，大約 45 分鐘，錄音一直播放，中間不會暫停，每題只念一次。口音有美國、英國、加拿大和澳洲。最新規定和官方範例題請看官方網站。<br><a href="https://www.toeic.com.tw/" target="_blank" rel="noopener">多益測驗官方網站（臺灣區）</a></div></div></details>
+    <details class="acc"><summary>這一級的目標</summary><div class="accb"><b>${esc(LT.band)}</b>　${esc(LT.target)}<div class="small muted" style="margin-top:6px">依照 ETS 公布的多益分數與 CEFR 對照：A2 聽力 110 分、B1 聽力 275 分、B2 聽力 400 分（聽力滿分 495 分）。${LEVEL==='A'?'初級的對話和獨白比正式考試短，先練到「每一句都聽得懂」，再到中級練速度。':'中級的長度、語速和題型都接近正式考試。如果覺得太快，可以先做初級。'}</div></div></details>
+    <details class="acc"><summary>建議的練習順序</summary><div class="accb"><ol class="steps">
+      <li><b>基礎聽辨　</b>${LEVEL==='A'?'先練最容易聽錯的數字、母音和子音。':'先練相似音陷阱和只差一個字的句子。'}</li>
+      <li><b>主題練習　</b>重點 → 單字 → 聽力 → 口說。</li>
+      <li><b>模擬測驗　</b>照正式考試的方式播放，每題只念一次。</li>
+      <li><b>錯題複習　</b>做錯的題目會自動收集，練到答對為止。</li></ol></div></details>`)}
+  ${sec('sec-decode','c-decode','II','基礎聽辨',`<div class="muted small">${DECODE_INTRO}</div>
+    <div class="row" style="margin-top:10px"><button class="btn" data-act="decodeStart" data-g="all">${bt('全部練習',` (${PAIRS.length})`)}</button>${Object.entries(PAIR_GROUP).map(([k,v])=>`<button class="btn ghost sm" data-act="decodeStart" data-g="${k}">${bt(v)}</button>`).join('')}</div>`)}
+  ${sec('sec-topics','c-topic','III',LEVEL==='A'?'八個生活與職場主題':'八個職場主題',`<div class="small muted" style="margin-bottom:10px">每個主題 10 題：Part 1 一題、Part 2 三題、Part 3 和 Part 4 各一個題組。</div><div class="tgrid">${cards}</div>`)}
+  ${sec('sec-book','c-book','IV','我的單字本與筆記',`<div class="row"><button class="btn" data-act="bookOpen" data-b="words">★ ${bt('單字本',` (${book.length})`)}</button><button class="btn ghost" data-act="bookOpen" data-b="notes">${bt('筆記',` (${notes.length})`)}</button></div>`)}
+  ${sec('sec-mock','c-mock','V','模擬測驗',`
+    <div class="sub"><h4>綜合模擬測驗</h4>
+    <div class="muted small">題目按照考試的四個部分排列。每題按一次播放，只念一次；Part 3 和 Part 4 的本文只在題組的第一題播放。交卷後才看答案。</div>
+    <div class="note small" style="margin-top:8px">⏱ 提醒：正式考試會一直播放下去，中間不能暫停，也不能回頭重聽。暫存只是練習時的方便，建議一次做完，練習專注力。</div>
+    ${saved?`<div class="resume"><b>繼續上次的模擬測驗</b><div class="small muted">你有一份還沒做完的模擬測驗。 ${SET_NAME[saved.set]}｜${saved.ans.filter(x=>x!=null).length} / ${saved.refs.length}</div>
+      <div class="row" style="margin-top:8px"><button class="btn red" data-act="mockResume">${bt('繼續上次的模擬測驗')}</button><button class="btn ghost sm" data-act="mockDiscard">${bt('放棄並重新開始')}</button></div></div>`:''}
+    <div class="small" style="margin-top:12px"><b>選擇一份模擬測驗</b></div>
+    <div class="setgrid">
+      <button class="setbtn" data-act="mockStart" data-set="A" ${saved?'disabled':''}><span class="sn">1</span>${bt('第一回')}<span class="small muted">${half} 題</span></button>
+      <button class="setbtn" data-act="mockStart" data-set="B" ${saved?'disabled':''}><span class="sn">2</span>${bt('第二回')}<span class="small muted">${half} 題</span></button>
+      <button class="setbtn" data-act="mockStart" data-set="R" ${saved?'disabled':''}><span class="sn">⟳</span>${bt('隨機組卷')}<span class="small muted">${half} 題</span></button>
+    </div>
+    <div class="small muted" style="margin-top:6px">每一回大約 20 分鐘。隨機組卷每次從全部題目抽出不同的 ${half} 題。想一次做完全部 ${TOTAL} 題：<button class="linkbtn" data-act="mockStart" data-set="F" ${saved?'disabled':''}>完整練習（${TOTAL} 題）</button></div></div>
+    <div class="sub"><h4>錯題複習</h4>
+    ${wrongCount?`<div class="muted small">主題練習和模擬測驗中做錯、還沒有重新答對的題目。</div><button class="btn" data-act="wrongStart" style="margin-top:10px">${bt('練習錯題',` (${wrongCount})`)}</button>`:`<p class="muted small">目前沒有錯題。做錯的題目會自動出現在這裡。</p>`}</div>`)}
+  ${footer()}`;
+  app.querySelector('[data-set="rate"]').value=String(settings.rate);
+  app.querySelector('[data-set="accent"]').value=settings.accent;
+  app.querySelector('[data-set="zh"]').value=settings.zh;
+}
+function footer(){
+  return `<footer>${FOOT}
+  <p>TOEIC 是 ETS 的註冊商標。本教材未經 ETS 審閱或背書。單字連結的《劍橋詞典》與 YouGlish 內容，著作權屬各網站所有。</p>
+  <p class="credit">${esc(LT.credit)}</p>
+  <p>插圖：Tabler Icons（MIT 授權）及自繪線條圖。字型：Noto Sans TC、Noto Serif TC（SIL Open Font License 1.1）。</p>
+  <p>Copyright © 2026 Hsieh,C.L.</p><details class="lic"><summary>授權資訊</summary><pre>${esc(LIC)}</pre></details></footer>`}
+
+/* ---------- 主題頁 ---------- */
+const topicObj=()=>T.find(t=>t.id===state.topic);
+const TABS=[['focus','重點'],['vocab','單字'],['listen','聽力'],['speak','口說'],['more','延伸']];
+function topbar(title,back='home'){return `<div class="topbar"><button class="back" data-act="${back}">${bt('← 首頁')}</button><h2>${title}</h2></div>`}
+function renderTopic(){
+  const t=topicObj();trSeq=0;
+  const body={focus:focusHTML,vocab:vocabHTML,listen:listenHTML,speak:speakHTML,more:moreHTML}[state.tab](t);
+  app.innerHTML=`<div class="stick">${topbar(`${t.icon} ${esc(t.name)}<span class="uit" lang="en">${esc(t.en)}</span>`)}
+  <div class="tabs" role="tablist">${TABS.map(([k,v],n)=>`<button role="tab" aria-selected="${state.tab===k}" data-act="tab" data-tab="${k}"><span class="tn">${n+1}</span>${bt(v)}</button>`).join('')}</div></div>
+  ${body}${footer()}`;
+}
+function focusHTML(t){
+  return `<div class="goal"><b>這個主題要學會　</b>${esc(t.goal)}</div>
+  <h3>常聽到的說法</h3>
+  ${t.vary.map(v=>{const g=trGroup(v.items.map(x=>x[1]));return `<div class="vary"><b>${esc(v.t)}</b><div class="items">${v.items.map((x,i)=>`<span class="chip"><span>${en(x[0])}${g.slot(i)}</span>${sayBtn(x[0],1)}</span>`).join('')}</div><div class="small muted">${esc(v.n)}</div>${g.btn}</div>`}).join('')}
+  ${(t.tool||[]).map(k=>toolHTML(k)).join('')}
+  <h3>一起學的相關單字</h3>
+  <div class="small muted">這些字常和本主題一起出現。點喇叭聽發音，點單字查《劍橋詞典》，按☆收進單字本。</div>
+  <div class="rel">${t.related.map(([w,z])=>`<div class="w">${sayBtn(w,1)}<div><a href="${dict(w).cam}" target="_blank" rel="noopener" lang="en"><b>${esc(w)}</b></a><span class="py">${esc(z)}</span></div>${starBtn(w,'',z,t.id)}</div>`).join('')}</div>
+  <div class="row" style="margin-top:20px"><button class="btn" data-act="tab" data-tab="vocab">${bt('下一步：學單字')}</button></div>`;
+}
+function vocabHTML(t){
+  return `<div class="row" style="margin-top:12px"><button class="btn ghost" data-act="sayAll">${ICON_SPK}${bt('全部聽一次')}</button><span class="small muted">每個字聽完，大聲跟著說。</span></div>
+  <ul class="vlist">${t.vocab.map(([w,p,z,ex])=>{const d=dict(w);return `<li>${sayBtn(w)}
+    <div><div class="py" lang="en">${esc(p)}</div><div class="zh" lang="en">${esc(w)}</div><div class="gl">${esc(z)}</div>
+    ${ex?`<div class="ex">${sayBtn(ex,1)}<span lang="en">${esc(ex)}</span></div>`:''}
+    <div class="links"><a href="${d.cam}" target="_blank" rel="noopener">劍橋詞典</a><a href="${d.yg}" target="_blank" rel="noopener">YouGlish 聽真人發音</a></div></div>${starBtn(w,p,z,t.id)}</li>`}).join('')}</ul>
+  <p class="small muted">音標是美式發音（IPA）。YouGlish 可以聽到這個字在真實影片裡的美、英、澳口音。</p>
+  <div class="row" style="margin-top:12px"><button class="btn" data-act="tab" data-tab="listen">${bt('下一步：做聽力題')}</button></div>`;
+}
+function navStrip(n,cur,stateOf){return `<div class="navstrip" role="navigation" aria-label="選題">${Array.from({length:n},(_,i)=>`<button class="nb ${stateOf(i)} ${i===cur?'cur':''}" data-act="jump" data-i="${i}" aria-label="第 ${i+1} 題">${i+1}</button>`).join('')}</div>`}
+function listenHTML(t){
+  const p=prog(t.id);const q=t.qs[lp.qi];const chosen=lp.ans[lp.qi];
+  const strip=navStrip(t.qs.length,lp.qi,i=>lp.ans[i]!=null?(lp.ans[i]===t.qs[i].ans?'ok':'no'):(p.q[i]===true?'ok':p.q[i]===false?'no':''));
+  const nav=`<div class="row" style="margin-top:12px">${lp.qi>0?`<button class="btn ghost" data-act="prev">${bt('上一題')}</button>`:''}${lp.qi<t.qs.length-1?`<button class="btn" data-act="next">${bt('下一題')}</button>`:`<button class="btn" data-act="tab" data-tab="speak">${bt('去練口說')}</button>`}${chosen!=null?`<button class="btn ghost" data-act="retry">${bt('這題再做一次')}</button>`:''}</div>`;
+  return `<p class="small muted" style="margin:12px 0 0">點號碼可以直接跳到那一題。綠色是答對，紅色是答錯。</p>${strip}`+questionHTML(q,{num:lp.qi+1,total:t.qs.length,chosen,reveal:true,showText:lp.show[lp.qi],qtr:lp.qtr[lp.qi],idx:lp.qi,noteBtn:noteBtnFor(t.id,lp.qi)})+nav;
+}
+function noteBtnFor(tid,k){const has=notes.some(n=>n.type==='q'&&n.t===tid&&n.k===k);return `<button class="btn ghost sm" data-act="noteQ" data-t="${tid}" data-k="${k}" ${has?'disabled':''}>${bt(has?'已加入筆記':'加入筆記')}</button>`}
+const MIC_STEPS=['電腦 Chrome：點網址列左邊的圖示，找到「麥克風」，選「允許」，再重新整理網頁。',
+  'Android 手機 Chrome：點網址列旁的鎖頭圖示，選「權限」→「麥克風」→「允許」。如果找不到，到手機的「設定」→「應用程式」→「Chrome」→「權限」→「麥克風」→「允許」。',
+  'iPhone、iPad Safari：點網址列左邊的「大小」圖示，選「網站設定」→「麥克風」→「允許」。也可以到「設定」→「Safari」→「麥克風」→「允許」。'];
+function speakHTML(t){
+  const p=prog(t.id);
+  const warn=SR?'':`<div class="warn">這個瀏覽器不能做語音辨識。電腦和 Android 手機請用 Chrome；iPhone 請用 Safari。你還是可以先聽、再大聲跟讀。</div>`;
+  const mic=`<details class="mic"><summary>麥克風打不開怎麼辦？</summary>
+    <ol>${MIC_STEPS.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>
+    <div class="row" style="margin-top:8px"><button class="btn ghost sm" data-act="micTest">${bt('測試麥克風')}</button><span class="small" id="micRes" aria-live="polite"></span></div></details>`;
+  const sh=t.shadow.map(([s,z],i)=>{const g=trGroup([z]);return `<div class="card"><div class="sent" id="sent-s${i}" lang="en">${esc(s)}</div>${g.slot(0)}
+    <div class="row" style="margin-top:8px"><button class="btn ghost sm" data-act="sayText" data-text="${esc(s)}">${ICON_SPK}${bt('聽')}</button><button class="btn ghost sm" data-act="saySlow" data-text="${esc(s)}">${ICON_SPK}${bt('慢速')}</button>
+    ${SR?`<button class="btn sm rec" data-act="recS" data-i="${i}" id="rec-s${i}">${bt('錄音跟讀')}</button>`:''}
+    ${p.s['s'+i]!=null?`<span class="small muted">最好成績 ${p.s['s'+i]}</span>`:''}</div>${g.btn}<div class="res" id="res-s${i}" aria-live="polite"></div></div>`}).join('');
+  const qa=t.qa.map((x,i)=>{const open=qaOpen[t.id+i];const g=trGroup(open?[x.q[1],...x.s.map(s=>s[1])]:[x.q[1]]);return `<div class="card"><div class="sent" lang="en">${esc(x.q[0])}</div>${g.slot(0)}
+    <div class="row" style="margin-top:8px"><button class="btn ghost sm" data-act="sayText" data-text="${esc(x.q[0])}">${ICON_SPK}${bt('聽問題')}</button>
+    ${SR?`<button class="btn sm rec" data-act="recQ" data-i="${i}" id="rec-q${i}">${bt('錄音回答')}</button>`:''}
+    <button class="btn ghost sm" data-act="sample" data-i="${i}">${bt(open?'收起範例':'看範例')}</button></div>
+    ${open?`<ul class="samples">${x.s.map((s,k)=>`<li>${sayBtn(s[0],1)}<span>${en(s[0])}${g.slot(k+1)}</span></li>`).join('')}</ul>`:''}${g.btn}
+    <div class="res" id="res-q${i}" aria-live="polite"></div></div>`}).join('');
+  const ms=mySent[t.id]||{};
+  const my=`<div class="card" id="mycard"><b>自己造句，練習聽與說</b>
+    <div class="small muted" style="margin:4px 0 8px">用英文寫你的句子，按「聽這句」聽發音，再錄音跟讀。不會寫的話，可以先寫中文，按「翻譯成英文」，會打開 Google 翻譯幫你翻，再把英文貼回來。</div>
+    <textarea id="myInput" lang="en" placeholder="I'd like to book a table for two.">${esc(ms.input||'')}</textarea>
+    <div class="row" style="margin-top:8px"><button class="btn ghost sm" data-act="mySay">${ICON_SPK}${bt('聽這句')}</button><button class="btn ghost sm" data-act="myTr">${bt('翻譯成英文')}</button>${SR?`<button class="btn sm rec" data-act="myRec" id="rec-my">${bt('錄音跟讀這句')}</button>`:''}</div>
+    <div id="myOut" aria-live="polite"></div><div class="res" id="res-my" aria-live="polite"></div></div>`;
+  return `${warn}${SR?mic:''}<h3>跟讀：聽一句，說一句</h3><div class="small muted">綠色是說對的字，紅色波浪線是辨識不到的字。先聽兩次再錄音，模仿語調和連音。</div>${sh}
+  <h3>回答問題</h3><div class="small muted">用完整的句子回答。回答裡有提示的關鍵字，就算完成。</div>${qa}${my}`;
+}
+function moreHTML(t){
+  const words=[...t.vocab.map(v=>[v[0],v[2]]),...t.related];
+  const g=trGroup(t.pat.map(x=>x[2]));
+  return `<h3>常用句型</h3>${t.pat.map(([p,ex,z],k)=>`<div class="pat"><div class="zh" lang="en">${esc(p)}</div><div class="row"><span>${en(ex)}${g.slot(k)}</span>${sayBtn(ex,1)}</div></div>`).join('')}
+  ${g.btn}
+  <h3>查更多：詞典與真人發音</h3>
+  <div class="small muted">《劍橋詞典》有中文解釋、英美發音和例句。YouGlish 可以聽到這個字在真實影片裡怎麼說。</div>
+  <table><thead><tr><th>單字</th><th>中文</th><th>劍橋詞典</th><th>YouGlish</th></tr></thead><tbody>
+  ${words.map(([w,z])=>{const d=dict(w);return `<tr><td lang="en">${esc(w)}</td><td class="py">${esc(z)}</td><td><a href="${d.cam}" target="_blank" rel="noopener">查詞</a></td><td><a href="${d.yg}" target="_blank" rel="noopener">聽發音</a></td></tr>`}).join('')}
+  </tbody></table>`;
+}
+
+/* ---------- 單字本與筆記 ---------- */
+function qSummary(q){
+  return `<div class="script">${q.a.map(x=>`<p><span class="who">${esc(whoLabel(x[0]))}：</span>${en(x[1])}</p>`).join('')}${q.q?`<p><span class="who">問題：</span>${en(q.q[0])}</p>`:''}<p><span class="who">答案</span>${L[q.ans]}　${en(q.o[q.ans][0])}</p></div>
+  <div class="key"><b>聽力重點　</b>${esc(q.k)}</div>${q.w?`<div class="key" style="margin-top:6px"><b>其他選項為什麼不對　</b>${esc(q.w)}</div>`:''}`;
+}
+function renderBook(){
+  trSeq=0;const tab=state.bookTab;
+  let body='';
+  if(tab==='words'){
+    if(!book.length)body=`<p class="muted">還沒有收藏單字。在「重點」和「單字」頁按☆就能收藏。</p>`;
+    else{
+      const groups=[...T.map(t=>[t.id,`${t.icon} ${t.name}`]),['decode','基礎聽辨']];
+      body=`<div class="small muted">依照主題排列。點主題名稱可以回到那個主題練習。</div>`+groups.map(([id,name])=>{const ws=book.filter(b=>b.t===id);if(!ws.length)return'';
+        const t=T.find(x=>x.id===id);
+        return `<div class="card"><div class="row" style="justify-content:space-between"><b>${esc(name)}</b>${t?`<button class="btn ghost xs" data-act="gotoTopic" data-t="${id}">${bt('回到主題')}</button>`:`<button class="btn ghost xs" data-act="decodeStart" data-g="all">${bt('基礎聽辨')}</button>`}</div>
+        <ul class="vlist">${ws.map(b=>`<li>${sayBtn(b.w)}<div><div class="py" lang="en">${esc(b.p||'')}</div><div class="zh" lang="en">${esc(b.w)}</div><div class="gl">${esc(b.z||'')}</div>
+          <div class="links"><a href="${dict(b.w).cam}" target="_blank" rel="noopener">劍橋詞典</a><button class="linkbtn" data-act="unstar" data-w="${esc(b.w)}">移除</button></div></div></li>`).join('')}</ul></div>`}).join('');
+    }
+  }else{
+    body=`<div class="card"><b>新增筆記</b><textarea id="noteNew" placeholder="..."></textarea><div class="row" style="margin-top:8px"><button class="btn sm" data-act="noteAdd">${bt('儲存筆記')}</button></div></div>`+
+    (notes.length?notes.slice().reverse().map(n=>{
+      if(n.type==='text')return `<div class="card"><div class="small muted">${new Date(n.time).toLocaleDateString()}</div><textarea data-note="${n.id}">${esc(n.text)}</textarea><div class="row" style="margin-top:6px"><button class="btn ghost xs" data-act="noteDel" data-id="${n.id}">${bt('刪除')}</button></div></div>`;
+      let q;try{q=getQ(n.t,n.k)}catch(e){}if(!q)return'';const t=T.find(x=>x.id===n.t);
+      return `<div class="card"><div class="row" style="justify-content:space-between"><span class="small muted">${t.icon} ${esc(t.name)}｜${PART_NO[q.p]}</span><button class="btn ghost xs" data-act="gotoQ" data-t="${n.t}" data-k="${n.k}">${bt('回到這題')}</button></div>
+        ${qSummary(q)}
+        <div class="small" style="margin-top:8px"><b>我的筆記</b></div><textarea data-note="${n.id}" placeholder="...">${esc(n.text||'')}</textarea>
+        <div class="row" style="margin-top:6px"><button class="btn ghost xs" data-act="replayQ" data-t="${n.t}" data-k="${n.k}">${ICON_SPK}${bt('重聽題目')}</button><button class="btn ghost xs" data-act="noteDel" data-id="${n.id}">${bt('刪除')}</button></div></div>`}).join(''):`<p class="muted">還沒有筆記。</p>`);
+  }
+  app.innerHTML=`${topbar('我的單字本與筆記')}
+  <div class="tabs"><button aria-selected="${tab==='words'}" data-act="bookTab" data-b="words">★ ${bt('單字本',` (${book.length})`)}</button><button aria-selected="${tab==='notes'}" data-act="bookTab" data-b="notes">${bt('筆記',` (${notes.length})`)}</button></div>
+  ${body}${footer()}`;
+}
+
+/* ---------- 基礎聽辨 ---------- */
+function startDecode(g){
+  const list=PAIRS.filter(p=>g==='all'||p[0]===g).map(p=>({p,play:Math.random()<.5?0:1})).sort(()=>Math.random()-.5);
+  dc={g,list,i:0,ans:new Array(list.length).fill(null)};state.view='decode';render();
+}
+const pairWord=(x,k)=>({w:x.p[k?3:1],ph:x.p[k?4:2],z:x.p[k?6:5]});
+function renderDecode(){
+  trSeq=0;const it=dc.list[dc.i];
+  const pairRow=x=>[0,1].map(k=>{const o=pairWord(x,k);return `<span class="chip"><span>${en(o.w)}<span class="trl">${esc(o.z)}</span></span>${sayBtn(o.w,1)}${x.p[0]==='sent'?'':starBtn(o.w,o.ph,o.z,'decode')}</span>`}).join('');
+  if(!it){const c=dc.list.filter((x,i)=>dc.ans[i]===x.play).length;
+    app.innerHTML=`${topbar('基礎聽辨')}
+    <p style="margin-top:20px"><span class="result-big">${c}</span><span class="muted"> / ${dc.list.length}</span></p>
+    <h3>聽錯的地方</h3>${dc.list.map((x,i)=>dc.ans[i]===x.play?'':`<div class="row" style="padding:6px 0;border-bottom:1px solid var(--line)">${pairRow(x)}</div>`).join('')||`<p class="muted">全部聽對了！</p>`}
+    <div class="row" style="margin-top:20px"><button class="btn" data-act="decodeStart" data-g="${dc.g}">${bt('再練一次')}</button><button class="btn ghost" data-act="home">${bt('回首頁')}</button></div>${footer()}`;return}
+  const done=dc.ans[dc.i]!=null,grp=it.p[0],sent=grp==='sent';
+  app.innerHTML=`${topbar('基礎聽辨：'+PAIR_GROUP[grp])}
+  <div class="note">${DECODE_INTRO}</div>
+  <div class="q"><div class="qhead"><span class="part">聽聽看，是哪一個？</span><span>${dc.i+1} / ${dc.list.length}</span></div>
+   <div class="player"><button class="play" id="playBtn" data-act="decodePlay" aria-label="播放">${ICON_PLAY}</button><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span class="hint">可以多聽幾次。</span></div>
+   <div class="opts ${sent?'':'pics'}" ${sent?'':'style="grid-template-columns:1fr 1fr"'}>${[0,1].map(k=>{const o=pairWord(it,k);let cls='opt';if(done){if(k===it.play)cls+=' right';else if(k===dc.ans[dc.i])cls+=' wrong'}
+     return `<button class="${cls}" data-act="decodeChoose" data-i="${k}" ${done?'disabled':''}><span class="bub">${L[k]}</span>${sent?`<span>${en(o.w)}${done?`<span class="trl">${esc(o.z)}</span>`:''}</span>`:`<div class="pic" style="min-height:70px"><span class="zh" lang="en">${esc(o.w)}</span><span class="py" lang="en">${esc(o.ph)}</span>${done?`<span class="trl">${esc(o.z)}</span>`:''}</div>`}</button>`}).join('')}</div>
+   ${done?`<div class="fb"><div class="verdict ${dc.ans[dc.i]===it.play?'ok':'no'}">${dc.ans[dc.i]===it.play?'答對了！':'聽錯了，再比較一下兩個聲音。'}</div>${it.p[7]?`<div class="key">${esc(it.p[7])}</div>`:''}<div class="row" style="margin-top:8px">${pairRow(it)}</div></div>`:''}
+  </div>
+  <div class="row" style="margin-top:12px">${done?`<button class="btn" data-act="decodeNext">${bt(dc.i<dc.list.length-1?'下一題':'看結果')}</button>`:''}</div>`;
+}
+
+/* ---------- 錯題複習 ---------- */
+function wqQ(i){const[tid,k]=wq.list[i];return getQ(tid,k)}
+function startWrong(){const list=wrongList();if(!list.length){alert('目前沒有錯題。');return}wq={list,qi:0,ans:{}};state.view='wrong';render()}
+function renderWrong(){
+  trSeq=0;const n=wq.list.length;
+  if(!n){app.innerHTML=`${topbar('錯題複習')}<p class="muted" style="margin-top:20px">目前沒有錯題。做錯的題目會自動出現在這裡。</p>`;return}
+  if(wq.qi>=n)wq.qi=n-1;
+  const[tid,k]=wq.list[wq.qi],q=wqQ(wq.qi),chosen=wq.ans[wq.qi],t=T.find(x=>x.id===tid);
+  app.innerHTML=`${topbar('錯題複習')}
+  <p class="small muted" style="margin:12px 0 0">${t.icon} ${esc(t.name)}　答對的題目會從錯題裡移除。</p>
+  ${navStrip(n,wq.qi,i=>wq.ans[i]!=null?(wq.ans[i]===wqQ(i).ans?'ok':'no'):'')}
+  ${questionHTML(q,{num:wq.qi+1,total:n,chosen,reveal:true,showText:false,idx:wq.qi,noteBtn:noteBtnFor(tid,k)})}
+  <div class="row" style="margin-top:12px">${wq.qi>0?`<button class="btn ghost" data-act="wPrev">${bt('上一題')}</button>`:''}${wq.qi<n-1?`<button class="btn" data-act="wNext">${bt('下一題')}</button>`:`<button class="btn" data-act="home">${bt('回首頁')}</button>`}
+  <button class="btn ghost" data-act="wRemove">${bt('複習完了，刪除這題')}</button></div>`;
+}
+
+/* ---------- 模擬測驗 ---------- */
+function mockRefs(set){
+  const ts=set==='A'?T.slice(0,HALF):set==='B'?T.slice(HALF):T;
+  let refs=[];PLIST.forEach(p=>ts.forEach(t=>t.qs.forEach((q,k)=>{if(q.p===p)refs.push([t.id,k])})));
+  if(set==='R'){
+    const sh=a=>a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+    const singles=p=>refs.filter(r=>getQ(...r).p===p);
+    const groups=p=>{const m={};refs.forEach(r=>{const q=getQ(...r);if(q.p===p)(m[q.grp]=m[q.grp]||[]).push(r)});return Object.values(m)};
+    refs=[...sh(singles(1)).slice(0,HALF),...sh(singles(2)).slice(0,HALF*3),...sh(groups(3)).slice(0,HALF).flat(),...sh(groups(4)).slice(0,HALF).flat()];
+  }
+  return refs;
+}
+function buildMock(set,refs,ans,plays,i,gp){
+  mock={set,refs,qs:refs.map(([s,k])=>Object.assign({},getQ(s,k),{src:s,qidx:k,topic:s})),i:i||0,
+    ans:ans||new Array(refs.length).fill(null),plays:plays||refs.map(()=>1),gp:gp||{},done:false};
+}
+/* 暫存：每次作答、換題、播放後都存一次，下次可以接著做 */
+function saveMock(){if(mock&&!mock.done)store.set('mocksave',{set:mock.set,refs:mock.refs,ans:mock.ans,plays:mock.plays,i:mock.i,gp:mock.gp,time:Date.now()})}
+function clearMock(){store.set('mocksave',null)}
+function startMock(set){buildMock(set||'A',mockRefs(set||'A'));saveMock();state.view='mock';reviewAll=false;render()}
+function resumeMock(){const sv=store.get('mocksave',null);if(!sv)return;try{buildMock(sv.set,sv.refs,sv.ans,sv.plays,sv.i,sv.gp)}catch(e){clearMock();renderHome();return}state.view='mock';reviewAll=false;render()}
+function renderMock(){
+  if(mock.done)return renderMockResult();
+  trSeq=0;const q=mock.qs[mock.i];const answered=mock.ans.filter(x=>x!=null).length;
+  app.innerHTML=`<div class="topbar"><button class="back" data-act="quitMock">${bt('暫存並離開')}</button><h2>綜合模擬測驗<span class="uit">${SET_NAME[mock.set]}</span></h2></div>
+  <p class="small warnline">⏱ 正式考試中間不會暫停</p>
+  <p class="small muted" style="margin:4px 0 0">${answered} / ${mock.qs.length}　點號碼可以回去改答案。</p>
+  ${navStrip(mock.qs.length,mock.i,i=>mock.ans[i]!=null?'done':'')}
+  ${questionHTML(q,{num:mock.i+1,total:mock.qs.length,chosen:mock.ans[mock.i],reveal:false,playsLeft:mock.plays[mock.i],idx:mock.i})}
+  <div class="row" style="margin-top:12px">${mock.i>0?`<button class="btn ghost" data-act="mockPrev">${bt('上一題')}</button>`:''}
+    ${mock.i<mock.qs.length-1?`<button class="btn" data-act="mockNext">${bt('下一題')}</button>`:''}
+    <button class="btn red" data-act="mockEnd">${bt('交卷，看成績')}</button></div>`;
+}
+function renderMockResult(){
+  trSeq=0;const qs=mock.qs,ok=qs.map((q,i)=>mock.ans[i]===q.ans),total=ok.filter(Boolean).length;
+  const byPart=PLIST.map(p=>{const ix=qs.map((q,i)=>i).filter(i=>qs[i].p===p);return{p,c:ix.filter(i=>ok[i]).length,n:ix.length}}).filter(x=>x.n);
+  const byTopic=T.map(t=>{const ix=qs.map((q,i)=>i).filter(i=>qs[i].topic===t.id);return{t,c:ix.filter(i=>ok[i]).length,n:ix.length}}).filter(x=>x.n);
+  const weak=byTopic.slice().sort((a,b)=>a.c/a.n-b.c/b.n)[0];
+  const wp=byPart.slice().sort((a,b)=>a.c/a.n-b.c/b.n)[0];
+  const partAdvice=wp.c<wp.n?`<div class="note"><b>最需要加強：${PART_NO[wp.p]} ${PARTS[wp.p].n}　</b>${esc(TIPS[wp.p])}</div>`:'';
+  const row=(name,x)=>`<tr><td>${name}</td><td>${x.c}/${x.n}</td><td><div class="bar"><span style="width:${x.c/x.n*100}%"></span></div></td></tr>`;
+  const items=qs.map((q,i)=>(!reviewAll&&ok[i])?'':`<div class="card"><div class="row" style="justify-content:space-between"><span class="small muted">${i+1}｜${PART_NO[q.p]} ${PARTS[q.p].n}</span><span class="verdict ${ok[i]?'ok':'no'}" style="font-size:15px">${ok[i]?'答對了！':'答錯了'}</span></div>
+    ${q.pic?`<div class="pic" style="min-height:0">${picHTML(q.pic)}</div>`:''}
+    <div class="small">你的答案 ${mock.ans[i]==null?'—':L[mock.ans[i]]}　正確答案 ${L[q.ans]}</div>
+    ${reviewBlock(q,i,{noteBtn:noteBtnFor(q.src,q.qidx)})}</div>`).join('');
+  app.innerHTML=`${topbar('模擬測驗成績')}
+  <p style="margin-top:20px"><span class="result-big">${total}</span><span class="muted"> / ${qs.length}　答對率 ${Math.round(total/qs.length*100)}%</span></p>
+  <p class="muted small">這是練習用的答對題數，不是正式考試的量尺分數。</p>
+  <h3>各部分</h3><table><tbody>${byPart.map(x=>row(`${PART_NO[x.p]} ${PARTS[x.p].n}`,x)).join('')}</tbody></table>
+  ${partAdvice}
+  <h3>各主題</h3><table><tbody>${byTopic.map(x=>row(`${x.t.icon} ${esc(x.t.name)}`,x)).join('')}</tbody></table>
+  ${weak.c<weak.n?`<p style="margin-top:16px">建議先複習：<b>${esc(weak.t.name)}</b></p><button class="btn" data-act="topic" data-t="${weak.t.id}">${bt('去複習這個主題')}</button>`:`<p style="margin-top:16px">全部答對！可以去做官方的範例試題了。</p>`}
+  <h3>檢討</h3>
+  <div class="row"><button class="btn sm ${reviewAll?'ghost':''}" data-act="reviewMode" data-m="wrong">${bt('只看錯題')}</button><button class="btn sm ${reviewAll?'':'ghost'}" data-act="reviewMode" data-m="all">${bt('看全部題目')}</button></div>
+  ${items||`<p class="muted">沒有錯題。</p>`}
+  <div class="row" style="margin-top:20px"><button class="btn" data-act="wrongStart">${bt('練習所有錯題')}</button><button class="btn ghost" data-act="mockStart">${bt('再做一次')}</button></div>${footer()}`;
+}
+
+/* ---------- 事件 ---------- */
+const VIEWS={home:renderHome,topic:renderTopic,mock:renderMock,decode:renderDecode,wrong:renderWrong,book:renderBook};
+function render(){stopSpeak();VIEWS[state.view]()}
+function rerenderKeep(){const y=window.scrollY;VIEWS[state.view]();window.scrollTo(0,y)}
+function curQ(i){return state.view==='mock'?mock.qs[i]:state.view==='wrong'?wqQ(i):topicObj().qs[i]}
+/* 模擬測驗：題組的本文只播放一次，之後同一題組只念問題 */
+function officialLines(q){
+  if(!q.grp)return audioFor(q);
+  const heard=mock.gp[q.grp];mock.gp[q.grp]=true;return audioFor(q,heard);
+}
+function addQNote(tid,k){if(notes.some(n=>n.type==='q'&&n.t===tid&&n.k===k))return;notes.push({id:Date.now()+'',type:'q',t:tid,k,text:'',time:Date.now()});saveNotes()}
+const freshLp=qi=>({qi:qi||0,ans:{},show:{},qtr:{}});
+
+app.addEventListener('change',e=>{
+  const k=e.target.dataset.set;if(!k)return;
+  if(k==='rate')settings.rate=parseFloat(e.target.value);else settings[k]=e.target.value;
+  store.set('settings',settings);
+  if(k==='rate')say1('Hello. This is the speed you will hear.');
+  if(k==='accent'){rerenderKeep();speak([['W','Good morning. How can I help you?'],['M','Hi. I have a meeting at ten.']])}
+  if(k==='zh')rerenderKeep();
+});
+app.addEventListener('input',e=>{
+  if(e.target.id==='myInput'){const t=topicObj();mySent[t.id]={input:e.target.value}}
+  const nid=e.target.dataset.note;if(nid){const n=notes.find(x=>x.id===nid);if(n){n.text=e.target.value;saveNotes()}}
+});
+app.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b||b.disabled)return;
+  const a=b.dataset.act,i=b.dataset.i!=null?+b.dataset.i:null,t=topicObj();
+  switch(a){
+    case'home':state.view='home';render();window.scrollTo(0,0);break;
+    case'jumpTo':{const el=document.getElementById(b.dataset.id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});break}
+    case'topic':state.view='topic';state.topic=b.dataset.t;state.tab='focus';lp=freshLp();render();window.scrollTo(0,0);break;
+    case'gotoTopic':state.view='topic';state.topic=b.dataset.t;state.tab='vocab';lp=freshLp();render();window.scrollTo(0,0);break;
+    case'gotoQ':state.view='topic';state.topic=b.dataset.t;state.tab='listen';lp=freshLp(+b.dataset.k);render();window.scrollTo(0,0);break;
+    case'tab':state.tab=b.dataset.tab;render();window.scrollTo(0,0);break;
+    case'sayText':say1(b.dataset.text,b.dataset.g);break;
+    case'saySlow':speak([['W',b.dataset.text]],null,0.6);break;
+    case'sayAll':speak(t.vocab.map(v=>['W',v[0]]));break;
+    case'tr':doTr(b.dataset.id);break;
+    case'trHide':hideTr(b.dataset.id);break;
+    case'star':{const w=b.dataset.w;if(inBook(w))book=book.filter(x=>x.w!==w);else book.push({w,p:b.dataset.p,z:b.dataset.z,t:b.dataset.t});saveBook();
+      document.querySelectorAll(`.star[data-w="${CSS.escape(w)}"]`).forEach(s=>{const on=inBook(w);s.classList.toggle('on',on);s.textContent=on?'★':'☆'});break}
+    case'unstar':book=book.filter(x=>x.w!==b.dataset.w);saveBook();rerenderKeep();break;
+    case'bookOpen':state.view='book';state.bookTab=b.dataset.b;render();window.scrollTo(0,0);break;
+    case'bookTab':state.bookTab=b.dataset.b;render();break;
+    case'noteAdd':{const v=($('#noteNew').value||'').trim();if(!v)return;notes.push({id:Date.now()+'',type:'text',text:v,time:Date.now()});saveNotes();render();break}
+    case'noteDel':notes=notes.filter(n=>n.id!==b.dataset.id);saveNotes();rerenderKeep();break;
+    case'noteQ':addQNote(b.dataset.t,+b.dataset.k);b.disabled=true;b.innerHTML=bt('已加入筆記');break;
+    case'replayQ':speak(audioFor(getQ(b.dataset.t,+b.dataset.k)));break;
+    case'toolMode':{const s=toolState[b.dataset.k];s.mode=b.dataset.m;s.open=false;rerenderKeep();break}
+    case'toolSay':say1(toolState[b.dataset.k].item.say);break;
+    case'toolOpen':{const s=toolState[b.dataset.k];s.open=!s.open;rerenderKeep();break}
+    case'toolNext':{const k=b.dataset.k,s=toolState[k];s.item=genItem(k);s.open=false;rerenderKeep();if(s.mode==='hear')setTimeout(()=>say1(s.item.say),150);break}
+    case'play':
+      if(state.view==='mock'){if(mock.plays[mock.i]<=0)return;mock.plays[mock.i]--;const lines=officialLines(mock.qs[mock.i]);saveMock();b.disabled=true;const h=app.querySelector('.player .hint');if(h)h.textContent='正在播放……';playLines(lines,()=>{const h2=app.querySelector('.player .hint');if(h2)h2.textContent='播放完了，請作答。'})}
+      else playLines(audioFor(curQ(state.view==='wrong'?wq.qi:lp.qi)));
+      break;
+    case'showText':lp.show[lp.qi]=!lp.show[lp.qi];rerenderKeep();break;
+    case'qtr':lp.qtr[lp.qi]=!lp.qtr[lp.qi];rerenderKeep();break;
+    case'choose':
+      if(state.view==='mock'){mock.ans[mock.i]=i;saveMock();rerenderKeep()}
+      else if(state.view==='wrong'){if(wq.ans[wq.qi]!=null)return;wq.ans[wq.qi]=i;stopSpeak();const[tid,k]=wq.list[wq.qi];prog(tid).q[k]=(i===wqQ(wq.qi).ans);saveProg();rerenderKeep()}
+      else{if(lp.ans[lp.qi]!=null)return;lp.ans[lp.qi]=i;stopSpeak();prog(t.id).q[lp.qi]=(i===t.qs[lp.qi].ans);saveProg();rerenderKeep()}
+      break;
+    case'jump':if(state.view==='mock'){mock.i=i;saveMock()}else if(state.view==='wrong')wq.qi=i;else lp.qi=i;render();break;
+    case'wNext':wq.qi++;render();window.scrollTo(0,0);break;
+    case'wPrev':wq.qi--;render();window.scrollTo(0,0);break;
+    case'wRemove':{const[tid,k]=wq.list[wq.qi];delete prog(tid).q[k];saveProg();wq.list.splice(wq.qi,1);const a2={};Object.keys(wq.ans).forEach(x=>{x=+x;if(x<wq.qi)a2[x]=wq.ans[x];else if(x>wq.qi)a2[x-1]=wq.ans[x]});wq.ans=a2;render();break}
+    case'wrongStart':startWrong();window.scrollTo(0,0);break;
+    case'decodeStart':startDecode(b.dataset.g);window.scrollTo(0,0);break;
+    case'decodePlay':{const it=dc.list[dc.i];playLines([['W',pairWord(it,it.play).w]]);break}
+    case'decodeChoose':if(dc.ans[dc.i]==null){dc.ans[dc.i]=i;rerenderKeep()}break;
+    case'decodeNext':dc.i++;render();window.scrollTo(0,0);break;
+    case'sayLine':speak([[b.dataset.g,b.dataset.text]]);break;
+    case'slow':speak(audioFor(curQ(i)),null,0.65);break;
+    case'next':lp.qi++;render();window.scrollTo(0,0);break;
+    case'prev':lp.qi--;render();window.scrollTo(0,0);break;
+    case'retry':delete lp.ans[lp.qi];rerenderKeep();break;
+    case'replay':speak(audioFor(curQ(i)));break;
+    case'sample':qaOpen[t.id+i]=!qaOpen[t.id+i];rerenderKeep();break;
+    case'recS':doRec('s',i);break;
+    case'recQ':doRec('q',i);break;
+    case'micTest':micTest();break;
+    case'mySay':{const inp=($('#myInput').value||'').trim();if(/[a-z]/i.test(inp))say1(inp);else $('#res-my').innerHTML=`<div class="warn">請先寫英文句子，或按「翻譯成英文」。</div>`;break}
+    case'myTr':openGoogleTr(($('#myInput').value||'').trim());break;
+    case'myRec':doRec('my',0);break;
+    case'mockStart':if(store.get('mocksave',null)&&!confirm('你有一份還沒做完的模擬測驗。要放棄它，開始新的一份嗎？'))return;startMock(b.dataset.set||(mock&&mock.set)||'A');window.scrollTo(0,0);break;
+    case'mockNext':mock.i++;saveMock();render();window.scrollTo(0,0);break;
+    case'mockPrev':mock.i--;saveMock();render();window.scrollTo(0,0);break;
+    case'mockEnd':{const left=mock.ans.filter(x=>x==null).length;if(left&&!confirm(`還有 ${left} 題沒有作答。確定要交卷嗎？`))return;mock.done=true;mock.qs.forEach((q,j)=>{if(mock.ans[j]!=null)prog(q.src).q[q.qidx]=(mock.ans[j]===q.ans)});saveProg();clearMock();render();window.scrollTo(0,0);break}
+    case'reviewMode':reviewAll=b.dataset.m==='all';rerenderKeep();break;
+    case'quitMock':saveMock();state.view='home';render();window.scrollTo(0,0);setTimeout(()=>{const el=document.getElementById('sec-mock');if(el)el.scrollIntoView()},50);break;
+    case'mockResume':resumeMock();window.scrollTo(0,0);break;
+    case'mockDiscard':if(confirm('確定要放棄這份還沒做完的模擬測驗嗎？')){clearMock();renderHome();const el=document.getElementById('sec-mock');if(el)el.scrollIntoView()}break;
+  }
+});
+async function micTest(){
+  const out=$('#micRes');
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){out.textContent='這個瀏覽器不能使用麥克風。';return}
+  try{const s=await navigator.mediaDevices.getUserMedia({audio:true});s.getTracks().forEach(t=>t.stop());out.innerHTML=`<span style="color:var(--green)">麥克風可以使用了！</span>`}
+  catch(e){out.innerHTML=`<span style="color:var(--red)">麥克風沒有開啟。請照上面的步驟允許麥克風。</span>`}
+}
+/* 打開 Google 翻譯：中文翻成英文 */
+function openGoogleTr(text){
+  const out=$('#myOut');
+  if(!text){out.innerHTML=`<div class="warn">請先在框裡寫一個句子。</div>`;return}
+  try{if(navigator.clipboard)navigator.clipboard.writeText(text).catch(()=>{})}catch(e){}
+  window.open(`https://translate.google.com/?sl=zh-TW&tl=en&text=${encodeURIComponent(text)}&op=translate`,'_blank','noopener');
+  const steps=['如果 Google 翻譯裡沒有你的句子，請在輸入框貼上（句子已經幫你複製好了）。','複製翻譯出來的英文。','回到這裡，把英文貼到上面的框，再按「聽這句」或「錄音跟讀這句」。'];
+  out.innerHTML=`<div class="trout"><b>已打開 Google 翻譯。</b><ol style="margin:6px 0 0;padding-left:22px">${steps.map(s=>`<li>${s}</li>`).join('')}</ol><div class="small muted">翻譯結果僅供參考，可以請老師確認。</div></div>`;
+}
+function doRec(kind,i){
+  const t=topicObj(),id=kind==='my'?'my':kind+i,btn=$('#rec-'+id),res=$('#res-'+id);if(!btn)return;
+  let target='';
+  if(kind==='my'){target=($('#myInput').value||'').trim();
+    if(!/[a-z]/i.test(target)||/[\u3400-\u9fff]/.test(target)){res.innerHTML=`<div class="warn">請先寫英文句子，或按「翻譯成英文」。</div>`;return}
+    $('#myOut').innerHTML=`<div class="trout" style="margin-top:8px"><div class="sent" id="sent-my" lang="en">${esc(target)}</div></div>`}
+  if(recH){recH.stop();return}
+  const label=btn.innerHTML;stopSpeak();btn.classList.add('on');btn.innerHTML=bt('說完了，按這裡停止');
+  res.innerHTML=`<div class="muted">🎙️ 正在聽，請開始說…</div>`;
+  const done=()=>{btn.classList.remove('on');btn.innerHTML=label};
+  recognize({interim:txt=>{res.innerHTML=`<div class="muted">🎙️ 聽到了： <b lang="en">${esc(txt)}</b></div>`},res:alts=>{
+    done();
+    if(kind==='s'||kind==='my'){
+      if(kind==='s')target=t.shadow[i][0];
+      let best={score:-1};alts.forEach(h=>{const r=compare(target,h);if(r.score>best.score)best=Object.assign(r,{heard:h})});
+      const el=$(kind==='s'?'#sent-s'+i:'#sent-my');if(el)el.innerHTML=best.html;
+      if(kind==='s'){const p=prog(t.id);p.s['s'+i]=Math.max(p.s['s'+i]||0,best.score);saveProg()}
+      const msg=best.score>=85?'很好！':best.score>=60?'不錯，注意紅色的字再試一次。':'再聽一次，慢慢說。';
+      res.innerHTML=`<span class="score">${best.score}</span>　${msg}<div class="muted">辨識到：<span lang="en">${esc(best.heard)}</span></div>`;
+    }else{
+      const x=t.qa[i];let bestH=alts[0],bestN=-1,bestG=[];
+      alts.forEach(h=>{const hl=' '+toks(h).join(' ')+' ';const g=x.kw.map(grp=>grp.some(w=>hl.includes(' '+toks(w).join(' ')+' ')||h.toLowerCase().includes(w)));const n=g.filter(Boolean).length;if(n>bestN){bestN=n;bestH=h;bestG=g}});
+      const all=bestN===x.kw.length;
+      res.innerHTML=`<div class="verdict ${all?'ok':'no'}" style="font-size:16px">${all?'完成！句子裡有需要的關鍵字。':'還差一點，試著加上沒有出現的關鍵字。'}</div>
+        <div lang="en">${x.kw.map((grp,k)=>`<span class="kw ${bestG[k]?'ok':''}">${esc(grp.join(' / '))}</span>`).join('')}</div>
+        <div class="muted">辨識到：<span lang="en">${esc(bestH)}</span></div>`;
+    }
+  },err:msg=>{done();res.innerHTML=`<div class="warn">${esc(msg)}</div>`}});
+}
+render();
+/* 回到頂端按鈕 */
+const topBtn=document.createElement('button');topBtn.className='totop';topBtn.setAttribute('aria-label','回到頂端');topBtn.textContent='↑';
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));document.body.appendChild(topBtn);
+window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>500),{passive:true});
+
+</script>
+</body>
+</html>
